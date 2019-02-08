@@ -5,15 +5,50 @@
  */
 var twoSum = function(nums, target) {
     arraySize = nums.length;
+    var numsMap = new Map();
     // console.log("target " + target + '')
     for (var i = 0; i < arraySize; i++) {
-        for (var j = i + 1; j < arraySize; j++) {
-            var sorted = sortAbsolute(nums[i] + '', nums[j] + '');
-            // sorted[0]: absolute bigger number
-            // sorted[1]: absolute smaller number
-            var sum = addNumbersStr(sorted[0], sorted[1]);
-            // console.log("sum " + sum + " target " + target + '')
-            if (sum == (target + '')) return [i, j];
+        // some test case will have duplicate integers in the array and cause a key collision
+        // so value in the Map will be an array of indices
+        if (numsMap.has(nums[i])) {
+            // collision
+            var indices = numsMap.get(nums[i]);
+            indices.push(i);
+        } else {
+            var indices = [i];
+        }
+        numsMap.set(nums[i], indices);
+    }
+    for (const [key, value] of numsMap) {
+        var diff = target - key;
+        // console.log(key + ' ' + value + ' diff ' + diff + ' ' + numsMap.get(diff));
+        if (numsMap.has(diff)) {
+            var indices = numsMap.get(diff);
+            var len = indices.length;
+            
+            // unique, one and only in the array
+            if (len == 1) {
+                if (numsMap.get(key) == numsMap.get(diff)) {
+                    // [key, value] and [diff, value] point to the same element in the array
+                    continue;
+                }
+            }
+            // diff is the same as key (duplicate integers in the array)
+            // given there is exactly one solution, it can be only two of them
+            if (len == 2) {
+                return numsMap.get(diff);
+            }
+            // diff is the same as key (duplicate integers in the array)
+            // given there is exactly one solution, it can be only two of them
+            // this should never happen
+            if (len > 2) {
+                console.log('This should never happen. More than 1 solution found ' + indices)
+                continue;
+            }
+            
+            // unique number
+            // console.log(key + ' ' + value + ' diff ' + diff + ' ' + numsMap.get(diff));
+            return [value, indices];
         }
     }
 };
