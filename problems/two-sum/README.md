@@ -15,4 +15,4 @@ Example:
 This is a lousy problem description. It does not provide clear information on the problem.
 1. size of array. (test case shows as many as 17000+ elements)
 2. range of the integers in the array, if the integers is positive or negative, if the integer is too big for data type number.
-3. uniqueness of integers in the array. (test cases shows it is not)
+3. uniqueness of integers in the array. (test cases show they are not)
