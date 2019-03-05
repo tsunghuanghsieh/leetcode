@@ -25,7 +25,7 @@ Explanation: The answer is "wke", with the length of 3.
 ```
 
 # Setup
-Install Go from https://golang.org/
-Install Go extension for Visual Studio Code.
-Install `go get -v github.com/go-delve/delve/cmd/dlv` to `$GOPATH`. If there are several paths, the first one will be used.
-Executable `dlv` will be in `$GOPATH/bin` folder. You can move it to `/usr/local/bin` so that you don't have to update `$PATH`.
+* Install Go from https://golang.org/
+* Install Go extension for Visual Studio Code.
+* Install `go get -v github.com/go-delve/delve/cmd/dlv` to `$GOPATH`. If there are several paths, the first one will be used.
+* Executable `dlv` will be in `$GOPATH/bin` folder. You can move it to `/usr/local/bin` so that you don't have to update `$PATH`.
