@@ -2,48 +2,35 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	// "strings"
 )
 
 func main ()  {
-	fmt.Println("length is", lengthOfLongestSubstring("pwwkew"));
+	fmt.Println("length is", lengthOfLongestSubstring("abcabcbb"));
+	// fmt.Println("length is", lengthOfLongestSubstring("bbbbb"));
+	// fmt.Println("length is", lengthOfLongestSubstring("pwwkew"));
+	// fmt.Println("length is", lengthOfLongestSubstring("dvdf"));
+	// fmt.Println("length is", lengthOfLongestSubstring("abba"));
+	// fmt.Println("length is", lengthOfLongestSubstring("abcdefgchijkbcbb"));
 }
 
 func lengthOfLongestSubstring(input string) int {
 	var longest int = 0;
-	var keepLen int = 0;
-	var toDelete string;
-	var toKeep string;
-	mapSubstr := make(map[string]string);
+	var startIdx int = 0;
+	// string in map seems to run faster than byte, however memory usage is worse
+	mapSubstr := make(map[string]int); // latest position (array index + 1) of character in string
 
-	for _, ch := range input {
-		_, ok := mapSubstr[string(ch)];
-		if (ok) {
-			// fmt.Println("seeing dup ", string(ch));
-			if (keepLen > longest) {
-				longest = keepLen;   // update longest length
-			}
-			// fmt.Println("curr before ", toKeep)
-			splits := strings.Split(toKeep, string(ch));
-			toDelete = splits[0];
-			for _, d := range toDelete {
-				// see a repeated character
-				// delete all characters up to and including current seen character
-				delete(mapSubstr, string(d));
-			}
-			toKeep = splits[1];
-			// fmt.Println("curr after ", toKeep)
-			keepLen = len(toKeep);
+	for pos := 0; pos < len(input); pos++ {
+        if (mapSubstr[string(input[pos])] != 0 && mapSubstr[string(input[pos])] > startIdx) {
+			// we have seen this character the current substring
+			startIdx = mapSubstr[string(input[pos])];
+			// fmt.Println("startIdx ", startIdx);
 		}
-		// count and add the character seen
-		keepLen++;
-		toKeep = toKeep + string(ch);
-		mapSubstr[string(ch)] = toKeep;
-	}
+		mapSubstr[string(input[pos])] = pos + 1;
 
-	// in case the longest is at the end of the input string
-	if (keepLen > longest) {
-		longest = keepLen;
+		if (longest < pos + 1 - startIdx) {
+			longest = pos + 1 - startIdx;
+		}
 	}
 	return longest;
 }
