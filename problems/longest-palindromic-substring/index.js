@@ -22,13 +22,13 @@ var longestPalindrome = function(s) {
 
     for (curr = 0, next = 1, pal_start = 0, pal_end = 0; curr < slen; curr++, next++) {
         if (pal_start == pal_end) {
-            // console.log("curr " + curr + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
+            console.log("curr " + curr + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
             // start a new palindrome
             if (s[curr] == s[curr + 1]) {
                 pal_start = curr;
                 pal_end = curr + 1;
                 hasDiffChars = s[curr] != s[curr + 1];
-                // console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
+                console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
             } else if (curr != 0 && s[curr - 1] == s[curr + 1]) {
                 pal_start = curr - 1;
                 pal_end = curr + 1;
@@ -52,7 +52,7 @@ var longestPalindrome = function(s) {
                     updateLongest();
                 }
             } else if (pal_start - 1 < 0) {
-                // console.log("curr " + curr + " hasDiffChars " + hasDiffChars + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
+                console.log("curr " + curr + " hasDiffChars " + hasDiffChars + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
                 var start = pal_start + 1, end = pal_end + 1;
                 var isPalindrome = true;
                 // if (hasDiffChars) isPalindrome = s[curr] == s[curr - 1];
@@ -106,6 +106,8 @@ var longestPalindrome = function(s) {
             reset = false;
         }
     }
+    console.log("returning " + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ");
+    console.log("returning " + s.substring(longest_start, longest_end + 1))
     return s.substring(longest_start, longest_end + 1);
 };
 
