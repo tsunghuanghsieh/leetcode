@@ -49,9 +49,9 @@ var longestPalindrome = function(s) {
                 var start = pal_start + 1, end = pal_end + 1;
                 var isPalindrome = true;
                 // if (hasDiffChars) isPalindrome = s[curr] == s[curr - 1];
-                // for (var i = 0; hasDiffChars && i < (start + end) / 2 + (start + end) % 2; i++) {
-                for (var i = 0; i < Math.floor((start + end) / 2) + (start + end) % 2; i++) {
-                    if (s[start + i] != s[end - i]) {
+                // for (loopIdx = 0; hasDiffChars && loopIdx < (start + end) / 2 + (start + end) % 2; loopIdx++) {
+                for (loopIdx = 0; loopIdx < Math.floor((start + end) / 2) + (start + end) % 2; loopIdx++) {
+                    if (s[start + loopIdx] != s[end - loopIdx]) {
                         isPalindrome = false;
                         break;
                     }
