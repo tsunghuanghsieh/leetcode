@@ -41,8 +41,11 @@ var longestPalindrome = function(s) {
                 pal_end = curr;
                 if (curr + 1 < slen) {
                     hasDiffChars = s[curr] != s[curr + 1];
+                    // we can't confirm if it's not a palindrome until the next char, don't reset just yet
                 } else {
-                    reset = true;
+                    // reach end of the string, update longest palindrome
+                    // updateLongest(longest_start, longest_end, pal_start, pal_end);
+                    updateLongest();
                 }
             } else if (pal_start - 1 < 0) {
                 // console.log("curr " + curr + " hasDiffChars " + hasDiffChars + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
@@ -63,7 +66,8 @@ var longestPalindrome = function(s) {
                     pal_end++;
                     // console.log("curr " + curr + " shifting")
                 } else {
-                    reset = true;
+                    console.log("resetPalindromeIndices")
+                    resetPalindromeIndices(s);
                 }
             } else if (s[pal_start - 1] == s[pal_end + 1]) {
                 pal_start--;
@@ -73,18 +77,11 @@ var longestPalindrome = function(s) {
                 if (pal_end + 1 >= slen) reset = true;
                 // reset = true;
             } else {
-                if (s[curr - 1] == s[curr + 1]) {
-                    // update palindrome indices
-                    pal_start = curr - 1;
-                    pal_end = curr + 1;
-                    if (!hasDiffChars) hasDiffChars = s[pal_start] != s[pal_end];
-                    // console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
-                } else {
-                    reset = true;
-                }
+                resetPalindromeIndices(s);
             }
         }
         
+        /*
         if (reset && longest_end - longest_start <= pal_end - pal_start) {
             longest_start = pal_start;
             longest_end = pal_end;
@@ -98,6 +95,48 @@ var longestPalindrome = function(s) {
             console.log("curr " + curr + " resetting to " + pal_start)
             // curr = pal_start;
         }
+        */
+        if (reset) {
+            updateLongest();
+            pal_start = pal_end = curr;
+            reset = false;
+        }
     }
     return s.substring(longest_start, longest_end + 1);
 };
+
+function resetPalindromeIndices(s) {
+    // check if curr and curr + 1 is the same char
+    console.log("curr " + curr)
+    if (s[curr] == s[curr + 1]) {
+        // aaabbbcbbbb...
+        // look back on bbbb after c
+        for (loopIdx = 1; s[curr - loopIdx] == s[curr]; loopIdx++) { /* do nothing loop */ }
+        // update longest palindrome
+        updateLongest();
+
+        pal_start = curr - loopIdx + 1;
+        pal_end = curr + 1;
+        hasDiffChars = !(pal_end - pal_start > 0);
+    } else if (s[curr - 1] == s[curr + 1]) {
+        // aaaxyzczyxy...
+        // update longest palindrome
+        updateLongest();
+                    
+        // update palindrome indices
+        pal_start = curr - 1;
+        pal_end = curr + 1;
+        if (!hasDiffChars) hasDiffChars = s[curr] != s[curr + 1];
+        // console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
+    } else {
+        reset = true;
+    }
+}
+function updateLongest() {
+    console.log("updateLongest " + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
+    if (longest_end - longest_start <= pal_end - pal_start) {
+        longest_start = pal_start;
+        longest_end = pal_end;
+    }
+    console.log("updateLongest " + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
+}
