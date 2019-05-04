@@ -74,6 +74,8 @@ var longestPalindrome = function(s) {
         }
         if (reset) {
             updateLongest();
+            // end of the current palindrome detected
+            // restart looking for the next palindrome after midpoint of current one
             pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
             curr = pal_start;
             reset = false;
