@@ -92,11 +92,11 @@ var longestPalindrome = function(s) {
             // console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(longest_start, longest_end + 1))
 
             // reset palindrome indices
-            pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
-            // pal_start = pal_end;
+            // pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
+            pal_start = pal_end = curr;
             reset = false;
             console.log("curr " + curr + " resetting to " + pal_start)
-            curr = pal_start;
+            // curr = pal_start;
         }
     }
     return s.substring(longest_start, longest_end + 1);
