@@ -124,6 +124,15 @@ function resetPalindromeIndices(s) {
         pal_start = curr - loopIdx + 1;
         pal_end = curr + 1;
         hasDiffChars = !(pal_end - pal_start > 0);
+    } else if (s[curr] == s[curr -1]) {
+        updateLongest1(s);
+
+        console.log("curr " + curr + " s[curr - 1] " + s[curr - 1] + " + s[curr] " + s[curr])
+        // update palindrome indices
+        pal_start = curr - 1;
+        pal_end = curr;
+        console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end)
+        hasDiffChars = s[curr] != s[curr + 1];
     } else if (s[curr - 1] == s[curr + 1]) {
         // aaaxyzczyxy...
         // update longest palindrome
