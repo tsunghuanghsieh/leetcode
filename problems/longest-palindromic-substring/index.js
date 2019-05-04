@@ -34,6 +34,10 @@ var longestPalindrome = function(s) {
                 pal_end = curr + 1;
                 hasDiffChars = s[curr] != s[curr + 1];
                 // console.log("acurr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
+            } else if (curr + 1 == slen) {
+                pal_start = curr;
+                pal_end = curr;
+                updateLongest();
             }
         } else {
             // update current palidrome
