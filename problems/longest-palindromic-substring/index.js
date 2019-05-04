@@ -22,18 +22,15 @@ var longestPalindrome = function(s) {
 
     for (curr = 0, next = 1, pal_start = 0, pal_end = 0; curr < slen; curr++, next++) {
         if (pal_start == pal_end) {
-            console.log("curr " + curr + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
             // start a new palindrome
             if (s[curr] == s[curr + 1]) {
                 pal_start = curr;
                 pal_end = curr + 1;
                 hasDiffChars = s[curr] != s[curr + 1];
-                console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
             } else if (curr != 0 && s[curr - 1] == s[curr + 1]) {
                 pal_start = curr - 1;
                 pal_end = curr + 1;
                 hasDiffChars = s[curr] != s[curr + 1];
-                // console.log("acurr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
             } else if (curr + 1 == slen) {
                 pal_start = curr;
                 pal_end = curr;
@@ -51,7 +48,6 @@ var longestPalindrome = function(s) {
                     updateLongest();
                 }
             } else if (pal_start - 1 < 0) {
-                console.log("curr " + curr + " hasDiffChars " + hasDiffChars + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
                 var start = pal_start + 1, end = pal_end + 1;
                 var isPalindrome = true;
                 for (loopIdx = 0; loopIdx < Math.floor((start + end) / 2) + (start + end) % 2; loopIdx++) {
@@ -64,75 +60,31 @@ var longestPalindrome = function(s) {
                     // shift palindrome by 1 character
                     pal_start++;
                     pal_end++;
-                    // console.log("curr " + curr + " shifting")
                 } else {
-                    console.log("resetPalindromeIndices")
-                    resetPalindromeIndices(s);
+                    reset = true;
                 }
             } else if (s[pal_start - 1] == s[pal_end + 1]) {
                 pal_start--;
                 pal_end++;
                 if (!hasDiffChars) hasDiffChars = s[pal_start - 1] != s[pal_end + 1];
-                console.log(" curr " + curr + " hasDiffChars " + hasDiffChars + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
                 if (pal_end + 1 >= slen) reset = true;
             } else {
-                resetPalindromeIndices(s);
+                reset = true;
             }
         }
         if (reset) {
             updateLongest();
-            pal_start = pal_end = curr;
+            pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
+            curr = pal_start;
             reset = false;
         }
     }
-    console.log("returning " + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ");
-    console.log("returning " + s.substring(longest_start, longest_end + 1))
     return s.substring(longest_start, longest_end + 1);
 };
 
-function resetPalindromeIndices(s) {
-    // check if curr and curr + 1 is the same char
-    console.log("curr " + curr)
-    if (s[curr] == s[curr + 1]) {
-        // aaabbbcbbbb...
-        // look back on bbbb after c
-        for (loopIdx = 1; s[curr - loopIdx] == s[curr]; loopIdx++) { /* do nothing loop */ }
-        // update longest palindrome
-        updateLongest();
-
-        console.log("going forward in time 00")
-        pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
-        curr = pal_start;
-        hasDiffChars = !(pal_end - pal_start > 0);
-    } else if (s[curr] == s[curr -1]) {
-        // update longest palindrome
-        updateLongest();
-
-        console.log("curr " + curr + " s[curr - 1] " + s[curr - 1] + " + s[curr] " + s[curr])
-        // update palindrome indices
-        console.log("going back in time 00")
-        pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
-        curr = pal_start;
-    } else if (s[curr - 1] == s[curr + 1]) {
-        // aaaxyzczyxy...
-        // update longest palindrome
-        updateLongest();
-
-        // update palindrome indices
-        console.log("going back in time 010")
-        pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
-        curr = pal_start;
-        // console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
-    } else {
-        reset = true;
-    }
-}
-
 function updateLongest() {
-    console.log("updateLongest " + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
     if (longest_end - longest_start <= pal_end - pal_start) {
         longest_start = pal_start;
         longest_end = pal_end;
     }
-    console.log("updateLongest " + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
 }
