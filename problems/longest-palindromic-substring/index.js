@@ -121,32 +121,42 @@ function resetPalindromeIndices(s) {
         // update longest palindrome
         updateLongest();
 
-        pal_start = curr - loopIdx + 1;
-        pal_end = curr + 1;
+        // pal_start = curr - loopIdx + 1;
+        // pal_end = curr + 1;
+        console.log("going forward in time 00")
+        pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
+        curr = pal_start;
         hasDiffChars = !(pal_end - pal_start > 0);
     } else if (s[curr] == s[curr -1]) {
-        updateLongest1(s);
+        updateLongest();
 
         console.log("curr " + curr + " s[curr - 1] " + s[curr - 1] + " + s[curr] " + s[curr])
         // update palindrome indices
-        pal_start = curr - 1;
-        pal_end = curr;
-        console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end)
-        hasDiffChars = s[curr] != s[curr + 1];
+        // pal_start = curr - 1;
+        // pal_end = curr;
+        // console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end)
+        // hasDiffChars = s[curr] != s[curr + 1];
+        console.log("going back in time 00")
+        pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
+        curr = pal_start;
     } else if (s[curr - 1] == s[curr + 1]) {
         // aaaxyzczyxy...
         // update longest palindrome
         updateLongest();
-                    
+
         // update palindrome indices
-        pal_start = curr - 1;
-        pal_end = curr + 1;
-        if (!hasDiffChars) hasDiffChars = s[curr] != s[curr + 1];
+        // pal_start = curr - 1;
+        // pal_end = curr + 1;
+        // if (!hasDiffChars) hasDiffChars = s[curr] != s[curr + 1];
+        console.log("going back in time 010")
+        pal_start = pal_end = Math.floor((pal_start + pal_end) / 2);
+        curr = pal_start;
         // console.log("curr " + curr + " pal_start " + pal_start + " " + "pal_end " + pal_end + " " + s.substring(pal_start, pal_end + 1))
     } else {
         reset = true;
     }
 }
+
 function updateLongest() {
     console.log("updateLongest " + " longest_start " + longest_start + " " + "longest_end " + longest_end + " " + " pal_start " + pal_start + " " + "pal_end " + pal_end + " ")
     if (longest_end - longest_start <= pal_end - pal_start) {
