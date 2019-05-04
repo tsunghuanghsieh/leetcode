@@ -1,13 +1,21 @@
+var pal_start, pal_end, curr, next;
+var slen;
+var longest_start = 0, longest_end = 0;
+var hasDiffChars = true; // false if only 1 character in palindrome
+var reset = false;
+var loopIdx = 0;
+
 /**
  * @param {string} s
  * @return {string}
  */
 var longestPalindrome = function(s) {
-    var pal_start, pal_end, curr, next;
-    var slen = s.length;
-    var longest_start = 0, longest_end = 0;
-    var hasDiffChars = true; // false if only 1 character in palindrome
-    var reset = false;
+    hasDiffChars = true; // false if only 1 character in palindrome
+    longest_start = 0;
+    longest_end = 0;
+    loopIdx = 0;
+    reset = false;
+    slen = s.length;
 
     // special cases
     if (slen == 1) return s;
