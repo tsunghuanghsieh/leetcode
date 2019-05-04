@@ -50,7 +50,7 @@ var longestPalindrome = function(s) {
             } else if (pal_start - 1 < 0) {
                 var start = pal_start + 1, end = pal_end + 1;
                 var isPalindrome = true;
-                for (loopIdx = 0; loopIdx < Math.floor((start + end) / 2) + (start + end) % 2; loopIdx++) {
+                for (loopIdx = 0; loopIdx < Math.ceil((start + end) / 2); loopIdx++) {
                     if (s[start + loopIdx] != s[end - loopIdx]) {
                         isPalindrome = false;
                         break;
