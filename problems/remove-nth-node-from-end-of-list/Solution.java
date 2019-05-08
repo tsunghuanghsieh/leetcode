@@ -22,7 +22,7 @@ class Solution {
         if (head == nth && n == pos) {
             head = head.next;
         } else {
-            nth.next = nth.next.next;            
+            nth.next = nth.next.next;
         }
         return head;
     }
