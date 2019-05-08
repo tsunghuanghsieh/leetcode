@@ -22,7 +22,7 @@ public:
         ListNode *newLastNode = NULL;
         
         // special cases
-        if (head == NULL || k == 0) return head;
+        if (head == NULL || head->next == NULL || k == 0) return head;
         
         for (length = 0; temp != NULL; length++) {
             if (temp->next == NULL) {
@@ -31,6 +31,9 @@ public:
             temp = temp->next;
         }
         k %= length;
+        // no shift, return head as is
+        if (k == 0) return head;
+
         temp = head;
         for (int i = 0; i < length - k; i++) {
             newLastNode = temp;
