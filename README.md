@@ -9,3 +9,4 @@
 |   5 | [ZigZag Conversion](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/zigzag-conversion/)| C++ |
 |   6 | [Integer to Roman](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/integer-to-roman/)| C++ |
 |   7 | [Remove Nth Node From End of List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/remove-nth-node-from-end-of-list/)| Java |
+|   8 | [Remove Nth Node From End of List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/rotate-list/)| C++ |
