@@ -10,35 +10,27 @@
  * @return {number[]}
  */
 var inorderTraversal = function(root) {
-    var nodes = [];
-    var values = [];
-    var leftDone = false;
-    var rightDone = false;
+    var nodes = []; // stack for traversal
+    var values = []; // output
     //     1
     //    /  \
     //   2    3
     //  / \   /
     // 4   5 6
     // inorder traveral: 4 2 5 1 6 3
-    nodes.push(root);
-    while (nodes.length != 0) {
-        while (root.left != null && leftDone != true) {
-            nodes.push(root.left);
+    while (root || nodes.length > 0) {
+        while (root != null) {
+            // push current node to top of stack
+            nodes.push(root);
+            // traverse left node tree
             root = root.left;
         }
+        // root is now null (no more left node), get top node in stack
+        root = nodes[nodes.length - 1];
         values.push(root.val);
         nodes.pop();
-        leftDone = true;
-        console.log('value ' + root.val);
-        if (root.right != null) {
-            nodes.push(root.right);
-            root = root.right;
-            leftDone = false;
-            continue;
-        }
-        root = nodes[nodes.length - 1];
-        // rightDone = true;
+        // traverse right node tree
+        root = root.right;
     }
-    console.log(values)
     return values;
 };
