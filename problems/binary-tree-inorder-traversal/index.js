@@ -17,7 +17,7 @@ var inorderTraversal = function(root) {
     //   2    3
     //  / \   /
     // 4   5 6
-    // inorder traveral: 4 2 5 1 6 3
+    // inorder traversal: 4 2 5 1 6 3
     while (root || nodes.length > 0) {
         while (root != null) {
             // push current node to top of stack
