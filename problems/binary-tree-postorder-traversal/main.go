@@ -26,7 +26,7 @@ func makeTree(inputs []int) {
 }
 
 func printTreeNode(values []int) {
-
+    fmt.Println("values ", values);
 }
 
 /**
@@ -59,34 +59,23 @@ func postorderTraversal(root *TreeNode) []int {
     for (len(stack) > 0) {
         seenRight = false;
         seenLeft = false;
-        // 1 3 2 5 4
-        // 4 5 2
         if ((*root).Right != nil) {
             _, seenRight = visited[(*root).Right];
-            fmt.Println("right ", (*root).Val);
             if (!seenRight) {
-                fmt.Println("append right ", (*(*root).Right).Val);
                 stack = append(stack, (*(*root).Right));
                 // add right child node to hash table
                 visited[(*root).Right] = (*(*root).Right).Val;
-            } else {
-                fmt.Println("seen right ", (*(*root).Right).Val)
             }
         }
         if ((*root).Left != nil) {
             _, seenLeft = visited[(*root).Left];
-            fmt.Println("left ", (*(*root).Left).Val);
             if (!seenLeft) {
-                fmt.Println("append left ", (*(*root).Left).Val);
                 stack = append(stack, (*(*root).Left));
                 // add left child node to hash table
                 visited[(*root).Left] = (*(*root).Left).Val;
-            } else {
-                fmt.Println("seen left ", (*(*root).Left).Val)
             }
         }
         if (seenRight || seenLeft) {
-            fmt.Println("backtracking ", (*root).Val)
             // backtracking
             values = append(values, (*root).Val);
             stack = stack[0: len(stack) - 1];
@@ -96,13 +85,9 @@ func postorderTraversal(root *TreeNode) []int {
             values = append(values, (*root).Val);
             stack = stack[0: len(stack) - 1];
         }
-        fmt.Println(len(stack), " ", (*root).Val);
-        fmt.Println("stack ", stack);
-        fmt.Println("values ", values);
         if (len(stack) > 0) {
             root = &(stack[len(stack) - 1]);
         }
     }
-    fmt.Println("values ", values);
     return values;
 }
