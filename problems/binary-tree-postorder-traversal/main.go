@@ -42,8 +42,7 @@ func postorderTraversal(root *TreeNode) []int {
     var stack []TreeNode;
     // hash table of nodes seen so far
     var visited map[*TreeNode]int = make(map[*TreeNode]int);
-    var seenRight bool;
-    var seenLeft bool;
+
     //     1
     //    /  \
     //   2    3
@@ -51,14 +50,15 @@ func postorderTraversal(root *TreeNode) []int {
     // 4   5 6
     // postorder traversal: 4 5 2 6 3 1
     if (root == nil) {
+        // special case
         return values;
     }
     stack = append(stack, *root);
     visited[root] = (*root).Val;
-    // TODO: what if it's a null root?
     for (len(stack) > 0) {
-        seenRight = false;
-        seenLeft = false;
+        seenRight := false;
+        seenLeft := false;
+        // add right child node to stack first
         if ((*root).Right != nil) {
             _, seenRight = visited[(*root).Right];
             if (!seenRight) {
@@ -67,6 +67,7 @@ func postorderTraversal(root *TreeNode) []int {
                 visited[(*root).Right] = (*(*root).Right).Val;
             }
         }
+        // add left child node to stack
         if ((*root).Left != nil) {
             _, seenLeft = visited[(*root).Left];
             if (!seenLeft) {
@@ -86,6 +87,7 @@ func postorderTraversal(root *TreeNode) []int {
             stack = stack[0: len(stack) - 1];
         }
         if (len(stack) > 0) {
+            // advance to the top node in stack
             root = &(stack[len(stack) - 1]);
         }
     }
