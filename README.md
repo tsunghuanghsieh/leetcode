@@ -13,3 +13,4 @@
 |   9 | [Binary Tree Inorder Traversal](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-tree-inorder-traversal/)| javascript |
 |  10 | [Binary Tree Postorder Traversal](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-tree-postorder-traversal/)| golang |
 |  11 | [Binary Tree Preorder Traversal](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-tree-preorder-traversal/)| javascript |
+|  12 | [Smallest Integer Divisible by K](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/smallest-integer-divisible-by-k/)| javascript |
