@@ -13,7 +13,7 @@ var smallestRepunitDivByK = function (K) {
     if (K == 1) return 1;
 
     // only integers with 1, 3, 7 and 9 in the least significant digit will get to this point
-    // 1 * 1 = 1
+    // 11 * 1 = 11
     // 3 * 7 = 21
     // 7 * 3 = 21
     // 9 * 9 = 81
