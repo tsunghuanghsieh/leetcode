@@ -17,23 +17,17 @@ var smallestRepunitDivByK = function (K) {
     // 3 * 7 = 21
     // 7 * 3 = 21
     // 9 * 9 = 81
-    // var quotients = [-1, 1, -1, 7, -1, -1, -1, 3, -1, 9];
     var strDivisor = [];
     var idx_d = 0; // current index of strDivisor being operated on
     var product = 0;
     var carryover = Math.floor(product / 10);
-    console.log("before while K " + K);
     while (true) {
         var multiplyer;
         for (multiplyer = 0; multiplyer < 10; multiplyer++) {
-            // product = stringK[idx_k] * multiplyer + carryover;
             product = K * multiplyer + carryover;
-            // console.log("multiplier " + multiplyer + " product " + product);
             if (product % 10 == 1) {
-                // console.log("product " + product);
                 strDivisor[idx_d] = multiplyer;
                 carryover = Math.floor(product / 10);
-                // console.log("carryover " + carryover);
                 idx_d++;
                 break;
             }
