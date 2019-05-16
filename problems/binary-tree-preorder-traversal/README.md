@@ -14,3 +14,7 @@ Input: [1,null,2,3]
 Output: [1,2,3]
 ```
 **Follow up:** Recursive solution is trivial, could you do it iteratively?
+
+## Other solution
+Three lines of code in the while loop, both simpler and harder to read. lol...
+https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/185866/JavaScript-Simple-iterative-solution
