@@ -4,7 +4,6 @@
  */
 var firstMissingPositive = function(nums) {
     var smallest_number = 0;
-    var largest_number = 0;
     var positive_count = 0;
     var numsMap = new Map();
     for (var i = 0; i < nums.length; i++) {
@@ -14,8 +13,6 @@ var firstMissingPositive = function(nums) {
         positive_count++;
         // find the smallest number in the array
         if (smallest_number == 0 || nums[i] < smallest_number) smallest_number = nums[i];
-        // find the largest number in the array
-        if (nums[i] > largest_number) largest_number = nums[i];
     }
     if (smallest_number != 1) return 1;
 
@@ -27,10 +24,12 @@ var firstMissingPositive = function(nums) {
     }
 
     for (var i = 1; i <= positive_count; i++) {
+        // find the first missing number in the hashmap
         if (!numsMap.has(smallest_number + i)) {
             return smallest_number + i;
         }
     }
 
+    // the missing number is 1 + largest positive number
     return smallest_number + positive_count;
 };
