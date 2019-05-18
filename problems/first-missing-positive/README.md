@@ -20,3 +20,8 @@ Output: 1
 **Note:**
 
 Your algorithm should run in O(n) time and uses constant extra space.
+
+## Content
+`index.js` contains my implementation of O(n) runtime and extra space complexity.
+
+`solution.js` contains my implementation of O(n) runtime and constant extra space complexity after googling.
