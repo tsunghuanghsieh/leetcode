@@ -7,7 +7,6 @@ var addDigits = function(num) {
     while (num >= 10) {
         sum = 0;
         sum = sum + num % 10;
-        // console.log(sum)
         while (Math.floor(num / 10) > 0) {
             num = Math.floor(num / 10);
             sum = sum + num % 10;
