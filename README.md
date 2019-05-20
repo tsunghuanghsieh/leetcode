@@ -19,3 +19,4 @@
 |  15 | [Rotate Image](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/rotate-image/)| Medium | javascript |
 |  16 | [Remove Linked List Elements](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/remove-linked-list-elements/)| Easy | javascript |
 |  17 | [Flatten Binary Tree to Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/flatten-binary-tree-to-linked-list/)| Medium | javascript |
+|  18 | [Climbing Stairs](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/climbing-stairs/)| Easy | javascript |
