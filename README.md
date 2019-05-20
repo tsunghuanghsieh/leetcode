@@ -17,3 +17,4 @@
 |  13 | [Binary Tree Level Order Traversal](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-tree-level-order-traversal/)| Medium | javascript |
 |  14 | [First Missing Positive](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/first-missing-positive/)| Hard | javascript |
 |  15 | [Rotate Image](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/rotate-image/)| Medium | javascript |
+|  16 | [Remove Linked List Elements](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/remove-linked-list-elements/)| Easy | javascript |
