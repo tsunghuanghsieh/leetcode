@@ -4,19 +4,29 @@
  * @return {number}
  */
 var subarraySum = function(nums, k) {
-    var sum = 0;
+    var currSum = 0; // current sum of numbers
     var count = 0;
+    var sums = new Map(); // count of current sum in array
 
-    for (var i = 0, start = 0; i < nums.length; i++) {
-        if (sum + nums[i] < k) {
-            sum += nums[i];
+    for (var i = 0; i < nums.length; i++) {
+        currSum += nums[i];
+
+        if (currSum == k) {
+            count++;
+        }
+
+        if (sums.has(currSum - k)) {
+            // find number of subarrays that has the sum k, stored at currSum - k.
+            count += sums.get(currSum - k);
+        }
+
+        // count current sum in hashmap
+        if (sums.has(currSum)) {
+            // increment
+            sums.set(currSum, sums.get(currSum) + 1);
         } else {
-            if (sum + nums[i] == k) {
-                count++;
-            }
-            sum -= nums[start];
-            sum += nums[i];
-            start++;
+            // new
+            sums.set(currSum, 1);
         }
     }
 
