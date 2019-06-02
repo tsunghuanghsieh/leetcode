@@ -14,7 +14,7 @@ The range of numbers in the array is [-1000, 1000] and the range of the integer 
 ## Explanation
 1e7 == 1 * 10^7
 
-## Note
+## Interview
 My facebook phone interview Q1
 [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value)
 Subscription needed.
