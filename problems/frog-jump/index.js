@@ -31,7 +31,7 @@ var canCross = function(stones) {
                     landings.push((position + i));
                     distances.push(i);
                 }
-                if (position + i == lastStone) result = true;
+                if (position + i == lastStone) return true;
             }
         }
     }
