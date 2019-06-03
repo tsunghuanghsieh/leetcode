@@ -24,3 +24,4 @@
 |  20 | [Subarray Sum Equals K](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/subarray-sum-equals-k/)| Medium | javascript |
 |  21 | [Continuous Subarray Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/continuous-subarray-sum/)| Medium | javascript |
 |  22 | [Add Binary](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/add-binary/)| Easy | javascript |
+|  23 | [Frog Jump](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/frog-jump/)| Hard | javascript |
