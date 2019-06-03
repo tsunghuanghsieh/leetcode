@@ -9,11 +9,13 @@ var canCross = function(stones) {
     if (stones[1] != 1) {
         return result;
     } else {
+        // special case: [0,1]
         if (stones.length == 2) return true;
     }
 
     var mapStones = new Map();
     for (var i = 1; i < stones.length; i++) {
+        // set map key to position of stone and value to a set of jump distance
         mapStones.set(stones[i], new Set());
     }
 
@@ -26,6 +28,8 @@ var canCross = function(stones) {
             if (i <= 0) continue;
 
             if (mapStones.has(position + i)) {
+                // keep track of jump distance seen for given position
+                // so that we don't duplicate the effort for the given position
                 if (!mapStones.get(position + i).has(i)) {
                     mapStones.get(position + i).add(i);
                     landings.push((position + i));
@@ -39,6 +43,8 @@ var canCross = function(stones) {
     return result;
 };
 
+// Jump clss is no longer needed
+// Keeping it for javascript class reference
 class Jump {
     position;
     k;
