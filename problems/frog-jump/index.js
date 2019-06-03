@@ -6,17 +6,19 @@ var canCross = function(stones) {
     var result = false;
     var lastStone = stones[stones.length - 1];
 
-    if (stones[1] != 1) return result;
+    if (stones[1] != 1) {
+        return result;
+    } else {
+        if (stones.length == 2) return true;
+    }
 
     var mapStones = new Map();
     for (var i = 1; i < stones.length; i++) {
         mapStones.set(stones[i], new Set());
     }
 
-    var landings = [];
-    var distances = [];
-    landings.push(0);
-    distances.push(1);
+    var landings = [1];
+    var distances = [1];
     while (landings.length > 0) {
         var k = distances.shift();
         var position = landings.shift();
