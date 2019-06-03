@@ -22,8 +22,8 @@ var canCross = function(stones) {
     var landings = [1];
     var distances = [1];
     while (landings.length > 0) {
-        var k = distances.shift();
-        var position = landings.shift();
+        var k = distances.pop();
+        var position = landings.pop();
         for (var i = k - 1; i < k + 2; i++) {
             if (i <= 0) continue;
 
