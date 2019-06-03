@@ -9,9 +9,8 @@ var canCross = function(stones) {
     if (stones[1] != 1) return result;
 
     var mapStones = new Map();
-    var mapStonesKeys = new Map();
     for (var i = 1; i < stones.length; i++) {
-        mapStones.set(stones[i], i);
+        mapStones.set(stones[i], new Set());
     }
 
     // var queue = [];
@@ -37,11 +36,13 @@ var canCross = function(stones) {
             if (i <= 0) continue;
 
             if (mapStones.has(position + i)) {
-                if (!mapStonesKeys.has(position + i + '_' + i)) {
-                    mapStonesKeys.set(position + i + '_' + i, 1);
+                // if (!mapStonesKeys.has(position + i + '_' + i)) {
+                //     mapStonesKeys.set(position + i + '_' + i, 1);
                     // queue.push(next);
+                if (!mapStones.get(position + i).has(i)) {
+                    mapStones.get(position + i).add(i);
                     landings.push((position + i));
-                    distances.push(i)
+                    distances.push(i);
                 }
                 if (position + i == lastStone) result = true;
             }
