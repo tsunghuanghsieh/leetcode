@@ -26,3 +26,4 @@
 |  22 | [Add Binary](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/add-binary/)| Easy | javascript |
 |  23 | [Frog Jump](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/frog-jump/)| Hard | javascript |
 |  24 | [Fruit Into Baskets](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fruit-into-baskets/)| Medium | javascript |
+|  25 | [Coin Change 2](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/coin-change-2/)| Medium | javascript |
