@@ -21,6 +21,6 @@ Explanation: Because [23, 2, 6, 4, 7] is an continuous subarray of size 5 and su
 The length of the array won't exceed 10,000.
 You may assume the sum of all the numbers is in the range of a signed 32-bit integer.
 
-# Special cases
+## Special cases
 k == 0 and input: `[0,0]`, `[0,0,1]`, `[0,1,0]`, `[1,0,0]`
 k == 2 and input: `[1,0]
