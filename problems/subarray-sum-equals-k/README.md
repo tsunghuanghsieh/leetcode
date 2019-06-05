@@ -16,12 +16,11 @@ Output: 2
 1e7 == 1 * 10^7
 
 ## Interview
-My facebook phone interview Q1
+My facebook phone interview Q1:
 [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value)
 Subscription needed.
 
-My facebook phone interview Q2
-It returns true when there is a continous subarray whose sum equals to k, false otherwise.
-
+My facebook phone interview Q2:
 Similar to [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/).
 
+It returns true when there is a continous subarray whose sum equals to k, false otherwise.
