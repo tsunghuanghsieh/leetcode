@@ -47,6 +47,6 @@ If we started at the first tree or the eighth tree, we would only collect 4 frui
 2. `0 <= tree[i] < tree.length`
 
 ## Interview
-As of Nov 9, 2018, the most commonly asked question by Google per [this](https://www.youtube.com/watch?v=za2YuucS0tw).
+As of 11/09/2018, the most commonly asked question by Google per [this](https://www.youtube.com/watch?v=za2YuucS0tw).
 
-As of Jun 4, 2019, leetcode premium subscription says Google 56 times, Amazon 4 times in the last 6 months.
+As of 06/04/2019, leetcode premium subscription says Google 56 times, Amazon 4 times in the last 6 months.

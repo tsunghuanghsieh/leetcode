@@ -33,4 +33,4 @@ Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually rec
 
 
 ## Interview
-As of Jun 4, 2019, leetcode premium subscription says Google 104 times, Amazon 10 times in the last 6 months.
+As of 06/04/2019, leetcode premium subscription says Google 104 times, Amazon 10 times in the last 6 months.
