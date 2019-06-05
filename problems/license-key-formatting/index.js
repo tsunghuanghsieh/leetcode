@@ -4,6 +4,29 @@
  * @return {string}
  */
 var licenseKeyFormatting = function(S, K) {
+    // hmmm... built-in string functions are faster than my imolementation
+    var chars = S.replace(/-/g, '').toUpperCase();
+    var result = [];
+
+    // only 1 group, no dash, simply return string.
+    if (chars.length <= K) return chars;
+
+    var start = chars.length % K;
+    for (var i = 0; i < chars.length; i++) {
+        if (i != 0 && (i - start) % K == 0) {
+            result.push('-');
+        }
+        result.push(chars[i]);
+    }
+    return result.join('');
+};
+
+/**
+ * @param {string} S
+ * @param {number} K
+ * @return {string}
+ */
+var licenseKeyFormattingSlower = function(S, K) {
     var char;
     var chars = [];
     var result = [];
