@@ -25,5 +25,5 @@ The flattened tree should look like:
           6
 ```
 
-## Note
-Mocked interview Question 2
+## Interview
+Leetcode mocked interview Question 2
