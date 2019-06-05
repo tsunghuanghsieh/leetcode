@@ -26,3 +26,5 @@ Explanation: There are three ways to climb to the top.
 
 ## Interview
 Leetcode mocked interview Question 1
+
+As of Jun 4, 2019, leetcode premium subscription says Amazon 11 times in the last 6 months.

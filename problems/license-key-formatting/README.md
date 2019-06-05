@@ -26,3 +26,4 @@ Explanation: The string S has been split into three parts, each part has 2 chara
 3. String S is non-empty.
 
 ## interview
+As of Jun 4, 2019, leetcode premium subscription says Google 38 times in the last 6 months.
