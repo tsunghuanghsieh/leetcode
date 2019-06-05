@@ -27,7 +27,7 @@ var checkSubarraySum = function(nums, k) {
         }
 
         if (sums.has(modulo)) {
-            if ((nums[i] % element_modulo != 0 && nums[i] != 0) ||
+            if ((nums[i] != 0 && nums[i] % element_modulo != 0) ||
                 (k == 0 && i > 0 && nums[i - 1] == 0)) { // k = 0 and [1,0,0], [0,1,0], [0,0,1]
                 return true;
             }
