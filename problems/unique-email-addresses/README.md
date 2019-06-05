@@ -31,3 +31,6 @@ Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually rec
 * All local and domain names are non-empty.
 * Local names do not start with a `'+'` character.
 
+
+## Interview
+As of Jun 4, 2019, leetcode premium subscription says Google 104 times, Amazon 10 times in the last 6 months.
