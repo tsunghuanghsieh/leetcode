@@ -48,4 +48,5 @@ If we started at the first tree or the eighth tree, we would only collect 4 frui
 
 ## Interview
 As of Nov 9, 2018, the most commonly asked question by Google per [this](https://www.youtube.com/watch?v=za2YuucS0tw).
+
 As of Jun 4, 2019, leetcode premium subscription says Google 56 times, Amazon 4 times.
