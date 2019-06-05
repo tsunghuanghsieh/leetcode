@@ -24,3 +24,5 @@ My facebook phone interview Q2:
 Similar to [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/).
 
 It returns true when there is a continous subarray whose sum equals to k, false otherwise.
+
+As of Jun 4, 2019, leetcode premium subscription says Facebook 39 times, Amazon 11 times in the last 6 months.
