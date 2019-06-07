@@ -4,7 +4,7 @@
  * @return {string}
  */
 var licenseKeyFormatting = function(S, K) {
-    // hmmm... built-in string functions are faster than my imolementation
+    // hmmm... built-in string functions are faster than my implementation
     var chars = S.replace(/-/g, '').toUpperCase();
     var result = [];
 
