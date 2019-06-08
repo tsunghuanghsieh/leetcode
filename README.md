@@ -28,3 +28,4 @@
 |  24 | [Fruit Into Baskets](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fruit-into-baskets/)| Medium | javascript |
 |  25 | [Unique Email Addresses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/unique-email-addresses/)| Easy | javascript |
 |  26 | [License Key Formatting](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/license-key-formatting/)| Easy | javascript |
+|  27 | [LRU Cache](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/lru-cache/)| Medium | javascript |
