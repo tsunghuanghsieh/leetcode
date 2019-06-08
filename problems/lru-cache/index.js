@@ -3,38 +3,7 @@
  */
 var LRUCache = function(capacity) {
     this.lru = new Map();
-    // key: key of key/value pair from input
-    // value: index of key stored in array
-    this.mapOrder = new Map();
-    // index: from least recently used to most recently used
-    // value: key of key/value pair from input
-    this.arrOrder = new Array();
     this.max = capacity;
-
-    //
-    // @param {number} key
-    // It finds and updates recent used lists for all keys.
-    // If the key is not found, it does nothing.
-    //
-    this.updateLRUList = function(key) {
-        // initialize for capacity is reached
-        // regardless if key already exists
-        var position = 0;
-        var deleteKey = this.arrOrder[0];
-        if (this.mapOrder.has(key)) {
-            // overwrite initialization values
-            position = this.mapOrder.get(key);
-            deleteKey = this.arrOrder[position];
-        }
-        for (var idx = position; idx < this.arrOrder.length - 1; idx++) {
-            this.arrOrder[idx] = this.arrOrder[idx + 1];
-            this.mapOrder.set(this.arrOrder[idx + 1], idx);
-        }
-        this.mapOrder.delete(deleteKey);
-        this.mapOrder.set(key, this.arrOrder.length - 1);
-        this.arrOrder[this.arrOrder.length - 1] = key;
-        return deleteKey;
-    }
 };
 
 /**
@@ -43,8 +12,10 @@ var LRUCache = function(capacity) {
  */
 LRUCache.prototype.get = function(key) {
     if (this.lru.has(key)) {
-        this.updateLRUList(key);
-        return this.lru.get(key);
+        var value = this.lru.get(key);
+        this.lru.delete(key);
+        this.lru.set(key, value);
+        return value;
     }
     return -1;
 };
@@ -55,12 +26,10 @@ LRUCache.prototype.get = function(key) {
  * @return {void}
  */
 LRUCache.prototype.put = function(key, value) {
-    if (this.mapOrder.has(key) || this.arrOrder.length >= this.max) {
-        var evictedKey = this.updateLRUList(key);
-        this.lru.delete(evictedKey);
-    } else {
-        this.mapOrder.set(key, this.arrOrder.length);
-        this.arrOrder.push(key);
+    if (this.lru.has(key)) {
+        this.lru.delete(key);
+    } else if (this.lru.size == this.max) {
+        this.lru.delete(this.lru.keys().next().value);
     }
     this.lru.set(key, value);
 };
