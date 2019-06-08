@@ -1,20 +1,40 @@
-var lru = new Map();
-// key: key of key/value pair from input
-// value: index of key stored in array
-var mapOrder = new Map();
-// index: from least recently used to most recently used
-// value: key of key/value pair from input
-var arrOrder = [];
-var max = 0;
-
 /**
  * @param {number} capacity
  */
-var LRUCache = function (capacity) {
-    lru = new Map();
-    mapOrder = new Map();
-    arrOrder = [];
-    max = capacity;
+var LRUCache = function(capacity) {
+    this.lru = new Map();
+    // key: key of key/value pair from input
+    // value: index of key stored in array
+    this.mapOrder = new Map();
+    // index: from least recently used to most recently used
+    // value: key of key/value pair from input
+    this.arrOrder = new Array();
+    this.max = capacity;
+
+    //
+    // @param {number} key
+    // It finds and updates recent used lists for all keys.
+    // If the key is not found, it does nothing.
+    //
+    this.updateLRUList = function(key) {
+        // initialize for capacity is reached
+        // regardless if key already exists
+        var position = 0;
+        var deleteKey = this.arrOrder[0];
+        if (this.mapOrder.has(key)) {
+            // overwrite initialization values
+            position = this.mapOrder.get(key);
+            deleteKey = this.arrOrder[position];
+        }
+        for (var idx = position; idx < this.arrOrder.length - 1; idx++) {
+            this.arrOrder[idx] = this.arrOrder[idx + 1];
+            this.mapOrder.set(this.arrOrder[idx + 1], idx);
+        }
+        this.mapOrder.delete(deleteKey);
+        this.mapOrder.set(key, this.arrOrder.length - 1);
+        this.arrOrder[this.arrOrder.length - 1] = key;
+        return deleteKey;
+    }
 };
 
 /**
@@ -22,9 +42,9 @@ var LRUCache = function (capacity) {
  * @return {number}
  */
 LRUCache.prototype.get = function(key) {
-    if (lru.has(key)) {
-        updateLRUList(key);
-        return lru.get(key);
+    if (this.lru.has(key)) {
+        this.updateLRUList(key);
+        return this.lru.get(key);
     }
     return -1;
 };
@@ -35,40 +55,18 @@ LRUCache.prototype.get = function(key) {
  * @return {void}
  */
 LRUCache.prototype.put = function(key, value) {
-    if (mapOrder.has(key) || arrOrder.length >= max) {
-        var evictedKey = updateLRUList(key);
-        lru.delete(evictedKey);
+    if (this.mapOrder.has(key) || this.arrOrder.length >= this.max) {
+        var evictedKey = this.updateLRUList(key);
+        this.lru.delete(evictedKey);
     } else {
-        mapOrder.set(key, arrOrder.length);
-        arrOrder.push(key);
+        this.mapOrder.set(key, this.arrOrder.length);
+        this.arrOrder.push(key);
+        for (var idx = 0; idx < this.arrOrder.length; idx++) {
+            console.log("this.arrOrder[idx] " + this.arrOrder[idx]);
+        }
     }
-    lru.set(key, value);
+    this.lru.set(key, value);
 };
-
-//
-// @param {number} key
-// It finds and updates recent used lists for all keys.
-// If the key is not found, it does nothing.
-//
-function updateLRUList(key) {
-    // initialize for capacity is reached
-    // regardless if key already exists
-    var position = 0;
-    var deleteKey = arrOrder[0];
-    if (mapOrder.has(key)) {
-        // overwrite initialization values
-        position = mapOrder.get(key);
-        deleteKey = arrOrder[position];
-    }
-    for (var idx = position; idx < arrOrder.length - 1; idx++) {
-        arrOrder[idx] = arrOrder[idx + 1];
-        mapOrder.set(arrOrder[idx + 1], idx);
-    }
-    mapOrder.delete(deleteKey);
-    mapOrder.set(key, arrOrder.length - 1);
-    arrOrder[arrOrder.length - 1] = key;
-    return deleteKey;
-}
 
 /**
  * Your LRUCache object will be instantiated and called as such:
