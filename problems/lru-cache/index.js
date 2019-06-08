@@ -61,9 +61,6 @@ LRUCache.prototype.put = function(key, value) {
     } else {
         this.mapOrder.set(key, this.arrOrder.length);
         this.arrOrder.push(key);
-        for (var idx = 0; idx < this.arrOrder.length; idx++) {
-            console.log("this.arrOrder[idx] " + this.arrOrder[idx]);
-        }
     }
     this.lru.set(key, value);
 };
