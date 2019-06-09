@@ -29,3 +29,4 @@
 |  25 | [Unique Email Addresses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/unique-email-addresses/)| Easy | javascript |
 |  26 | [License Key Formatting](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/license-key-formatting/)| Easy | javascript |
 |  27 | [LRU Cache](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/lru-cache/)| Medium | javascript |
+|  28 | [3Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/3sum/)| Medium | javascript |
