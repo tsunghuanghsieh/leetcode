@@ -22,10 +22,10 @@ var ladderLength = function(beginWord, endWord, wordList) {
     while (queue.length > 0) {
         var roundLength = queue.length;
         count++;
-        console.log("roundLength is " + roundLength);
+        var tempQueue = queue; // use a temp queue so that we don't have to use shift().
+        queue = [];
         for (var i = 0; i < roundLength; i++) {
-            var word = queue.shift();
-            console.log("working on " + word);
+            var word = tempQueue.pop();
             if (word == endWord) return count;
             for (const [key, value] of mapWords) {
                 if (diffWords(word, key)) {
