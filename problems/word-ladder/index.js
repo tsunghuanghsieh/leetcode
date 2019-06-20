@@ -20,15 +20,13 @@ var ladderLength = function(beginWord, endWord, wordList) {
     // endWord not in the array
     if (notFound) return 0;
     while (queue.length > 0) {
-        var roundLength = queue.length;
-        count++;
         var tempQueue = queue; // use a temp queue so that we don't have to use shift().
-        queue = [];
-        for (var i = 0; i < roundLength; i++) {
-            var word = tempQueue.pop();
-            if (word == endWord) return count;
+        queue = []; // reinitialize queue for a new round of adjacent words
+        count++;
+        for (var i = 0; i < tempQueue.length; i++) {
+            if (tempQueue[i] == endWord) return count;
             for (const [key, value] of mapWords) {
-                if (diffWords(word, key)) {
+                if (diffWords(tempQueue[i], key)) {
                     queue.push(key);
                     mapWords.delete(key);
                 }
