@@ -30,3 +30,4 @@
 |  26 | [License Key Formatting](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/license-key-formatting/)| Easy | javascript |
 |  27 | [LRU Cache](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/lru-cache/)| Medium | javascript |
 |  28 | [3Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/3sum/)| Medium | javascript |
+|  29 | [Word Ladder](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-ladder/)| Medium | javascript |
