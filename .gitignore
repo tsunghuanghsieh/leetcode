@@ -4,3 +4,9 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# C++ object files created by G++
+**/*.o
+
+# C++ compiled binary
+**/a.out
