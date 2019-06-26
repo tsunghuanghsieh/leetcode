@@ -3,6 +3,14 @@
         "iosfwd": "cpp",
         "string": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "map": "cpp",
+        "array": "cpp",
+        "utility": "cpp",
+        "iterator": "cpp",
+        "vector": "cpp",
+        "__locale": "cpp",
+        "__string": "cpp",
+        "string_view": "cpp"
     }
 }
