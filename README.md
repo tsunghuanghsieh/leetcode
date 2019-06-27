@@ -33,3 +33,4 @@
 |  29 | [Word Ladder](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-ladder/)| Medium | javascript |
 |  30 | [Odd Even Jump](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/odd-even-jump/)| Hard | C++ |
 |  31 | [Reverse Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/reverse-integer/)| Easy | C++ |
+|  32 | [Middle of the Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/middle-of-the-linked-list/)| Easy | javascript |
