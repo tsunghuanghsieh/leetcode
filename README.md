@@ -34,3 +34,4 @@
 |  30 | [Odd Even Jump](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/odd-even-jump/)| Hard | C++ |
 |  31 | [Reverse Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/reverse-integer/)| Easy | C++ |
 |  32 | [Middle of the Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/middle-of-the-linked-list/)| Easy | javascript |
+|  33 | [Longest Valid Parentheses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-valid-parentheses/)| Hard | C++ |
