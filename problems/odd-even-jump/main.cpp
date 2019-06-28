@@ -72,7 +72,7 @@ public:
 
 int main() {
     int vals[] = {10,13,12,14,15};
-    vector<int> A(vals, vals + sizeof(vals) / sizeof(int));
+    vector<int> A(vals, vals + sizeof(vals) / sizeof(vals[0]));
     Solution s;
     cout << s.oddEvenJumps(A) << endl;
     return 0;

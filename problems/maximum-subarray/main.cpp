@@ -23,7 +23,7 @@ public:
 int main() {
     Solution s;
     int a[] = {-2,1,-3,4,-1,2,1,-5,4};
-    vector<int> nums(a, a + sizeof(a) / sizeof(int));
+    vector<int> nums(a, a + sizeof(a) / sizeof(a[0]));
     s.maxSubArray(nums);
     return 0;
 }
