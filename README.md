@@ -38,3 +38,4 @@
 |  34 | [Merge Two Sorted Lists](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-two-sorted-lists/)| Easy | C++ |
 |  35 | [Maximum Subarray](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-subarray/)| Easy | C++ |
 |  36 | [Reverse Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/reverse-linked-list/)| Easy | C++ |
+|  36 | [Best Time to Buy and Sell Stock](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/best-time-to-buy-and-sell-stock/)| Easy | C++ |
