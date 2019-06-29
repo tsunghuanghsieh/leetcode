@@ -19,7 +19,7 @@ public:
                 // reset lowest price since we have a new highest price
                 lowest = INT32_MAX;
             }
-            if (highest > prices[i]) lowest = min(lowest, prices[i]);
+            if (highest > prices[i] && lowest > prices[i]) lowest = prices[i];
             profit = max(profit, highest - lowest);
         }
         return profit;
