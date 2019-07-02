@@ -13,6 +13,7 @@
         "__string": "cpp",
         "string_view": "cpp",
         "queue": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "algorithm": "cpp"
     }
 }
