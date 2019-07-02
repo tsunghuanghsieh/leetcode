@@ -41,3 +41,4 @@
 |  37 | [Best Time to Buy and Sell Stock](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/best-time-to-buy-and-sell-stock/)| Easy | C++ |
 |  38 | [Merge Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-sorted-array/)| Easy | C++ |
 |  39 | [Number of Islands](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/number-of-islands/)| Medium | C++ |
+|  40 | [Merge Intervals](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-intervals/)| Medium | C++ |
