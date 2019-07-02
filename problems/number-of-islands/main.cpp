@@ -2,35 +2,34 @@
 #include <vector>
 #include <map>
 #include <set>
+#include <queue>
 #include <utility>
 using namespace std;
 
 class Solution
 {
 private:
-    map<pair<int, int>, int> islands;
+    void bfs(vector<vector<char>> &grid, pair<int, int> center) {
+        queue<pair<int, int>> island;
+        island.push(center);
+        int rows = grid.size();
+        int cols = grid[0].size(); // assuming same width across all rows
 
-    void deleteAdjacent(int rows, int cols, pair<int, int> center)
-    {
-        set<pair<int, int>> adjacent;
-        adjacent.insert(center);
-
-        while (!adjacent.empty()) {
-            auto itr = adjacent.begin();
-            pair<int, int> toDelete = *itr;
-            if (islands.find(toDelete) != islands.end()) islands.erase(toDelete);
-            adjacent.erase(toDelete);
-            for (int row = toDelete.first -1; row <= toDelete.first + 1; row++)
-            {
-                if (row < 0 || row >= rows) continue;
-                pair<int, int> coor = {row, toDelete.second};
-                if (islands.find(coor) != islands.end()) adjacent.insert(coor);
-            }
-            for (int col = toDelete.second -1; col <= toDelete.second + 1; col++)
-            {
-                if (col < 0 || col >= cols) continue;
-                pair<int, int> coor = {toDelete.first, col};
-                if (islands.find(coor) != islands.end()) adjacent.insert(coor);
+        // BFS
+        while (!island.empty()) {
+            pair<int, int> adjacents = island.front();
+            island.pop();
+            grid[adjacents.first][adjacents.second] = '2'; // visited
+            // directions: left, down, right, up.
+            pair<int, int> dirs[4] = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+            for (int i = 0; i < 4; i++) {
+                int row = adjacents.first + dirs[i].first;
+                int col = adjacents.second + dirs[i].second;
+                if (row < 0 || row >= rows || col < 0 || col >= cols) continue;
+                if (grid[row][col] == '1') {
+                    island.push(make_pair(row, col));
+                    grid[row][col] = '2'; // visited
+                }
             }
         }
     }
@@ -39,29 +38,20 @@ public:
     int numIslands(vector<vector<char>> &grid)
     {
         if (grid.size() == 0) return 0;
+        int total = 0;
         int rows = grid.size();
-        int cols = grid[0].size();
+        int cols = grid[0].size(); // assuming same width across all rows
         for (int row = 0; row < rows; row++)
         {
             for (int col = 0; col < cols; col++)
             {
-                if (grid[row][col] == '1')
-                {
-                    pair<int, int> coor = {row, col};
-                    islands[coor] = 1;
+                if (grid[row][col] == '1') {
+                    bfs(grid, make_pair(row, col));
+                    total++;
                 }
             }
         }
-        int count = 0;
-        while (islands.size() > 0)
-        {
-            map<pair<int, int>, int>::iterator itr = islands.begin();
-            count++;
-            pair<int, int> key = itr->first;
-            deleteAdjacent(rows, cols, key);
-            itr = next(itr);
-        }
-        return count;
+        return total;
     }
 };
 
