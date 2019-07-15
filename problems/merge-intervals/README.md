@@ -19,6 +19,8 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 Problem description is lousy and inadequate. The examples given seem to imply input is sorted, but it is not.
 
+## Runtime
+O(n log m) where `n` is the number of intervals in the input and `m` is the number of disjoint intervals (`m` <= `n`).
 
 ## Interview
 As of 07/01/2019, leetcode premium subscription says Facebook 27 times, Google 21 times, Amazon 21 times in the last 6 months.
