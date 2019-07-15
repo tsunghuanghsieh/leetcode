@@ -55,9 +55,12 @@ public:
                 start = intervals[i][0];
                 end = intervals[i][1];
                 if (itr != mapIntervals.begin()) {
+                    // as long as it's not at the beginning of map
+                    // we need to look at the previous smaller key
                     int prevStart = prev(itr)->first;
                     int prevEnd = prev(itr)->second;
                     if (prevEnd >= start) {
+                        // overlapped
                         start = prevStart;
                         end = max(end, prevEnd);
                     }
