@@ -14,6 +14,7 @@
         "string_view": "cpp",
         "queue": "cpp",
         "set": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "memory": "cpp"
     }
 }
