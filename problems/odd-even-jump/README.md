@@ -62,5 +62,5 @@ As of 06/25/2019, leetcode premium subscription says Google 55 times in the last
 ## Additional info
 Initially, I was trying to solve it using javascript. However, it does not have built-in sorted `Map` like `map` in C++ nor `TreeMap` in Java. It will be non trivial (for me at least) to implement a sorted `Map` in javascript to solve this problem with similar performance (logarithmic in `map`/`TreeMap` size for `map::lower_bound(const key_type& k)` and `map::upper_bound(const key_type& k)`, `TreeMap.lowerKey(K key)` and `TreeMap.higherKey(K key)`), so C++ it is.
 With `map` class, `map::lower_bound(const key_type& k)` and `map::upper_bound(const key_type& k)` methods, I was slowly able to come to understand and appreciate the solutions. I owe a lot to the links below.
-[花花酱 LeetCode 975. Odd Even Jump](https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-975-odd-even-jump/)
-[LiteCode 975. Odd Even Jump](https://leetcode.com/articles/odd-even-jump/)
+* [花花酱 LeetCode 975. Odd Even Jump](https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-975-odd-even-jump/)
+* [LeetCode 975. Odd Even Jump](https://leetcode.com/articles/odd-even-jump/)
