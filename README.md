@@ -43,3 +43,4 @@
 |  39 | [Number of Islands](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/number-of-islands/)| Medium | C++ |
 |  40 | [Merge Intervals](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-intervals/)| Medium | C++ |
 |  41 | [Meeting Rooms II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/meeting-rooms-ii/)| Medium | C++ |
+|  42 | [Trapping Rain Water](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/trapping-rain-water/)| Hard | C++ |
