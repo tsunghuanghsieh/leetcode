@@ -4,6 +4,22 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
+    var mapNums = new Map();
+    nums.forEach(function(num, idx) {
+        mapNums.set(num, idx); // keep the last index of duplicate integers in the array
+    })
+    for (var i = 0; i < nums.length; i++) {
+        var diff = target - nums[i];
+        // find diff in map, and make sure it is a different index in the array
+        if (mapNums.has(diff) && i != mapNums.get(diff)) {
+            return [i, mapNums.get(diff)];
+        }
+    }
+};
+
+// If the input contains a lot of duplicate integers, this may run slightly faster since
+// the second loop looks at unique keys. The code however is somewhat convoluted.
+var twoSum = function(nums, target) {
     arraySize = nums.length;
     var numsMap = new Map();
     // console.log("target " + target + '')
@@ -25,7 +41,7 @@ var twoSum = function(nums, target) {
         if (numsMap.has(diff)) {
             var indices = numsMap.get(diff);
             var len = indices.length;
-            
+
             // unique, one and only in the array
             if (len == 1) {
                 if (numsMap.get(key) == numsMap.get(diff)) {
@@ -45,7 +61,7 @@ var twoSum = function(nums, target) {
                 console.log('This should never happen. More than 1 solution found ' + indices)
                 continue;
             }
-            
+
             // unique number
             // console.log(key + ' ' + value + ' diff ' + diff + ' ' + numsMap.get(diff));
             return [value, indices];
