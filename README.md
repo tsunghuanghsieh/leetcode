@@ -3,7 +3,7 @@
 |   # | Title | Difficulty| Language Used |
 | --: | ----- | --------- | ------------- |
 |   1 | [Two Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/two-sum)| Easy | javascript |
-|   2 | [Add Two Numbers](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/add-two-numbers)| Medium | C# |
+|   2 | [Add Two Numbers](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/add-two-numbers)| Medium | C#, javascript |
 |   3 | [Longest Substring Without Repeating Characters](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-substring-without-repeating-characters/)| Medium | golang |
 |   4 | [Longest Palindromic Substring](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-palindromic-substring/)| Medium | javascript |
 |   5 | [ZigZag Conversion](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/zigzag-conversion/)| Medium | C++ |
