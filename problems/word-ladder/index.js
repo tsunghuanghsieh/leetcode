@@ -11,8 +11,10 @@ var ladderLength = function(beginWord, endWord, wordList) {
     var count = 1;
     for (var idx = 0; idx < wordList.length; idx++) {
         if (diffWords(beginWord, wordList[idx])) {
+            // one character different than beginWord
             queue.push(wordList[idx]);
         } else {
+            // more than one character different from beginWord
             mapWords.set(wordList[idx], idx);
         }
         if (endWord == wordList[idx]) notFound = false;
@@ -23,6 +25,8 @@ var ladderLength = function(beginWord, endWord, wordList) {
         var tempQueue = queue; // use a temp queue so that we don't have to use shift().
         queue = []; // reinitialize queue for a new round of adjacent words
         count++;
+        // going through the queue to look for words from map that are 1 character different
+        // append it to the queue and remove it from the map
         for (var i = 0; i < tempQueue.length; i++) {
             if (tempQueue[i] == endWord) return count;
             for (const [key, value] of mapWords) {
