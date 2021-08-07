@@ -44,3 +44,7 @@
 |  40 | [Merge Intervals](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-intervals/)| Medium | C++ |
 |  41 | [Meeting Rooms II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/meeting-rooms-ii/)| Medium | C++ |
 |  42 | [Trapping Rain Water](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/trapping-rain-water/)| Hard | C++ |
+|  43 | [Asteroid Collision](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/asteroid-collision/)| Medium | C++ |
+|  44 | [Max Stack](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/max-stack/)| Easy | C++ |
+|  45 | [Perfect Squares](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/perfect-squares/)| Medium | C++ |
+|  46 | [Letter Combinations of a Phone Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/letter-combinations-of-a-phone-number/)| Medium | C++ |
