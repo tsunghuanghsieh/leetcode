@@ -49,3 +49,4 @@
 |  45 | [Perfect Squares](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/perfect-squares/)| Medium | C++ |
 |  46 | [Letter Combinations of a Phone Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/letter-combinations-of-a-phone-number/)| Medium | C++ |
 |  47 | [Print in Order](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/print-in-order/)| Easy | python |
+|  48 | [Print FooBar Alternately](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/print-foobar-alternately/)| Medium | python |
