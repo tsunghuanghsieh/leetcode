@@ -51,4 +51,4 @@
 |    47 | [Print in Order](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/print-in-order/)| Easy | python |
 |    48 | [Print FooBar Alternately](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/print-foobar-alternately/)| Medium | python |
 |    49 | [Print Zero Even Odd](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/print-zero-even-odd/)| Medium | python |
-|    50 | [Array Prototype Last](https://leetcode.com/problems/array-prototype-last/)| Easy | Typescript |
+|    50 | [Array Prototype Last](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/array-prototype-last/)| Easy | Typescript |
