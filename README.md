@@ -54,3 +54,4 @@
 |    50 | [Array Prototype Last](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/array-prototype-last/)| Easy | Typescript |
 |    51 | [Implement Stack using Queues](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/implement-stack-using-queues)| Easy | C++ |
 |    52 | [Longest Common Prefix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-common-prefix)| Easy | C++ |
+|    53 | [Valid Parentheses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-parentheses)| Easy | C++ |
