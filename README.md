@@ -53,3 +53,4 @@
 |    49 | [Print Zero Even Odd](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/print-zero-even-odd/)| Medium | python |
 |    50 | [Array Prototype Last](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/array-prototype-last/)| Easy | Typescript |
 |    51 | [Implement Stack using Queues](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/implement-stack-using-queues)| Easy | C++ |
+|    52 | [Longest Common Prefix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-common-prefix)| Easy | C++ |
