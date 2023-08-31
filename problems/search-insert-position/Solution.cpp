@@ -18,14 +18,14 @@ public:
             if (nums[pos] >= target) {
                 if (half == 0) {
                     pos--;
-                    break; // return pos;
+                    break;
                 }
                 if (half) pos -= half;
             }
             else {
                 if (half == 0) {
                     pos++;
-                    break; // return pos;
+                    break;
                 }
                 if (half) pos += half;
             }
