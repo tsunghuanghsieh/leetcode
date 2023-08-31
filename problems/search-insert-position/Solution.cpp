@@ -6,31 +6,20 @@ using namespace std;
 class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
-        int length = nums.size();
         // special cases
         if (nums[0] >= target) return 0;
-        if (length == 1 || nums[length - 1] < target) return length;
+        if (nums.size() == 1 || nums[nums.size() - 1] < target) return nums.size();
 
-        int pos, half;
-        pos = half = length / 2;
-        while (half >= 1) {
-            half /= 2;
-            if (nums[pos] >= target) {
-                if (half == 0) {
-                    pos--;
-                    break;
-                }
-                if (half) pos -= half;
+        int half, low = 1, high = nums.size();
+        while (low <= high) {
+            half = (low + high) / 2;
+            if (nums[half] >= target) {
+                high = half - 1;
             }
             else {
-                if (half == 0) {
-                    pos++;
-                    break;
-                }
-                if (half) pos += half;
+                low = half + 1;
             }
         }
-        if (nums[pos] < target) pos++;
-        return pos;
+        return (low > high) ? low : (low + high) / 2;
     }
 };
