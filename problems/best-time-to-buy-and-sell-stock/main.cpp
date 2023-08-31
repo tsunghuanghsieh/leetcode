@@ -1,35 +1,33 @@
+#include <fstream>
 #include <iostream>
-#include <map>
+#include <regex>
 #include <vector>
 using namespace std;
 
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        if (prices.size() <= 1) return 0;
+#include "Solution.cpp"
 
-        int profit = 0;
-        int highest = prices[prices.size() - 1];
-        int lowest = INT32_MAX;
+vector<int> readToIntVector(ifstream& fin) {
+    string line, value;
+    vector<int> nums;
 
-        for (int i = prices.size() - 1; i >= 0; i--) {
-            // going reverse order to get the highest price
-            if (highest < prices[i]) {
-                highest = prices[i];
-                // reset lowest price since we have a new highest price
-                lowest = INT32_MAX;
-            }
-            if (highest > prices[i] && lowest > prices[i]) lowest = prices[i];
-            profit = max(profit, highest - lowest);
-        }
-        return profit;
+    std::getline(fin, line);
+    stringstream ss(line);
+    while (std::getline(ss, value, ',')) {
+        nums.emplace_back(stoi(std::regex_replace(value, std::regex("(^\\s+|\\s+$|\\[|\\]|\")"), "")));
     }
-};
+    // debug
+    // for (int i = 0; i < nums.size(); i++) {
+    //     cout << "nums[" << i << "] " << nums[i] <<  endl;
+    // }
+    return nums;
+}
 
-int main() {
+int main(int argc, char **argv) {
     Solution s;
-    int a[] = {7,1,5,3,6,4};
-    vector<int> prices(a, a + sizeof(a) / sizeof(a[0]));
+    ifstream fin;
+    fin.open(argv[1]);
+
+    vector<int> prices = readToIntVector(fin);
     cout << s.maxProfit(prices) << endl;
     return 0;
 }
