@@ -32,7 +32,6 @@ int main(int argc, char **argv) {
     vector<int> nums = readToIntVector(fin);
     int target;
     fin >> target;
-    cout << "target " << target << endl;
     int result = soln.searchInsert(nums, target);
     cout << result << endl;
     return 0;
