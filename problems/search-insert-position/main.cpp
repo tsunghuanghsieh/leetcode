@@ -14,7 +14,6 @@ vector<int> readToIntVector(ifstream& fin) {
     vector<int> nums;
 
     std::getline(fin, line);
-    cout << "line " << line << endl;
     stringstream ss(line);
     while (std::getline(ss, value, ',')) {
         nums.emplace_back(stoi(std::regex_replace(value, std::regex("(^\\s+|\\s+$|\\[|\\]|\")"), "")));
