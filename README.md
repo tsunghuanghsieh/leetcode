@@ -55,3 +55,4 @@
 |    51 | [Implement Stack using Queues](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/implement-stack-using-queues)| Easy | C++ |
 |    52 | [Longest Common Prefix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-common-prefix)| Easy | C++ |
 |    53 | [Valid Parentheses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-parentheses)| Easy | C++ |
+|    54 | [Search Insert Position](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/search-insert-position)| Easy | C++ |
