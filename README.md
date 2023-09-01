@@ -56,3 +56,4 @@
 |    52 | [Longest Common Prefix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-common-prefix)| Easy | C++ |
 |    53 | [Valid Parentheses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-parentheses)| Easy | C++ |
 |    54 | [Search Insert Position](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/search-insert-position)| Easy | C++ |
+|    54 | [Fizz Buzz](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fizz-buzz)| Easy | C++ |
