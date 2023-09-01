@@ -58,3 +58,4 @@
 |    54 | [Search Insert Position](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/search-insert-position)| Easy | C++ |
 |    55 | [Fizz Buzz](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fizz-buzz)| Easy | C++ |
 |    55 | [Palindrome Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/palindrome-number)| Easy | C++ |
+|    56 | [Contains Duplicate](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/contains-duplicate)| Easy | C++ |
