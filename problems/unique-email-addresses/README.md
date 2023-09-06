@@ -33,4 +33,5 @@ Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually rec
 
 
 ## Interview
+As of 09/06/2023, leetcode premium subscription says Twitch 12 times, Amazon 2 times in the last 6 - 12 months.
 As of 06/04/2019, leetcode premium subscription says Google 104 times, Amazon 10 times in the last 6 months.
