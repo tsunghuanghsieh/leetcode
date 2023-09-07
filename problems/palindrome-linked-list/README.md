@@ -21,3 +21,6 @@ Output: false
 * `0 <= Node.val <= 9`
 
 **Follow up**: Could you do it in `O(n)` time and `O(1)` space?
+
+## Interview
+As of 09/07/2023, leetcode premium subscription says Amazon 10 times, Apple 8 times, Microsoft 4 times in the last 6 months.
