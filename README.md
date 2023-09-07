@@ -61,3 +61,4 @@
 |    57 | [Contains Duplicate](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/contains-duplicate)| Easy | C++ |
 |    58 | [Pascal's Triangle](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/pascals-triangle)| Easy | C++ |
 |    59 | [Unique Number of Occurrences](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/unique-number-of-occurrences)| Easy | C++ |
+|    60 | [Palindrome Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/palindrome-linked-list)| Easy | C++ |
