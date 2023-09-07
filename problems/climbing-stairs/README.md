@@ -28,4 +28,5 @@ Explanation: There are three ways to climb to the top.
 Leetcode mocked interview Question 1
 Splunk phone interview
 
-As of 06/04/2019, leetcode premium subscription says Amazon 11 times in the last 6 months.
+* As of 09/06/2023, leetcode premium subscription says Amazon 11 times, Bloomberg and Googgle 5 times, Adobe and Apple 4 times, etc, in the last 6 months.
+* As of 06/04/2019, leetcode premium subscription says Amazon 11 times in the last 6 months.
