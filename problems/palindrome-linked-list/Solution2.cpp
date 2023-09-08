@@ -28,42 +28,32 @@ struct ListNode {
 class Solution2 {
 public:
     bool isPalindrome(ListNode* head) {
-        bool result = true;
-        ListNode *fast = head, *slow = head;
+        if (head->next == nullptr) return true;
+
+        ListNode *fast = head, *slow = head, *curr = head, *prev = nullptr;
         // Run through the list to get the middle node
         // at each iteration, slow advances 1 node and fast advances 2 nodes
-        while (fast != NULL) {
-            fast = fast->next;
-            if (fast) fast = fast->next;
-            if (fast) slow = slow->next;
+        // and reverse first half in the linked list
+        while (fast && fast->next) {
+            fast = fast->next->next;
+            slow = slow->next;
+            curr->next = prev;
+            prev = curr;
+            curr = slow;
         }
-        ListNode *last = slow;
-        slow = last->next;
-        // Reverse the second half to compare against the first half
-        reverseListNode(slow);
-        ListNode *front = head;
-        ListNode *back = slow;
-        while (back) {
-            result = result && (back->val == front->val);
-            back = back->next;
-            front = front->next;
+        // not null (odd numbered length)
+        // curr is at the middle node, need to advance 1 node.
+        if (fast) curr = curr->next;
+        // compare values in first half and second half
+        while (curr && prev) {
+            if (curr->val != prev->val) return false;
+            curr = curr->next;
+            prev = prev->next;
         }
-        // TODO: restore the linked list node
-        return result;
+        return true;
     }
 
 private:
-    // Pass in a reference to a pointer
-    void reverseListNode(ListNode *&head) {
-        ListNode *prev = NULL;
-        while (head) {
-            ListNode *next = head->next;
-            head->next = prev;
-            prev = head;
-            head = next;
-        }
-        head = prev;
-    }
     void printListNode(ListNode *head) {
         ListNode *ptr = head;
         while (ptr) {
