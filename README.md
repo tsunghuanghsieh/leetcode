@@ -65,3 +65,4 @@
 |    61 | [Sort Integers by The Number of 1 Bits](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/sort-integers-by-the-number-of-1-bits)| Easy | C++ |
 |    62 | [Remove Duplicates from Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/remove-duplicates-from-sorted-array)| Easy | C++ |
 |    63 | [Binary Search](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-search)| Easy | C++ |
+|    64 | [Valid Anagram](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-anagram)| Easy | C++ |
