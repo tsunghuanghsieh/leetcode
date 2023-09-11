@@ -64,3 +64,4 @@
 |    60 | [Palindrome Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/palindrome-linked-list)| Easy | C++ |
 |    61 | [Sort Integers by The Number of 1 Bits](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/sort-integers-by-the-number-of-1-bits)| Easy | C++ |
 |    62 | [Remove Duplicates from Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/remove-duplicates-from-sorted-array)| Easy | C++ |
+|    63 | [Binary Search](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-search)| Easy | C++ |
