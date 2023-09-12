@@ -34,5 +34,6 @@ int main(int argc, char **argv) {
 
     vector<int> nums = readToIntVector(fin);
     cout << "majority is " << soln.majorityElement(nums) << endl;
+    cout << "majority is " << soln2.majorityElement(nums) << endl;
     return 0;
 }
