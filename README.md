@@ -70,3 +70,4 @@
 |    66 | [Majority Element](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/majority-element)| Easy | C++ |
 |    67 | [Fibonacci Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fibonacci-number)| Easy | C++ |
 |    68 | [Valid Palindrome](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome)| Easy | C++ |
+|    69 | [Logger Rate Limiter](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/logger-rate-limiter)| Easy | C++ |
