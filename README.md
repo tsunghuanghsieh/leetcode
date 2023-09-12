@@ -67,3 +67,4 @@
 |    63 | [Binary Search](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-search)| Easy | C++ |
 |    64 | [Valid Anagram](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-anagram)| Easy | C++ |
 |    65 | [Happy Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/happy-number)| Easy | C++ |
+|    66 | [Majority Element](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/majority-element)| Easy | C++ |
