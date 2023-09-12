@@ -66,3 +66,4 @@
 |    62 | [Remove Duplicates from Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/remove-duplicates-from-sorted-array)| Easy | C++ |
 |    63 | [Binary Search](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-search)| Easy | C++ |
 |    64 | [Valid Anagram](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-anagram)| Easy | C++ |
+|    65 | [Happy Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/happy-number)| Easy | C++ |
