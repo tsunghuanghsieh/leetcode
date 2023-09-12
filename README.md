@@ -69,4 +69,4 @@
 |    65 | [Happy Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/happy-number)| Easy | C++ |
 |    66 | [Majority Element](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/majority-element)| Easy | C++ |
 |    67 | [Fibonacci Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fibonacci-number)| Easy | C++ |
-|    67 | [Valid Palindrome](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome)| Easy | C++ |
+|    68 | [Valid Palindrome](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome)| Easy | C++ |
