@@ -72,3 +72,4 @@
 |    68 | [Valid Palindrome](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome)| Easy | C++ |
 |    69 | [Logger Rate Limiter](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/logger-rate-limiter)| Easy | C++ |
 |    70 | [Complement of Base 10 Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/complement-of-base-10-integer)| Easy | C++ |
+|    71 | [Valid Palindrome II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome-ii)| Easy | C++ |
