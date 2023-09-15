@@ -4,7 +4,7 @@
 | ----: | ----- | --------- | ------------- |
 |     1 | [Two Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/two-sum)| Easy | C++, javascript |
 |     2 | [Add Two Numbers](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/add-two-numbers)| Medium | C#, javascript |
-|     3 | [Longest Substring Without Repeating Characters](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-substring-without-repeating-characters/)| Medium | golang, javascript |
+|     3 | [Longest Substring Without Repeating Characters](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-substring-without-repeating-characters/)| Medium | C++, golang, javascript |
 |     4 | [Longest Palindromic Substring](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-palindromic-substring/)| Medium | javascript |
 |     5 | [ZigZag Conversion](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/zigzag-conversion/)| Medium | C++ |
 |     6 | [Integer to Roman](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/integer-to-roman/)| Medium | C++ |
