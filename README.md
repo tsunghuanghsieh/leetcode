@@ -32,7 +32,7 @@
 |    28 | [3Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/3sum/)| Medium | javascript |
 |    29 | [Word Ladder](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-ladder/)| Medium | javascript |
 |    30 | [Odd Even Jump](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/odd-even-jump/)| Hard | C++ |
-|    31 | [Reverse Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/reverse-integer/)| Easy | C++ |
+|    31 | [Reverse Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/reverse-integer/)| Medium | C++ |
 |    32 | [Middle of the Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/middle-of-the-linked-list/)| Easy | javascript |
 |    33 | [Longest Valid Parentheses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-valid-parentheses/)| Hard | C++ |
 |    34 | [Merge Two Sorted Lists](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-two-sorted-lists/)| Easy | C++ |
