@@ -12,7 +12,6 @@ int main(int argc, char **argv) {
 
     string s;
     getline(fin, s, '\n');
-    // cout << ":" << s << ":" << endl;
     int ans;
     fin >> ans;
     int result = soln.lengthOfLongestSubstring(s);
