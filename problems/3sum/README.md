@@ -16,3 +16,6 @@ A solution set is:
   [-1, -1, 2]
 ]
 ```
+
+## Interview
+As of 09/12/2023, leetcode premium subscription says Amazon 23 times, Apple 14 times, Adobe 12 times, Facebook and Google 10 times in the last 6 months.
