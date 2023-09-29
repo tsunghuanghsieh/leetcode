@@ -74,4 +74,4 @@
 |    70 | [Complement of Base 10 Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/complement-of-base-10-integer)| Easy | C++ |
 |    71 | [Valid Palindrome II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome-ii)| Easy | C++ |
 |    72 | [Rotate String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/rotate-string)| Easy | C++ |
-|    73 | [String to Integer (atoi)](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/string-to-integer-atoi)| Medium | C++ ||    73 | [String to Integer (atoi)](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/string-to-integer-atoi)| Medium | C++ |
+|    73 | [String to Integer (atoi)](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/string-to-integer-atoi)| Medium | C++ |
