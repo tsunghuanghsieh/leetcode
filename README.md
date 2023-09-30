@@ -76,4 +76,4 @@
 |    72 | [Rotate String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/rotate-string)| Easy | C++ |
 |    73 | [String to Integer (atoi)](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/string-to-integer-atoi)| Medium | C++ |
 |    74 | [Next Permutation](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/next-permutation)| Medium | C++ |
-|    75 | [Search in Rotated Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/nsearch-in-rotated-sorted-array)| Medium | C++ |
+|    75 | [Search in Rotated Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/search-in-rotated-sorted-array)| Medium | C++ |
