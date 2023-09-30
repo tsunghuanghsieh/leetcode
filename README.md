@@ -78,3 +78,4 @@
 |    74 | [Next Permutation](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/next-permutation)| Medium | C++ |
 |    75 | [Search in Rotated Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/search-in-rotated-sorted-array)| Medium | C++ |
 |    76 | [Find First and Last Position of Element in Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-first-and-last-position-of-element-in-sorted-array)| Medium | C++ |
+|    77 | [Count and Say](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/count-and-say)| Medium | C++ |
