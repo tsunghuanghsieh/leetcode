@@ -70,7 +70,7 @@
 |    66 | [Majority Element](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/majority-element)| Easy | C++ ||
 |    67 | [Fibonacci Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fibonacci-number)| Easy | C++ ||
 |    68 | [Valid Palindrome](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome)| Easy | C++ ||
-|    69 | [Logger Rate Limiter](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/logger-rate-limiter)| Easy | C++ ||
+|    69 | [Logger Rate Limiter](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/logger-rate-limiter)| Easy | C++ | Y |
 |    70 | [Complement of Base 10 Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/complement-of-base-10-integer)| Easy | C++ ||
 |    71 | [Valid Palindrome II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-palindrome-ii)| Easy | C++ ||
 |    72 | [Rotate String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/rotate-string)| Easy | C++ ||
