@@ -1,4 +1,4 @@
-[169. Majority Element](https://leetcode.com/problems/majority-element/)
+# [169. Majority Element](https://leetcode.com/problems/majority-element/)
 
 Given an array nums of size `n`, return _the majority element_.
 

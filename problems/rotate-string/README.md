@@ -1,4 +1,4 @@
-[796. Rotate String](https://leetcode.com/problems/rotate-string/)
+# [796. Rotate String](https://leetcode.com/problems/rotate-string/)
 
 Given two strings `s` and `goal`, return `true` _if and only if `s` can become `goal` after some number of **shifts** on `s`_.
 

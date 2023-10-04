@@ -1,4 +1,4 @@
-[680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+# [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
 
 Given a string `s`, return `true` _if the `s` can be palindrome after deleting **at most one** character from it_.
 

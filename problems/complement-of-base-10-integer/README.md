@@ -1,4 +1,4 @@
-[1009. Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/description/)
+# [1009. Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/description/)
 
 The **complement** of an integer is the integer you get when you flip all the `0`'s to `1`'s and all the `1`'s to `0`'s in its binary representation.
 
