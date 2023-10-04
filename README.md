@@ -81,3 +81,4 @@
 |    77 | [Count and Say](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/count-and-say)| Medium | C++ ||
 |    78 | [Group Anagrams](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/group-anagrams)| Medium | C++ ||
 |    79 | [Pow(x, n)](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/powx-n)| Medium | C++ ||
+|    80 | [Spiral Matrix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/spiral-matrix)| Medium | C++ ||
