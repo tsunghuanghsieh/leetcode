@@ -1,4 +1,4 @@
-# [716. Max Stack](https://leetcode.com/problems/max-stack/)
+# [716. Max Stack](https://leetcode.com/problems/max-stack/) (**Premium**)
 
 Design a max stack that supports push, pop, top, peekMax and popMax.
 
