@@ -80,3 +80,4 @@
 |    76 | [Find First and Last Position of Element in Sorted Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-first-and-last-position-of-element-in-sorted-array)| Medium | C++ |
 |    77 | [Count and Say](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/count-and-say)| Medium | C++ |
 |    78 | [Group Anagrams](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/group-anagrams)| Medium | C++ |
+|    79 | [Pow(x, n)](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/powx-n)| Medium | C++ |
