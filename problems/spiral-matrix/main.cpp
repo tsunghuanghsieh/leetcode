@@ -21,6 +21,15 @@ void printMatrix(vector<vector<int>> matrix) {
     cout << "]" << endl;
 }
 
+void printResult(vector<int> result) {
+    cout << "[";
+    for (int i = 0; i < result.size(); i++) {
+        cout << result[i];
+        if (i < result.size() - 1) cout << ",";
+    }
+    cout << "]";
+}
+
 int main(int argc, char **argv) {
     Solution soln;
     ifstream fin;
@@ -41,11 +50,11 @@ int main(int argc, char **argv) {
         }
         matrix.push_back(nums);
     }
+    printMatrix(matrix);
     fin >> expected;
     cout << expected << " : expected" << endl;
-    printMatrix(matrix);
-    soln.spiralOrder(matrix);
-    // cout <<  << " : actual" << endl;
+    printResult(soln.spiralOrder(matrix));
+    cout <<  " : actual" << endl;
 
     return 0;
 }
