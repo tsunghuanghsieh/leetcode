@@ -6,9 +6,11 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution2 soln2;
     ifstream fin;
     regex patternNum("\\d+");
     string line;
@@ -24,7 +26,8 @@ int main(int argc, char **argv) {
     }
     fin >> expected;
     cout << expected << " : expected" << endl;
-    cout << ((soln.canJump(nums) == expected) ? "correct" : "wrong") << endl;
+    cout << "Solution 1: " << ((soln.canJump(nums) == expected) ? "correct" : "wrong") << endl;
+    cout << "Solution 2: " << ((soln2.canJump(nums) == expected) ? "correct" : "wrong") << endl;
 
     return 0;
 }
