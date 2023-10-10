@@ -7,20 +7,11 @@ class Solution {
 public:
     // tracing backward
     bool canJump(vector<int>& nums) {
-        if (nums.size() == 1) return true;
-
-        vector<bool> reachable(nums.size(), false);
-        reachable[nums.size() - 1] = true;
-        int idx = nums.size() - 2;
-        reachable[idx] = idx + nums[idx] >= nums.size() - 1;
-        idx--;
-
+        int idx_reachable = nums.size() - 1, idx = nums.size() - 2;
         while (idx >= 0) {
-            int i = idx, stop = min<int>(nums.size() - 1, idx + nums[idx]);
-            while (!reachable[i] && i <= stop) i++;
-            if (i < stop || (i == stop && reachable[i])) reachable[idx] = true;
+            if (idx + nums[idx] >= idx_reachable) idx_reachable = idx;
             idx--;
         }
-        return reachable[0];
+        return idx_reachable == 0;
     }
 };
