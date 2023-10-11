@@ -3,6 +3,9 @@
 #include <vector>
 using namespace std;
 
+// Runtime
+// O(n log m) where n is the number of intervals in the input and m is the number of disjoint intervals (m <= n).
+
 class Solution {
 private:
     // mapIntervals: map of intervals added so far

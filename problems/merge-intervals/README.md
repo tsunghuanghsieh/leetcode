@@ -20,9 +20,6 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 * `intervals[i].length == 2`
 * `0 <= starti <= endi <= 10^4`
 
-## Runtime
-O(n log m) where `n` is the number of intervals in the input and `m` is the number of disjoint intervals (`m` <= `n`).
-
 ## Interview
 As of 10/10/2023, leetcode premium subscription says Facebook 21 times, Amazon 14 times, Google 12 times, Bloomberg 12 times and Apple 9 times in the last 6 months.
 As of 07/01/2019, leetcode premium subscription says Facebook 27 times, Google 21 times, Amazon 21 times in the last 6 months.
