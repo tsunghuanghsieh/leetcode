@@ -7,6 +7,7 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 void printResult(vector<vector<int>> intervals) {
     cout << "[";
@@ -19,6 +20,7 @@ void printResult(vector<vector<int>> intervals) {
 
 int main(int argc, char** argv) {
     Solution s;
+    Solution2 soln2;
     regex patternNumber("\\d+");
     string line;
     ifstream fin(argv[1]);
@@ -34,8 +36,10 @@ int main(int argc, char** argv) {
             interval.push_back(atoi((*itr).str().c_str()));
             intervals.push_back(interval);
         }
-        intervals = s.merge(intervals);
-        printResult(intervals);
+        vector<vector<int>> res1 = s.merge(intervals);
+        printResult(res1);
+        vector<vector<int>> res2 = soln2.merge(intervals);
+        printResult(res2);
         cout << endl;
     }
     return 0;
