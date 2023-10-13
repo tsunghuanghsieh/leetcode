@@ -29,8 +29,8 @@ class Solution {
 public:
     vector<vector<int>> verticalOrder(TreeNode* root) {
         vector<vector<int>> result;
-        queue<pair<TreeNode*, int>> qNodes;
-        int lvl = 1;
+        queue<pair<TreeNode*, int>> qNodes; // BFS tree with node and idx of column
+        int lvl = 1; // max number of nodes at the current level
         qNodes.push(make_pair(root, 0));
         while (qNodes.size() > 0) {
             int cntNullptr = 0;
@@ -39,20 +39,25 @@ public:
                 qNodes.pop();
                 if (curr.first == nullptr) {
                     cntNullptr++;
+                    // we need to fill the empty child nodes with nullptr
                     qNodes.push(make_pair(curr.first, -1));
                     qNodes.push(make_pair(curr.first, -1));
                     continue;
                 }
+                // grow by 1 at the leftmost end, and update offset accordingly
                 if (curr.first && curr.second < 0 && offset == 0) {
                     result.insert(result.begin(), vector<int>({curr.first->val}));
                     offset++;
                 }
+                // grow by 1 at the rightmost end or the root node
                 else if (curr.second + offset >= result.size() || result.size() == 0) {
                     result.emplace_back(vector<int>({curr.first->val}));
                 }
                 else {
                     result[curr.second + offset].emplace_back(curr.first->val);
                 }
+                // its children are +/-1 away from its index, offset by 1 if, at the current level,
+                // the number of nodes grow by 1 at the leftmost end.
                 qNodes.push(make_pair(curr.first->left, curr.second - 1 + offset));
                 qNodes.push(make_pair(curr.first->right, curr.second + 1 + offset));
             }
