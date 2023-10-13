@@ -84,3 +84,4 @@
 |    80 | [Spiral Matrix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/spiral-matrix)| Medium | C++ ||
 |    81 | [Jump Game](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/jump-game)| Medium | C++ ||
 |    82 | [Binary Tree Vertical Order Traversal](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-tree-vertical-order-traversal)| Medium | C++ | Y |
+|    83 | [Buildings With an Ocean View](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/buildings-with-an-ocean-view)| Medium | C++ | Y |
