@@ -83,3 +83,4 @@
 |    79 | [Pow(x, n)](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/powx-n)| Medium | C++ ||
 |    80 | [Spiral Matrix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/spiral-matrix)| Medium | C++ ||
 |    81 | [Jump Game](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/jump-game)| Medium | C++ ||
+|    82 | [Binary Tree Vertical Order Traversal](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-tree-vertical-order-traversal)| Medium | C++ | Y |
