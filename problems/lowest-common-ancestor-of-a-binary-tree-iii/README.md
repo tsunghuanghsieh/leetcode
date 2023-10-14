@@ -15,6 +15,7 @@ class Node {
 According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/Lowest_common_ancestor): "The lowest common ancestor of two nodes p and q in a tree T is the lowest node that has both p and q as descendants (where we allow **a node to be a descendant of itself**)."
 
 **Example 1:**
+
 ![Example 1 Binary Tree](https://assets.leetcode.com/uploads/2018/12/14/binarytree.png)
 ```
 Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
@@ -23,6 +24,7 @@ Explanation: The LCA of nodes 5 and 1 is 3.
 ```
 
 **Example 2:**
+
 ![Example 2 Binary Tree](https://assets.leetcode.com/uploads/2018/12/14/binarytree.png)
 ```
 Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
