@@ -69,8 +69,7 @@ int main(int argc, char **argv) {
             itr++;
         }
     }
-    printAncestry(p);
-    printAncestry(q);
+
     cout << expected << " : expected" << endl;
     Node* result = soln.lowestCommonAncestor(p, q);
     cout << result->val << " : actual" << endl;
