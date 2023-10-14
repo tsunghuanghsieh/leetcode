@@ -8,6 +8,7 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 void printAncestry(Node *node) {
     Node *curr = node;
@@ -20,6 +21,7 @@ void printAncestry(Node *node) {
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution2 soln2;
     regex patternVal("(-)?\\d+|null");
     int val_p, val_q, expected;
     ifstream fin(argv[1]);
@@ -72,6 +74,8 @@ int main(int argc, char **argv) {
 
     cout << expected << " : expected" << endl;
     Node* result = soln.lowestCommonAncestor(p, q);
-    cout << result->val << " : actual" << endl;
+    Node* result2 = soln2.lowestCommonAncestor(p, q);
+    cout << result->val << " : actual soln" << endl;
+    cout << result2->val << " : actual soln2" << endl;
     return 0;
 }

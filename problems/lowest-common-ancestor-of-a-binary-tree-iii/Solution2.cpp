@@ -25,20 +25,15 @@ public:
 };
 #endif
 
-class Solution {
+// 2 Runner solution
+class Solution2 {
 public:
     Node* lowestCommonAncestor(Node* p, Node * q) {
-        unordered_set<Node*> ancestry_p;
-        Node *temp = p;
-
-        while (temp) {
-            ancestry_p.insert(temp);
-            temp = temp->parent;
+        Node *temp_p = p, *temp_q = q;
+        while (temp_p != temp_q) {
+            temp_p = (temp_p->parent) ? temp_p->parent : q;
+            temp_q = (temp_q->parent) ? temp_q->parent : p;
         }
-        temp = q;
-        while (ancestry_p.find(temp) == ancestry_p.end()) {
-            temp = temp->parent;
-        }
-        return temp;
+        return temp_q;
     }
 };
