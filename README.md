@@ -87,3 +87,4 @@
 |    83 | [Buildings With an Ocean View](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/buildings-with-an-ocean-view)| Medium | C++ | Y |
 |    84 | [Minimum Remove to Make Valid Parentheses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-remove-to-make-valid-parentheses)| Medium | C++ ||
 |    85 | [Lowest Common Ancestor of a Binary Tree III](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/lowest-common-ancestor-of-a-binary-tree-iii)| Medium | C++ | Y |
+|    86 | [Maximum Value at a Given Index in a Bounded Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-value-at-a-given-index-in-a-bounded-array)| Medium | C++ ||
