@@ -17,7 +17,7 @@ public:
     double soupServings(int n) {
         double probability = 0.0;
         for (int i = 0; i < n + 25; i += 25) {
-            probability = getProbability(0, i, i);
+            probability = getProbability(i, i);
             if (probability > 1 - 1e-5) return 1.0;
         }
         return probability;
@@ -25,7 +25,7 @@ public:
 private:
     vector<pair<int, int>> servings = {{100, 0}, {75, 25}, {50, 50}, {25, 75}};
     map<std::pair<int, int>, double> seen = {};
-    double getProbability(int lvl, int a, int b) {
+    double getProbability(int a, int b) {
         int emptyA, emptyB;
         double probability = 0;
         for (int i = 0; i < 4; i++) {
@@ -45,7 +45,7 @@ private:
                 // do nothing
                 probability += 0 * 0.25;
             } else {
-                probability += 0.25 * getProbability(lvl + 1, remainingA, remainingB);
+                probability += 0.25 * getProbability(remainingA, remainingB);
             }
         }
         seen[make_pair(a, b)] = probability;
