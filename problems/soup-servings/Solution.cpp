@@ -1,6 +1,5 @@
 #include <iostream>
-#include <map>
-// #include <unordered_map>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -24,13 +23,13 @@ public:
     }
 private:
     vector<pair<int, int>> servings = {{100, 0}, {75, 25}, {50, 50}, {25, 75}};
-    map<std::pair<int, int>, double> seen = {};
+    unordered_map<int, unordered_map<int, double>> seen = {};
     double getProbability(int a, int b) {
         int emptyA, emptyB;
         double probability = 0;
         for (int i = 0; i < 4; i++) {
-            if (seen.find(make_pair(a, b)) != seen.end()) {
-                probability += 0.25 * seen[make_pair(a, b)];
+            if (seen.find(a) != seen.end() && seen[a].find(b) != seen[a].end()) {
+                probability += 0.25 * seen[a][b];
                 continue;
             }
             int remainingA = a - servings[i].first;
@@ -48,7 +47,7 @@ private:
                 probability += 0.25 * getProbability(remainingA, remainingB);
             }
         }
-        seen[make_pair(a, b)] = probability;
+        seen[a][b] = probability;
         return probability;
     }
 };
