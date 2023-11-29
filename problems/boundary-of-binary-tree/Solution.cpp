@@ -32,13 +32,13 @@ public:
 
         if (root->left) {
             // left boundary
-            vector<int> children = dfs(root->left, true);
-            result.insert(result.end(), children.begin(), children.end());
+            dfs(root->left, true, result);
         }
         if (root->right) {
             // right boundary
             boundary_done = false;
-            vector<int> children = dfs(root->right, false);
+            vector<int> children;
+            dfs(root->right, false, children);
             for (int i = children.size() - 1; i >= 0; i--) {
                 result.emplace_back(children[i]);
             }
@@ -49,36 +49,32 @@ private:
     bool boundary_done = false;
 
     // DFS to identify boundary nodes and leaf nodes
-    vector<int> dfs(TreeNode *node, bool isLeftSub) {
+    void dfs(TreeNode *node, bool isLeftSub, vector<int>& values) {
         vector<int> result;
         if (node->left == nullptr && node->right == nullptr) {
             boundary_done = true; // boundary done
-            return {node->val}; // leaf value
+            values.emplace_back(node->val); // leaf value
+            return;
         }
         if (!boundary_done) {
             // append boundary value
-            result.emplace_back(node->val);
+            values.emplace_back(node->val);
         }
         if (isLeftSub) {
             if (node->left) {
-                vector<int> children = dfs(node->left, isLeftSub);
-                result.insert(result.end(), children.begin(), children.end());
+                dfs(node->left, isLeftSub, values);
             }
             if (node->right) {
-                vector<int> children = dfs(node->right, isLeftSub);
-                result.insert(result.end(), children.begin(), children.end());
+                dfs(node->right, isLeftSub, values);
             }
         }
         else {
             if (node->right) {
-                vector<int> children = dfs(node->right, isLeftSub);
-                result.insert(result.end(), children.begin(), children.end());
+                dfs(node->right, isLeftSub, values);
             }
             if (node->left) {
-                vector<int> children = dfs(node->left, isLeftSub);
-                result.insert(result.end(), children.begin(), children.end());
+                dfs(node->left, isLeftSub, values);
             }
         }
-        return result;
     }
 };
