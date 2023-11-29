@@ -50,7 +50,6 @@ private:
 
     // DFS to identify boundary nodes and leaf nodes
     void dfs(TreeNode *node, bool isLeftSub, vector<int>& values) {
-        vector<int> result;
         if (node->left == nullptr && node->right == nullptr) {
             boundary_done = true; // boundary done
             values.emplace_back(node->val); // leaf value
