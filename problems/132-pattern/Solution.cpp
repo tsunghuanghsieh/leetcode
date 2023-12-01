@@ -18,7 +18,7 @@ public:
                 map<int, int>::iterator itr_end = ranges.lower_bound(nums[pos]);
                 // first range is the current low and high range, skip it.
                 for (auto itr = ++ranges.begin(); itr != itr_end;) {
-                    if (itr->first < nums[pos] && itr->second > nums[pos]) {
+                    if (itr->second > nums[pos]) {
                         return true;
                     }
                     auto prev = itr++;
