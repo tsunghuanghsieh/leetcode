@@ -6,6 +6,9 @@ using namespace std;
 
 class Solution {
 public:
+    // This approach run through the array once, keeping track of highs and lows in a map,
+    // compacting the map as needed (this could potentially make runtime n^2),
+    // and comparing the incoming number to the map to identify 132 pattern.
     bool find132pattern(vector<int>& nums) {
         map<int, int> ranges;
         ranges[nums[0]] = nums[0];
@@ -14,7 +17,7 @@ public:
         for (int pos = 1; pos < nums.size(); pos++) {
             if (nums[pos] > curr_high) {
                 ranges[curr_low] = curr_high = nums[pos];
-                // excluding ranges that are >= the current high.
+                // excluding ranges that its low is >= the current high.
                 map<int, int>::iterator itr_end = ranges.lower_bound(nums[pos]);
                 // first range is the current low and high range, skip it.
                 for (auto itr = ++ranges.begin(); itr != itr_end;) {
