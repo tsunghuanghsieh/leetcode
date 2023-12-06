@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ void printNums(vector<int> nums) {
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution2 soln2;
     vector<int> nums;
     regex patternNumber("(-)?\\d+");
     string input;
@@ -36,6 +38,7 @@ int main(int argc, char **argv) {
     cout << input << ": input" << endl;
     printNums(nums);
     cout << expected << ": expected" << endl;
-    cout << soln.find132pattern(nums) << ": actual" << endl;
+    cout << soln.find132pattern(nums) << ": actual (Solution)" << endl;
+    cout << soln2.find132pattern(nums) << ": actual (Solution2)" << endl;
     return 0;
 }
