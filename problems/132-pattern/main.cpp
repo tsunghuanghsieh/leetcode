@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
     Solution soln;
     Solution2 soln2;
     vector<int> nums;
-    regex patternNumber("(-)?\\d+");
+    regex patternNumber("-?\\d+");
     string input;
     bool expected;
     fstream fin;

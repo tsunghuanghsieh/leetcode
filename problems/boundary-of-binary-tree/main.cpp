@@ -21,7 +21,7 @@ using namespace std;
  */
 
 TreeNode* parseInput(string input) {
-    regex patternVal("(-)?\\d+|null");
+    regex patternVal("-?\\d+|null");
     TreeNode *root = nullptr;
     queue<TreeNode*> qNodes;
     sregex_token_iterator itr(input.begin(), input.end(), patternVal);

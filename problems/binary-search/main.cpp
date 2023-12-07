@@ -12,7 +12,7 @@ vector<int> readToIntVector(ifstream& fin) {
     vector<int> nums;
 
     std::getline(fin, line);
-    regex patternDigits("(-?\\d+)");
+    regex patternDigits("-?\\d+");
     const sregex_token_iterator end;
     for (sregex_token_iterator itr(line.begin(), line.end(), patternDigits); itr != end; itr++) {
         nums.emplace_back(stoi(*itr));

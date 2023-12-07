@@ -33,7 +33,7 @@ void printResult(vector<int> result) {
 int main(int argc, char **argv) {
     Solution soln;
     ifstream fin;
-    regex patternRow("(-?\\d+)(,-?\\d+)*");
+    regex patternRow("-?\\d+(,-?\\d+)*");
     regex patternNum("-?\\d+");
     string line;
     string expected;

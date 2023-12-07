@@ -22,7 +22,7 @@ void printAncestry(Node *node) {
 int main(int argc, char **argv) {
     Solution soln;
     Solution2 soln2;
-    regex patternVal("(-)?\\d+|null");
+    regex patternVal("-?\\d+|null");
     int val_p, val_q, expected;
     ifstream fin(argv[1]);
     string line;
