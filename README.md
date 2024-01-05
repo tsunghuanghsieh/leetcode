@@ -93,3 +93,4 @@
 |    89 | [132 Pattern](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/132-pattern)| Medium | C++ ||
 |    90 | [Minimum Operations to Reduce X to Zero](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-operations-to-reduce-x-to-zero)| Medium | C++ ||
 |    91 | [Peeking Iterator](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/peeking-iterator)| Medium | C++ ||
+|    92 | [Plates Between Candles](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/plates-between-candles)| Medium | C++ ||
