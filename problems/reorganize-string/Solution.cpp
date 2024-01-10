@@ -9,7 +9,7 @@ using namespace std;
 class Solution {
 public:
     string reorganizeString(string s) {
-        char maxChar;
+        char maxChar = 0;
         map<char, int> freq;
         stringstream ss;
 
