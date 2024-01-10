@@ -15,7 +15,7 @@ public:
 
         for (int i = 0; i < s.size(); i++) {
             freq[s[i]]++;
-            maxChar = (freq[s[i]] > freq[maxChar]) ? s[i] : maxChar;
+            maxChar = (maxChar == 0 || freq[s[i]] > freq[maxChar]) ? s[i] : maxChar;
         }
         if (freq[maxChar] - 1 > (s.size() - 1) / 2) {
             return "";
