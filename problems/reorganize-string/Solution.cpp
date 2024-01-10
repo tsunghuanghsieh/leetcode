@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+#include <queue>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -11,6 +12,7 @@ public:
     string reorganizeString(string s) {
         char maxChar = 0;
         map<char, int> freq;
+        priority_queue<vector<int>> pq;
         stringstream ss;
 
         for (int i = 0; i < s.size(); i++) {
@@ -20,18 +22,22 @@ public:
         if (freq[maxChar] - 1 > (s.size() - 1) / 2) {
             return "";
         }
-
-        for (int i = 0; i < s.size(); i++) {
-            multimap<int, char, greater<int>> temp;
-            for (pair<char, int> p : freq) {
-                if (p.second > 0) temp.insert({p.second, p.first});
-            }
-            if (temp.size() == 0) break;
-            multimap<int, char>::iterator itr = temp.begin();
-            for (int j = 0; j < 2 && itr != temp.end(); j++, itr++) {
-                ss << itr->second;
-                freq[itr->second]--;
-            }
+        for (pair<char, int> p : freq) {
+            pq.push({p.second, p.first - 'a'});
+        }
+        cout << freq.size() << endl;
+        while (!pq.empty()) {
+            vector<int> chFirst = pq.top();
+            pq.pop();
+            chFirst[0]--;
+            ss << char(chFirst[1] + 'a');
+            if (pq.empty()) break;
+            vector<int> chSecond = pq.top();
+            pq.pop();
+            chSecond[0]--;
+            ss << char(chSecond[1] + 'a');
+            if (chFirst[0] > 0) pq.push(chFirst);
+            if (chSecond[0] > 0) pq.push(chSecond);
         }
 
         return ss.str();
