@@ -95,3 +95,4 @@
 |    91 | [Peeking Iterator](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/peeking-iterator)| Medium | C++ ||
 |    92 | [Plates Between Candles](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/plates-between-candles)| Medium | C++ ||
 |    93 | [Reorganize String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/reorganize-string)| Medium | C++ ||
+|    94 | [Make String a Subsequence Using Cyclic Increments](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/make-string-a-subsequence-using-cyclic-increments)| Medium | C++ ||
