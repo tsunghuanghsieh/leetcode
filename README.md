@@ -97,3 +97,4 @@
 |    93 | [Reorganize String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/reorganize-string)| Medium | C++ ||
 |    94 | [Make String a Subsequence Using Cyclic Increments](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/make-string-a-subsequence-using-cyclic-increments)| Medium | C++ ||
 |    95 | [Maximum Length of Subarray With Positive Product](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-length-of-subarray-with-positive-product)| Medium | C++ ||
+|    96 | [MMaximum Element After Decreasing and Rearranging](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-element-after-decreasing-and-rearranging)| Medium | C++ ||
