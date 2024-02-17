@@ -1,5 +1,5 @@
 #include <iostream>
-#include <numeric>
+#include <map>
 #include <vector>
 
 using namespace std;
@@ -8,19 +8,17 @@ class Solution {
 public:
     Solution(vector<int>& w) {
         int size = w.size();
-        sum = accumulate(w.begin(), w.end(), 0);
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < w[i]; j++) {
-                v_prob.emplace_back(i);
-            }
+            sum += w[i];
+            dist[sum - 1] = i;
         }
     }
 
     int pickIndex() {
-        return v_prob[rand() % sum];
+        return dist.lower_bound(rand() % sum)->second;
     }
 private:
-    vector<int> v_prob;
+    map<int, int> dist;
     int sum = 0;
 };
 
