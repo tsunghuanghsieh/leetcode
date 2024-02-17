@@ -1,0 +1,2 @@
+["Solution","pickIndex","pickIndex","pickIndex","pickIndex","pickIndex","pickIndex"]
+[[[3,6,3]],[],[],[],[],[],[]]
