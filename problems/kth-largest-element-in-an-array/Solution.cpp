@@ -1,5 +1,5 @@
 #include <iostream>
-#include <map>
+#include <queue>
 #include <vector>
 
 using namespace std;
@@ -7,20 +7,13 @@ using namespace std;
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
-        map<int, int> mnums;
-        int res;
+        priority_queue<int> pq;
 
         for (int i = 0; i < nums.size(); i++) {
-            // map insert runtime: ~log(map_size)
-            mnums[nums[i]]++;
+            // priority_queue implemnts a max-heap. hence multiply by -1.
+            pq.emplace(-nums[i]);
+            if (pq.size() > k) pq.pop();
         }
-        for (auto itr = mnums.rbegin(); itr != mnums.rend(); itr++) {
-            k -= itr->second;
-            if (k <= 0) {
-                res = itr->first;
-                break;
-            }
-        }
-        return res;
+        return -pq.top();
     }
 };
