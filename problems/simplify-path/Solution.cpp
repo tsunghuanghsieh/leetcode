@@ -14,15 +14,16 @@ public:
         int lastSeen = 0;
         stringstream fname, ss;
         vector<string> fnames;
+        char sep = '/', period = '.';
 
         for (int i = 1; i <= path.size(); i++) {
-            if (path[i] != '/') {
+            if (path[i] != sep) {
                 fname << path[i];
-                lastSeen = (path[i] == '.') ? 2 : 1;
+                lastSeen = (path[i] == period) ? 2 : 1;
             }
-            if (path[i] == '/' || i + 1 == path.size()) {
+            if (path[i] == sep || i + 1 == path.size()) {
                 if (lastSeen == 1 || (lastSeen == 2 && (fname.str().size() > 2 ||
-                    (fname.str().size() == 2 && fname.str()[0] != '.')))) {
+                    (fname.str().size() == 2 && fname.str()[0] != period)))) {
                     fnames.emplace_back(fname.str());
                 }
                 else if (lastSeen == 2 && fname.str().size() == 2) {
@@ -33,10 +34,10 @@ public:
             }
         }
 
-        ss << '/';
+        ss << sep;
         for (int i = 0; i < fnames.size(); i++) {
             ss << fnames[i];
-            if (i + 1 < fnames.size()) ss << '/';
+            if (i + 1 < fnames.size()) ss << sep;
         }
         return ss.str();
     }
