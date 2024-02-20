@@ -100,3 +100,4 @@
 |    96 | [Maximum Element After Decreasing and Rearranging](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-element-after-decreasing-and-rearranging)| Medium | C++ ||
 |    97 | [Basic Calculator II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/basic-calculator-ii)| Medium | C++ ||
 |    98 | [Random Pick with Weight](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/random-pick-with-weight)| Medium | C++ ||
+|    99 | [Simplify Path](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/simplify-path)| Medium | C++ ||

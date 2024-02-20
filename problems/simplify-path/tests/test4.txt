@@ -1,0 +1,2 @@
+/home///foo/..d
+/home/foo/..d
