@@ -16,7 +16,7 @@ public:
         vector<string> fnames;
         char sep = '/', period = '.';
 
-        for (int i = 1; i <= path.size(); i++) {
+        for (int i = 1; i < path.size(); i++) {
             if (path[i] != sep) {
                 fname << path[i];
                 lastSeen = (path[i] == period) ? 2 : 1;
