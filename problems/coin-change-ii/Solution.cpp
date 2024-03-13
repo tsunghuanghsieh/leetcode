@@ -5,10 +5,10 @@ using namespace std;
 
 class Solution {
 public:
-    // In the initial approach, I failed to come up with a code flow which would allow elimination of computations
-    // of previously discarded subtrees and tried to manually maintain the unique permutations of coins.
-    // It failed LTE.
-    // Also the amount was in the outer loop, coin in the inner loop
+    // In the initial top-down approach, I failed to come up with a code flow which would allow elimination
+    // of computations of previously discarded subtrees and tried to manually maintain the unique permutations
+    // of coins. It failed LTE.
+    // Also the amount was in the outer loop, coin in the inner loop.
     vector<int> lcoins;
     vector<vector<int>> res;
     int change(int amount, vector<int>& coins) {
@@ -20,7 +20,7 @@ public:
     }
 private:
     int findChange(int amount, int idx) {
-        if (idx == lcoins.size() || amount < lcoins[idx]) return 0;
+        if (idx == lcoins.size() || amount < lcoins[idx]) return 0;   // prune when amount < lcoins[idx]
         if (amount == lcoins[idx]) return 1;
         if (res[idx][amount] != -1) return res[idx][amount];
         res[idx][amount] = findChange(amount - lcoins[idx], idx) + findChange(amount, idx + 1);
