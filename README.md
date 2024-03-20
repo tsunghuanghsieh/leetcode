@@ -105,4 +105,5 @@
 |   101 | [Lowest Common Ancestor of a Binary Tree](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/lowest-common-ancestor-of-a-binary-tree)| Medium | C++ ||
 |   102 | [Convert Binary Search Tree to Sorted Doubly Linked List](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/convert-binary-search-tree-to-sorted-doubly-linked-list)| Medium | C++ | Y |
 |   103 | [Coin Change II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/coin-change-ii/)| Medium | C++ ||
+|   104 | [Maximum Number of Eaten Apples](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-number-of-eaten-apples/)| Medium | C++ ||
 
