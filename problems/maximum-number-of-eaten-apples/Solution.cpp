@@ -8,6 +8,10 @@ class Solution {
 public:
     // Runtime: O(nlogn) from priority_queue ops
     // Space: O(n) for priority_queue
+
+    // I first tried to find O(n) solution by iterating through days and maintaining available (grown - rotton) apples
+    // vs max expiry date without using priority_queue. The code wasn't able to keep track of different expiry days for
+    // all available apples, as the result, some would-be-rotton apples were incorrectly counted.
     int eatenApples(vector<int>& apples, vector<int>& days) {
         int total = 0;
         priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> expiry;   // greater for min heap
@@ -27,7 +31,11 @@ public:
                 if (apples[expiry.top()[1]] == 0) expiry.pop();
             }
         }
+        // For days beyond days.size() and there are still apples in priority_queue.
         int d = days.size();
+        // This while loop can be combined with the above for loop with a couple condition mods.
+        // But I would probably scratching my head looking back 6 months from now.
+        // So to save myself a few minutes in the future. ;)
         while (expiry.size() > 0) {
             while (expiry.size() > 0 && expiry.top()[0] <= d) expiry.pop();
             if (expiry.size() > 0) {
