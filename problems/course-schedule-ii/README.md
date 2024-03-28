@@ -33,7 +33,7 @@ Output: [0]
 * `prerequisites[i].length == 2`
 * `0 <= ai, bi < numCourses`
 * `ai != bi`
-* `All the pairs [ai, bi]` are **distinct**.
+* All the pairs `[ai, bi]` are **distinct**.
 
 ## Interview
 As of 03/21/2024, leetcode premium subscription says Tiktok 17 times, Amazon 15 times, Snapchat 4 times, Google, Apple and Facebook 3 times in the last 6 months.
