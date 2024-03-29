@@ -107,4 +107,5 @@
 |   103 | [Coin Change II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/coin-change-ii/)| Medium | C++ ||
 |   104 | [Maximum Number of Eaten Apples](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-number-of-eaten-apples/)| Medium | C++ ||
 |   105 | [Course Schedule II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/course-schedule-ii/)| Medium | C++ ||
+|   106 | [Course Schedule](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/course-schedule/)| Medium | C++ ||
 
