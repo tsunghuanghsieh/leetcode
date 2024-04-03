@@ -4,9 +4,11 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 int main(int argc, char** argv) {
     Solution s;
+    Solution2 s2;
     string line;
     int expected;
     ifstream fin(argv[1]);
@@ -17,6 +19,7 @@ int main(int argc, char** argv) {
     fin >> line >> expected;
     cout << line << ": input" << endl;
     cout << expected << ": expected" << endl;
-    cout << s.numDecodings(line) << ": actual" << endl;
+    cout << s.numDecodings(line) << ": actual (Fibonacci)" << endl;
+    cout << s2.numDecodings(line) << ": actual (DP iterative)" << endl;
     return 0;
 }

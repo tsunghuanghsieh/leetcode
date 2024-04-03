@@ -7,7 +7,7 @@ a.out: main.o
 
 compile: main.o
 
-main.o: main.cpp Solution.cpp
+main.o: main.cpp Solution.cpp Solution2.cpp
 	g++ -std=c++17 -c main.cpp
 
 clean:
