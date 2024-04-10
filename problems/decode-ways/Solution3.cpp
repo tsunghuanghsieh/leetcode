@@ -1,23 +1,28 @@
 #include <iostream>
-#include <map>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class Solution3 {
 public:
-    map<string, int> seen;
+    vector<int> seen;
     int numDecodings(string s) {
-        if (s.size() == 0) return 1;
-        if (s[0] == '0') return 0;
-        if (s.size() == 1) return 1;
-        if (seen.find(s) != seen.end()) return seen[s];
-        int sum = numDecodings(s.substr(1));
-        int num = (s[0] - '0') * 10 + s[1] - '0';
-        if (num <= 26) {
-            sum += numDecodings(s.substr(2));
+        seen.assign(s.size(), -1);
+        return recursive(0, s);
+    }
+
+    int recursive(int idx, string& s) {
+        if (idx == s.size()) return 1;
+        if (s[idx] == '0') return 0;
+        if (idx == s.size() - 1) return 1;
+        if (seen[idx] >= 0) return seen[idx];
+
+        int sum = recursive(idx + 1, s);
+        if (stoi(s.substr(idx, 2)) <= 26) {
+            sum += recursive(idx + 2, s);
         }
-        seen.insert(make_pair(s, sum));
+        seen[idx] = sum;
         return sum;
     }
 };
