@@ -112,5 +112,5 @@
 |   108 | [Unique Paths](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/unique-paths/)| Medium | C++ ||
 |   109 | [Minimum Number of Operations to Make Array Empty](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-number-of-operations-to-make-array-empty/)| Medium | C++ ||
 |   110 | [Median of Two Sorted Arrays](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/median-of-two-sorted-arrays/)| Hard | C++ ||
-|   111 | [Dot Product of Two Sparse Vectors](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/dot-product-of-two-sparse-vectors/)| Medium | C++ ||
+|   111 | [Dot Product of Two Sparse Vectors](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/dot-product-of-two-sparse-vectors/)| Medium | C++ | Y |
 
