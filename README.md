@@ -115,4 +115,5 @@
 |   111 | [Dot Product of Two Sparse Vectors](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/dot-product-of-two-sparse-vectors/)| Medium | C++ | Y |
 |   112 | [Nested List Weight Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/nested-list-weight-sum/)| Medium | C++ | Y |
 |   113 | [Minimum Add to Make Parentheses Valid](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-add-to-make-parentheses-valid/)| Medium | C++ ||
+|   114 | [Custom Sort String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/custom-sort-string/)| Medium | C++ ||
 
