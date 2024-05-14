@@ -114,4 +114,5 @@
 |   110 | [Median of Two Sorted Arrays](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/median-of-two-sorted-arrays/)| Hard | C++ ||
 |   111 | [Dot Product of Two Sparse Vectors](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/dot-product-of-two-sparse-vectors/)| Medium | C++ | Y |
 |   112 | [Nested List Weight Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/nested-list-weight-sum/)| Medium | C++ | Y |
+|   113 | [Minimum Add to Make Parentheses Valid](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-add-to-make-parentheses-valid/)| Medium | C++ ||
 
