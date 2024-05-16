@@ -1,6 +1,8 @@
 # [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
-Given an array of integers and an integer **k**, you need to find the total number of continuous subarrays whose sum equals to **k**.
+Given an array of integers `nums` and an integer `k`, return _the total number of subarrays whose sum equals to `k`_.
+
+A subarray is a contiguous **non-empty** sequence of elements within an array.
 
 **Example 1:**
 ```
@@ -8,12 +10,16 @@ Input: nums = [1,1,1], k = 2
 Output: 2
 ```
 
-**Note:**
-1. The length of the array is in range [1, 20,000].
-2. The range of numbers in the array is [-1000, 1000] and the range of the integer **k** is [-1e7, 1e7].
+**Example 2:**
+```
+Input: nums = [1,2,3], k = 3
+Output: 2
+```
 
-### Helpful info
-1e7 == 1 * 10^7
+**Constraints:**
+* `1 <= nums.length <= 2 * 10^4`
+* `-1000 <= nums[i] <= 1000`
+* `-10^7 <= k <= 10^7`
 
 ## Interview
 My facebook phone interview Q1:
@@ -25,4 +31,5 @@ Similar to [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-s
 
 It returns true when there is a continous subarray whose sum equals to k, false otherwise.
 
+As of 05/13/2024, leetcode premium subscription says Facebook 88 times, Google and Amazon 8 times in the last 6 months.
 As of 06/04/2019, leetcode premium subscription says Facebook 39 times, Amazon 11 times in the last 6 months.
