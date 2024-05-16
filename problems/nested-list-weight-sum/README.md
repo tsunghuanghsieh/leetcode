@@ -7,7 +7,7 @@ The **depth** of an integer is the number of lists that it is inside of. For exa
 Return _the sum of each integer in `nestedList` multiplied by its **depth**_.
 
 **Example 1:**
-[!Example 1](https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex1.png)
+![Example 1](https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex1.png)
 ```
 Input: nestedList = [[1,1],2,[1,1]]
 Output: 10
@@ -15,7 +15,7 @@ Explanation: Four 1's at depth 2, one 2 at depth 1. 1*2 + 1*2 + 2*1 + 1*2 + 1*2 
 ```
 
 **Example 2:**
-[!Example 2](https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex2.png)
+![Example 2](https://assets.leetcode.com/uploads/2021/01/14/nestedlistweightsumex2.png)
 ```
 Input: nestedList = [1,[4,[6]]]
 Output: 27
