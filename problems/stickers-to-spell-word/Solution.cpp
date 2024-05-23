@@ -14,7 +14,9 @@ public:
         set<map<int, int>> mts, stck_unique;
         vector<map<int, int>> m_stickers;
 
+        // convert string to frequency
         for (char c : target) mt[c - 'a']++;
+        // convert common alphabets with target in stickers to frequency (no duplicates)
         for (string s : stickers) {
             map<int, int> ms;
             for (char c : s) {
@@ -29,6 +31,16 @@ public:
         if (chars.size() != mt.size()) return -1;
 
         int count = 0;
+        // use bfs since it's finding the least stickers
+        //                         target
+        //      1             2             3             4
+        //  1  2  3  4    1  2  3  4    1  2  3  4    1  2  3  4
+        // 1,2 == 2,1; 1,3 == 3,1; 1,4 == 4,1
+        // 2,3 == 3,2; 2,4 == 4,2
+        // 3,4 == 4,3
+        // etc
+        // so we can skip 1 in 2nd sticker, 1 and 2 in 3rd sticker, so on and so forth.
+        // when pusing to the queue, we can include the index to skip duplicating operations.
         queue<pair<int, map<int, int>>> q;
         q.push({0, mt});
         int qsize = q.size();
@@ -52,6 +64,7 @@ public:
         return count;
     }
 private:
+    // Apply sticker to target and return the remaining frequency in target
     map<int, int> applySticker(map<int, int> current, map<int, int> sticker) {
         map<int, int> updated;
         for (auto [key, val] : current) {
@@ -61,6 +74,8 @@ private:
         }
         return  updated;
     }
+
+    // helper function to output map content to console for debug
     void printMap(map<int, int> target) {
         for (auto [key, val] : target) {
             char c = key + 'a';
