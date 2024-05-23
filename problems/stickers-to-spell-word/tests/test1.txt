@@ -1,0 +1,3 @@
+["with","example","science"]
+thehat
+3
