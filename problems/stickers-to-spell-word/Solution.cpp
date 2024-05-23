@@ -55,20 +55,15 @@ private:
     map<int, int> applySticker(map<int, int> current, map<int, int> sticker) {
         map<int, int> updated;
         for (auto [key, val] : current) {
-            // cout << "key " << key << " val " << val << endl;
-            // cout << "key " << key << " val " << current[key] << endl;
             if (current[key] > 0 && current[key] - sticker[key] > 0) {
                 updated[key] = current[key] - sticker[key];
-                // count++;
             }
-            // cout << "key " << key << " val " << updated[key] << endl;
         }
         return  updated;
     }
     void printMap(map<int, int> target) {
         for (auto [key, val] : target) {
             char c = key + 'a';
-            // cout << "key " << c << " val " << val << " ";
             cout << c << " " << val << "   ";
         }
         cout << endl;
