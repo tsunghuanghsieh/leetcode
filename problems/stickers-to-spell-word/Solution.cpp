@@ -8,6 +8,14 @@ using namespace std;
 
 class Solution {
 public:
+    // LC Editorial soln for optimized brute force goes a step further to reduce the number of stickers
+    // by comparing every alphabet in a sticker, count of all alphabets in a sticker >= to another sticker.
+    //
+    // It uses class scope variables, 1D or 2D int arrays for target and stickers respectively,
+    // to allow direct access in functions, eliminating variable constructor calls from function call/return.
+    // It also uses array for target to store updated target after a sticker is applied, and restore after done.
+    //
+    // My approach is top-down. Its approach is bottom-up. It claims it will find the answer faster.
     int minStickers(vector<string>& stickers, string target) {
         map<int, int> mt;
         set<char> chars;
