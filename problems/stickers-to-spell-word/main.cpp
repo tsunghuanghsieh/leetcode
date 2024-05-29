@@ -6,9 +6,12 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution1.cpp"
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution_dp soln_dp;
+
     ifstream fin;
     fin.open(argv[1]);
     if (!fin) {
@@ -27,6 +30,7 @@ int main(int argc, char **argv) {
     cout << line1 << ": stickers" << endl;
     cout << target << ": target" << endl;
     cout << expected << ": expected" << endl;
-    cout << soln.minStickers(stickers, target) << ": actual" << endl;
+    cout << soln.minStickers(stickers, target) << ": actual (brute force)" << endl;
+    cout << soln_dp.minStickers(stickers, target) << ": actual (dp)" << endl;
     return 0;
 }
