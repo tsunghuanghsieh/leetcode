@@ -20,6 +20,7 @@ public:
 
         for (int state = 0; state < states.size(); state++) {
             if (states[state] == -1) continue;   // no sticker leads to this states
+            // The same optimizations (checking only common letters, removing duplicate and dominated stickers)
             for (string s : stickers) {
                 int curr = state;   // current set bits (letters)
                 for (char c : s) {
