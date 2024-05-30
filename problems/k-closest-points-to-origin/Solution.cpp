@@ -15,7 +15,6 @@ public:
         }
         for (int i = 0; i < k; i++) {
             vector<int> item = q.top();
-            cout << item[1] << endl;
             res.push_back(points[item[1]]);
             q.pop();
         }

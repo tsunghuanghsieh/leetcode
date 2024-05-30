@@ -13,7 +13,7 @@ void printResult(const vector<vector<int>>& res) {
         cout << "[" << res[i][0] << "," << res[i][1] << "]";
         if (i < res.size() - 1) cout << ",";
     }
-    cout << "] : actual" << endl;
+    cout << "]: actual" << endl;
 }
 
 int main(int argc, char **argv)
