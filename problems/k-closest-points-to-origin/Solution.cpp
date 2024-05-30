@@ -28,3 +28,19 @@ public:
         return res;
     }
 };
+
+//
+// LC Editorial binary search approach
+// First run through the array of points to calculate Euclidean distances from origin.
+// Euclidean distances is used instead of Euclidean distances squared or the distribution may not be even.
+// Find inital mid = lowest + (highest - lowest) / 2
+// Run through the Euclidean distance to sort them into shorter or longer bucket against mid.
+// If shorter bucket is more than k, highest = mid, find new mid
+// and run against the shorter bucket.
+// If shorter bucket is less or equal to k, reduce k by shorter bucket size, lowest = mid, find new mid
+// and run aginst the longer bucket. Repeat until k is 0.
+// Worst case runtime is O(n^2), however the average is O(n). Space O(n).
+//
+// LC Editorial also provides QuickSelect approach, or partial application of QuickSort. It will probably
+// take too much time to implement during one-hour interview.
+//
