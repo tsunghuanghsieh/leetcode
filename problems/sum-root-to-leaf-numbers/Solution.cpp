@@ -44,3 +44,8 @@ private:
         if (node->right) preorder(node->right, (num + node->val) * 10);
     }
 };
+
+//
+// LC Editorial shows Morris Preorder Traversal that uses temporary link from right child to current root.
+// It uses constant space O(1) instead of O(h) where h is the height of the tree in recursive and iterative traversal.
+//
