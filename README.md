@@ -122,5 +122,5 @@
 |   118 | [K Closest Points to Origin](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/k-closest-points-to-origin/)| Medium | C++ ||
 |   119 | [Sum Root to Leaf Numbers](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/sum-root-to-leaf-numbers/)| Medium | C++ ||
 |   120 | [Making A Large Island](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/making-a-large-island/)| Hard | C++ ||
-|   120 | [Valid Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-number/)| Hard | C++ ||
+|   121 | [Valid Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-number/)| Hard | C++ ||
 
