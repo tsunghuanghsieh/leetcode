@@ -7,15 +7,6 @@ using namespace std;
 
 #include "Solution.cpp"
 
-void printGrid(vector<vector<int>> grid) {
-    for (int i = 0; i < grid.size(); i++) {
-        for (int j = 0; j < grid[i].size(); j++) {
-            cout << grid[i][j];
-        }
-        cout << endl;
-    }
-}
-
 int main(int argc, char **argv)
 {
     Solution soln;
