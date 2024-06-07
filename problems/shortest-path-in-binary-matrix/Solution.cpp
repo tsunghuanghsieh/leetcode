@@ -7,9 +7,10 @@ using namespace std;
 class Solution {
 public:
     int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
-        if (grid[0][0]) return -1;
+        int n = grid.size();
+        if (grid[0][0] || grid[n - 1][n - 1]) return -1;
 
-        int row = 0, col = 0, n = grid.size();
+        int row = 0, col = 0;
         queue<int> q;   // encoding [r, c] by r * n + c
         q.push(0);
         grid[0][0] = 1;
