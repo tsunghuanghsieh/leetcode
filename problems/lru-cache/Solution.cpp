@@ -38,12 +38,16 @@ public:
 
     int get(int key) {
         if (kv.find(key) == kv.end()) return -1;
+        // In LC Editorial, it simply remove the element without explicitly freeing the pointer
+        // and add the same element to the newest. I am freeing the point in remove.
         return update(kv[key], kv[key]);
     }
 
     void put(int key, int value) {
         DoublyLinkedNode *node = new DoublyLinkedNode(key, value);
         if (kv.find(key) != kv.end()) {
+            // In LC Editorial, it simply remove the element without explicitly freeing the pointer
+            // and add a newly created element to the newest. I am freeing the point in remove.
             update(kv[key], node);
         }
         else {
