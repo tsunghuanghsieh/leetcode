@@ -28,7 +28,7 @@
 |    24 | [Fruit Into Baskets](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/fruit-into-baskets/)| Medium | javascript ||
 |    25 | [Unique Email Addresses](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/unique-email-addresses/)| Easy | javascript ||
 |    26 | [License Key Formatting](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/license-key-formatting/)| Easy | javascript ||
-|    27 | [LRU Cache](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/lru-cache/)| Medium | javascript ||
+|    27 | [LRU Cache](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/lru-cache/)| Medium | C++, javascript ||
 |    28 | [3Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/3sum/)| Medium | C++, javascript ||
 |    29 | [Word Ladder](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-ladder/)| Hard | javascript ||
 |    30 | [Odd Even Jump](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/odd-even-jump/)| Hard | C++ ||
