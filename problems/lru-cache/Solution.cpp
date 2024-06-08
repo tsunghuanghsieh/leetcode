@@ -37,44 +37,21 @@ public:
     }
 
     int get(int key) {
-        auto itr = kv.find(key);
-        if (itr != kv.end()) {
-            DoublyLinkedNode *node = itr->second;
-            node->next->prev = node->prev;
-            node->prev->next = node->next;
-            newest->prev->next = node;
-            node->prev = newest->prev;
-            newest->prev = node;
-            node->next = newest;
-            return node->getValue();
-        }
-        return -1;
+        if (kv.find(key) == kv.end()) return -1;
+        return update(kv[key], kv[key]);
     }
 
     void put(int key, int value) {
         DoublyLinkedNode *node = new DoublyLinkedNode(key, value);
-        auto itr = kv.find(key);
-        if (itr != kv.end()) {
-            DoublyLinkedNode *old = itr->second;
-            old->prev->next = old->next;
-            old->next->prev = old->prev;
-            delete(old);
-            kv.erase(key);
+        if (kv.find(key) != kv.end()) {
+            update(kv[key], node);
         }
         else {
             if (kv.size() == _capacity) {
-                DoublyLinkedNode *old = oldest->next;
-                old->next->prev = old->prev;
-                oldest->next = old->next;
-                kv.erase(old->getKey());
-                delete(old);
+                remove(oldest->next);
             }
+            insert(node);
         }
-        node->next = newest;
-        node->prev = newest->prev;
-        newest->prev->next = node;
-        newest->prev = node;
-        kv.insert({key, node});
     }
 
     void printDoublyLinkedNodes() {
@@ -95,6 +72,35 @@ private:
     int _capacity;
     unordered_map<int, DoublyLinkedNode*> kv;
     DoublyLinkedNode *oldest, *newest;
+
+    void insert(DoublyLinkedNode *node) {
+        node->next = newest;
+        node->prev = newest->prev;
+        newest->prev->next = node;
+        newest->prev = node;
+        kv.insert({node->getKey(), node});
+    }
+
+    void remove(DoublyLinkedNode *node) {
+        node->prev->next = node->next;
+        node->next->prev = node->prev;
+        kv.erase(node->getKey());
+        delete(node);
+    }
+
+    int update(DoublyLinkedNode *source, DoublyLinkedNode *destination) {
+        source->next->prev = source->prev;
+        source->prev->next = source->next;
+        newest->prev->next = destination;
+        destination->prev = newest->prev;
+        newest->prev = destination;
+        destination->next = newest;
+        if (source != destination) {
+            delete(source);
+            kv[destination->getKey()] = destination;
+        }
+        return destination->getValue();
+    }
 };
 
 /**
