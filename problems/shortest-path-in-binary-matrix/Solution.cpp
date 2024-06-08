@@ -30,11 +30,10 @@ public:
             }
             if (size == 0) {
                 size = q.size();
-                if (size == 0) return -1;
                 count++;
             }
         }
-        return count;
+        return -1;
     }
 private:
     // combining direction row and direction column
