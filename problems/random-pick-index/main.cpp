@@ -60,7 +60,6 @@ int main(int argc, char **argv)
     cout << "[null,";
     for (int i = 1; i < cmdArgvs.size(); i++) {
         cout << soln.pick(cmdArgvs[i][0]);
-        cout << endl;
         if (i != cmdArgvs.size() - 1) cout << ",";
     }
     cout << "]: actual" << endl;
