@@ -125,4 +125,5 @@
 |   121 | [Valid Number](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-number/)| Hard | C++ ||
 |   122 | [Find Peak Element](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-peak-element/)| Medium | C++ ||
 |   123 | [Shortest Path in Binary Matrix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/shortest-path-in-binary-matrix/)| Medium | C++ ||
+|   124 | [Random Pick Index](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/random-pick-index/)| Medium | C++ ||
 
