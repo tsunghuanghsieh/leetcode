@@ -18,7 +18,7 @@ void printResult(vector<vector<string>> result) {
         cout << "]";
         if (i < result.size() - 1) cout << ",";
     }
-    cout << "] : actual" << endl;
+    cout << "]: actual" << endl;
 }
 
 int main(int argc, char **argv)
