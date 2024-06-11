@@ -13,15 +13,12 @@ public:
 
         for (int i = 0; i < s.size(); i++) {
             nums.push(s[i]);
-            int n = s[i] - '0';
-            digits[n] = digits[n] * 10 + (i + 1);   // 1-based index to avoid using 2d array
+            digits[s[i] - '0'] = i;   // last index found for the digit
         }
         for (int i = 0; i < s.size(); i++) {
             if (s[i] < nums.top()) {
-                int n = nums.top() - '0';
-                int idx = digits[n] % 10;
-                s[idx - 1] = s[i];
-                s[i] = '0' + n;
+                s[digits[nums.top() - '0']] = s[i];
+                s[i] = nums.top();
                 break;
             }
             else if (s[i] == nums.top()) nums.pop();
