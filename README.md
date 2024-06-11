@@ -127,4 +127,5 @@
 |   123 | [Shortest Path in Binary Matrix](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/shortest-path-in-binary-matrix/)| Medium | C++ ||
 |   124 | [Random Pick Index](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/random-pick-index/)| Medium | C++ ||
 |   125 | [Group Shifted Strings](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/group-shifted-strings/)| Medium | C++ | Y |
+|   126 | [Maximum Swap](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-swap/)| Medium | C++ ||
 
