@@ -8,7 +8,7 @@ class Solution {
 public:
     int maximumSwap(int num) {
         string s(to_string(num));
-        priority_queue<char> nums;   // max queue
+        priority_queue<char> nums;   // max queue. all digits seen in descending order.
         vector<int> digits(10);
 
         for (int i = 0; i < s.size(); i++) {
