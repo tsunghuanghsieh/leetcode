@@ -13,7 +13,6 @@ public:
         int n = grid.size();
         int island_id = 2, largest = 0;
         vector<int> islands(n * n);
-        if (n < 25) printGrid(grid);
         for (int row = 0; row < n; row++) {
             for (int col = 0; col < n; col++) {
                 if (grid[row][col] == 1) {
