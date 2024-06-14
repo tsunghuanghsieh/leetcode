@@ -15,7 +15,7 @@ void printResult(vector<vector<int>> intervals) {
         cout << "[" << intervals[i][0] << "," << intervals[i][1] << "]";
         if (i < intervals.size() - 1) cout << ",";
     }
-    cout << "] : actual" << endl;
+    cout << "]: actual" << endl;
 }
 
 int main(int argc, char** argv) {

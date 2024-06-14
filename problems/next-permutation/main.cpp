@@ -14,7 +14,7 @@ void printResult(vector<int> nums) {
         cout << nums[i];
         if (i < nums.size() - 1) cout << ",";
     }
-    cout << "] : actual" << endl;
+    cout << "]: actual" << endl;
 }
 
 int main(int argc, char **argv) {

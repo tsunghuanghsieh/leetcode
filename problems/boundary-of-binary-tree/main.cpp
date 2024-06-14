@@ -63,7 +63,7 @@ void printResult(vector<int> result) {
         cout << result[i];
         if (i < result.size() - 1) cout << ",";
     }
-    cout << "] : actual" << endl;
+    cout << "]: actual" << endl;
 }
 
 // Debug

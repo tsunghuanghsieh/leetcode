@@ -23,7 +23,7 @@ void printResult(vector<vector<string>> result) {
     if (result.size() == 0) {
         cout << "[\"\"]";
     }
-    cout << "] : actual" << endl;
+    cout << "]: actual" << endl;
 }
 
 int main(int argc, char **argv) {

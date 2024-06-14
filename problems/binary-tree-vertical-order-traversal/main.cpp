@@ -20,7 +20,7 @@ void printResult(vector<vector<int>> result) {
         cout << "]";
         if (i < result.size() - 1) cout << ",";
     }
-    cout << "] : actual" << endl;
+    cout << "]: actual" << endl;
 }
 
 void printTreeNodes(TreeNode *root) {
