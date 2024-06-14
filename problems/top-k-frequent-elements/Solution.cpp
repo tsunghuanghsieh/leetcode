@@ -10,22 +10,25 @@ class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
         unordered_map<int, int> um;
-        priority_queue<pair<int, int>> q;
+        // compare function for priority_queue
+        auto comp = [&um] (int a, int b) {
+            // incoming > existing for max heap
+            return um[b] > um[a];
+        };
+        priority_queue<int, vector<int>, decltype(comp)> q(comp);
 
-        // count occurrence and piggyback q updates on the loop
+        // count frequency
         for (int n : nums) {
             um[n]++;
-            q.push(pair{um[n], n});
         }
         vector<int> res;
+        // populate q with element index according to frequency
+        for (auto [key, val] : um) {
+            q.emplace(key);
+        }
         // find k frequent elements
-        while (!q.empty() && k > 0) {
-            pair<int, int> p = q.top();
-            if (um.find(p.second) != um.end()) {
-                res.emplace_back(p.second);
-                um.erase(p.second);
-                k--;
-            }
+        for (int i = 0; i < k; i++) {
+            res.emplace_back(q.top());
             q.pop();
         }
         return res;
