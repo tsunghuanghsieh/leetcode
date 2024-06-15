@@ -27,6 +27,11 @@ public:
             q.emplace(key);
         }
         // find k frequent elements
+        //
+        // LC Editorial explains using quickselect (Hoare's selection algorithm)
+        // to find k-th (frequent/smallest/largest/etc) element, which has O(n) average time complexity,
+        // but O(n^2) worst case time complexity. although probability of worst-case is negligible.
+        // [Lomuto's Partition Scheme](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme)
         for (int i = 0; i < k; i++) {
             res.emplace_back(q.top());
             q.pop();
