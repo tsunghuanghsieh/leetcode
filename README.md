@@ -131,4 +131,5 @@
 |   127 | [Binary Tree Right Side View](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/binary-tree-right-side-view/)| Medium | C++ ||
 |   128 | [Copy List with Random Pointer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/copy-list-with-random-pointer/)| Medium | C++ ||
 |   129 | [Top K Frequent Elements](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/top-k-frequent-elements/)| Medium | C++ ||
+|   130 | [Exclusive Time of Functions](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/exclusive-time-of-functions/)| Medium | C++ ||
 
