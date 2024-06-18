@@ -53,6 +53,8 @@ The online judging system doesn't flag the following situations in the input at 
 * Earlier function ends before later function.
 * Multiple start or end events at the same timestamp.
 
+From the problem description, it is stated that functions are pushed onto and popped off the top of a stack as functions start and end. THe function on the top of the stack is the current function being executed. It shouldn't be able to pop off a function that is not being executed in the middle of a stack. However, LC test case 121 ([test6.txt](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/exclusive-time-of-functions/tests/test6.txt)) does just that, it is a deviation from the problem statement. Bug [22693](https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/22693) and [22581](https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/22581).
+
 **Constraints:**
 * `1 <= n <= 100`
 * `1 <= logs.length <= 500`
