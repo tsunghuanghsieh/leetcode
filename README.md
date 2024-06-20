@@ -133,4 +133,5 @@
 |   129 | [Top K Frequent Elements](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/top-k-frequent-elements/)| Medium | C++ ||
 |   130 | [Exclusive Time of Functions](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/exclusive-time-of-functions/)| Medium | C++ ||
 |   131 | [Clone Graph](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/clone-graph/)| Medium | C++ ||
+|   132 | [Diagonal Traverse](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/diagonal-traverse/)| Medium | C++ ||
 
