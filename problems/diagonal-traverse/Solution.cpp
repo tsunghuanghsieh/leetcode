@@ -73,7 +73,6 @@ public:
                 c += dirs[dir][1];
             }
         }
-        cout << endl;
         return res;
     }
 };

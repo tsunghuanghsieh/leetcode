@@ -42,19 +42,12 @@ int main(int argc, char **argv) {
     for (; itrR != sregex_token_iterator(); itrR++) {
         vector<int> vrow;
         string row = *itrR;
-        // cout << row << endl;
         sregex_token_iterator itrC(row.begin(), row.end(), patternCol);
         for (; itrC != sregex_token_iterator(); itrC++) {
-            // cout << (*itrC).str() << " ";
             vrow.emplace_back(stoi((*itrC).str()));
         }
-        // cout << endl;
         matrix.emplace_back(vrow);
-        // cout << "matrix.size() " << matrix.size() << endl;
-        // printVector(vrow);
     }
-        // cout << "matrix.size() " << matrix.size() << endl;
-
     cout << input << ": input" << endl;
     cout << expected << ": expected" << endl;
     printMatrix(matrix);
