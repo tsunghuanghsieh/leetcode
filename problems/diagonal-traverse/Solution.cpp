@@ -7,11 +7,18 @@ using namespace std;
 
 class Solution {
 public:
+    // LC Editorial solution 1 is to iterate diagonally (sw) and reverse odd iterations.
+    // This is slightly slower because of the reversal, but the code will be simpler.
+    // This is a good strategy to keep code simple during interview to arrive at a working code.
+    //
+    // LC Editorial solution 2 is similar to my approach. However, its code looks simpler.
+    // It only requires 2 directions and check for direction change when the cell is out of bound.
     vector<int> findDiagonalOrder(vector<vector<int>>& mat) {
         int m = mat.size(), n = mat[0].size(), size = m * n;
         int r = 0, c = 0;
         vector<vector<int>> dirs({{-1, 1}, {0, 1}, {1, -1}, {1, 0}});   // ne, e, sw, s
         vector<int> res;
+        // fugly pos. i would prob be very confused looking back in the future.
         for (int i = 0, dir = 0; i < size; i++) {
             res.emplace_back(mat[r][c]);
             if (r == 0 && c <= n - 1) {   // row 0
