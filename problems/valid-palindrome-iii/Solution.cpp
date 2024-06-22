@@ -5,6 +5,8 @@
 using namespace std;
 
 class Solution {
+// 2nd attempt with memoization
+// Runtime and space complexity O(s.size()^2)
 public:
     // memoization of previously checked substrings
     // int is used instead of bool in order to differentiate between checked or not.
