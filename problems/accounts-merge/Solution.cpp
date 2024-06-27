@@ -10,6 +10,7 @@ using namespace std;
 
 class Solution {
 public:
+    // LC Editorial soln 1 stored emails in connected graphs and use DFS and visited for traversal.
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
         vector<vector<string>> res;
         unordered_map<string, int> unique_emails;
