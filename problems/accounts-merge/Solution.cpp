@@ -10,7 +10,17 @@ using namespace std;
 
 class Solution {
 public:
-    // LC Editorial soln 1 stored emails in connected graphs and use DFS and visited for traversal.
+    // LC Editorial soln 1 stored emails in connected graphs with the first email as the anchor vertex
+    // to all other emails in the same account, and use DFS and visited for traversal.
+    //
+    // My implementation tries to find union set at each account id, it would iterate through all emails
+    // in the current account id to find all account ids with same email, and merge all emails to a single
+    // account id. However, the underlying data structure isn't optimal for Disjoint Set Union (DSU).
+    //
+    // LC Editorial soln 2 uses Disjoint Set Union. It runs through all emails in all accounts to populate
+    // DSU data structure along with a map of emails to account id. It then runs through the map to construct
+    // a map of account id to emails. Finally, it sorts the emails in each account id before returning the merged
+    // accounts.
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
         vector<vector<string>> res;
         unordered_map<string, int> unique_emails;
