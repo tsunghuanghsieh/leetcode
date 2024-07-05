@@ -140,4 +140,5 @@
 |   136 | [Merge k Sorted Lists](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-k-sorted-lists/)| Hard | C++ ||
 |   137 | [Vertical Order Traversal of a Binary Tree](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/vertical-order-traversal-of-a-binary-tree/)| Hard | C++ ||
 |   138 | [Max Consecutive Ones III](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/max-consecutive-ones-iii/)| Medium | C++ ||
+|   139 | [Word Break II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-break-ii/)| Hard | C++ ||
 

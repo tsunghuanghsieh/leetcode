@@ -1,0 +1,3 @@
+pineapplepenapple
+["apple","pen","applepen","pine","pineapple"]
+["pine apple pen apple","pineapple pen apple","pine applepen apple"]

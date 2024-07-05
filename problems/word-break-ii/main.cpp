@@ -1,0 +1,32 @@
+#include <fstream>
+#include <iostream>
+#include <regex>
+#include <vector>
+
+using namespace std;
+
+#include "Solution.cpp"
+
+int main(int argc, char **argv) {
+    Solution soln;
+    ifstream fin;
+    fin.open(argv[1]);
+    if (!fin) {
+        cout << "ERROR: " << argv[1] << " does not exist." << endl;
+        exit(1);
+    }
+    string line1, line2, expected;
+    fin >> line1 >> line2;
+    fin.get();   // eat newline character
+    getline(fin, expected);
+    vector<string> wordDict;
+    regex patternWord("\\w+");
+    sregex_token_iterator itr(line1.begin(), line1.end(), patternWord);
+    for (; itr != sregex_token_iterator(); itr++) wordDict.emplace_back(*itr);
+
+    cout << line1 << ": line" << endl;
+    cout << line2 << ": wordDict" << endl;
+    cout << expected << ": expected" << endl;
+    soln.wordBreak(line1, wordDict);
+    return 0;
+}
