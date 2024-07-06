@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
     getline(fin, expected);
     vector<string> wordDict;
     regex patternWord("\\w+");
-    sregex_token_iterator itr(line1.begin(), line1.end(), patternWord);
+    sregex_token_iterator itr(line2.begin(), line2.end(), patternWord);
     for (; itr != sregex_token_iterator(); itr++) wordDict.emplace_back(*itr);
 
     cout << line1 << ": line" << endl;
