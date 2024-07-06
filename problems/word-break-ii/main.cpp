@@ -7,6 +7,15 @@ using namespace std;
 
 #include "Solution.cpp"
 
+void printResult(vector<string> res) {
+    cout << "[";
+    for (int i = 0; i < res.size(); i++) {
+        cout << "\"" << res[i] << "\"";
+        if (i + 1 < res.size()) cout << ",";
+    }
+    cout << "]: actual" << endl;
+}
+
 int main(int argc, char **argv) {
     Solution soln;
     ifstream fin;
@@ -27,6 +36,6 @@ int main(int argc, char **argv) {
     cout << line1 << ": line" << endl;
     cout << line2 << ": wordDict" << endl;
     cout << expected << ": expected" << endl;
-    soln.wordBreak(line1, wordDict);
+    printResult(soln.wordBreak(line1, wordDict));
     return 0;
 }
