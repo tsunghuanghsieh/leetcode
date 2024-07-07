@@ -1,0 +1,3 @@
+catsanddogsand
+["cat","cats","and","sand","dog","dogs"]
+["cats and dogs and","cats and dog sand","cat sand dogs and","cat sand dog sand"]
