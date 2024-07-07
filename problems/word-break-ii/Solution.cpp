@@ -20,7 +20,6 @@ private:
 
     void findWordBreak(string &s, int sidx, vector<string>& wordDict, int wdidx) {
         if (sidx >= s.size()) return;
-        if (wdidx == wordDict.size() && sidx != s.size()) return;
 
         int pos = s.find(wordDict[wdidx], sidx);
         if (pos == sidx) {
