@@ -13,7 +13,7 @@ void printResult(vector<vector<string>> result) {
     for (int i = 0; i < result.size(); i++) {
         cout << "[";
         for (int j = 0; j < result[i].size(); j++) {
-            cout << result[i][j];
+            cout << "\"" << result[i][j] << "\"";
             if (j < result[i].size() - 1) cout << ",";
         }
         cout << "]";
