@@ -1,3 +1,4 @@
 hit
 cog
 ["aah","aas","aba","abo","cog","cot","dot","dog","hog","hot","zek","zep","zig","zip","zit","zoa","zoo","zuz","zzz"]
+[["hit","hot","cot","cog"],["hit","hot","hog","cog"]]
