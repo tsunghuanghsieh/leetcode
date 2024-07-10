@@ -1,42 +1,40 @@
 # [126. Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)
 
-Given two words (_beginWord_ and _endWord_), and a dictionary's word list, find all shortest transformation sequence(s) from _beginWord_ to _endWord_, such that:
+A **transformation sequence** from word `beginWord` to word `endWord` using a dictionary `wordList` is a sequence of words `beginWord -> s1 -> s2 -> ... -> sk` such that:
 
-1. Only one letter can be changed at a time
-2. Each transformed word must exist in the word list. Note that _beginWord_ is not a transformed word.
+* Every adjacent pair of words differs by a single letter.
+* Every `si` for `1 <= i <= k` is in `wordList`. Note that `beginWord` does not need to be in `wordList`.
+* `sk == endWord`
 
-**Note:**
-* Return an empty list if there is no such transformation sequence.
-* All words have the same length.
-* All words contain only lowercase alphabetic characters.
-* You may assume no duplicates in the word list.
-* You may assume _beginWord_ and _endWord_ are non-empty and are not the same.
+Given two words, `beginWord` and `endWord`, and a dictionary `wordList`, return _all the **shortest transformation sequences** from `beginWord` to `endWord`, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words `[beginWord, s1, s2, ..., sk]`_.
 
 **Example 1:**
 ```
-Input:
-beginWord = "hit",
-endWord = "cog",
-wordList = ["hot","dot","dog","lot","log","cog"]
-
-Output:
-[
-  ["hit","hot","dot","dog","cog"],
-  ["hit","hot","lot","log","cog"]
-]
+Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+Output: [["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]
+Explanation: There are 2 shortest transformation sequences:
+"hit" -> "hot" -> "dot" -> "dog" -> "cog"
+"hit" -> "hot" -> "lot" -> "log" -> "cog"
 ```
 
 **Example 2:**
 ```
-Input:
-beginWord = "hit"
-endWord = "cog"
-wordList = ["hot","dot","dog","lot","log"]
-
+Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
 Output: []
-
-Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
+Explanation: The endWord "cog" is not in wordList, therefore there is no valid transformation sequence.
 ```
 
+**Constraints:**
+* `1 <= beginWord.length <= 5`
+* `endWord.length == beginWord.length`
+* `1 <= wordList.length <= 500`
+* `wordList[i].length == beginWord.length`
+* `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.
+* `beginWord != endWord
+* All the words in `wordList` are **unique**.
+* The **sum** of all shortest transformation sequences does not exceed `10^5`.
+
 ## Interview
-Lyft popular interview question.
+As of 07/03/2024, leetcode premium subscription says Facebook and Tiktok 2 times in the last 6 months.
+
+2020/08 Lyft popular interview question.
