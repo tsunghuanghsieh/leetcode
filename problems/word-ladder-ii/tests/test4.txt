@@ -1,0 +1,4 @@
+hot
+dog
+["hot","dog","dot"]
+[["hot","dot","dog"]]
