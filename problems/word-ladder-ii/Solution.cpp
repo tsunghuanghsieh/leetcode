@@ -24,9 +24,9 @@ public:
 
             vector<string> newNeighbors = findNeighbors(currWord, wordList, known);
 
-            directedGraph[currWord] = newNeighbors;
             for (string neighbor : newNeighbors) {
                 uniqueCurrNeighbors.insert(neighbor);
+                inverseGraph[neighbor].emplace_back(currWord);
             }
             if (currNeighborsCount == 0) {
                 if (uniqueCurrNeighbors.count(endWord)) {
@@ -42,19 +42,18 @@ public:
             }
         }
 
-        constructLadder(beginWord, endWord, vector<string>({beginWord}), results);
+        constructLadder(endWord, beginWord, vector<string>({endWord}), results);
         return results;
     }
 private:
-    unordered_map<string, vector<string>> directedGraph;
-
+    unordered_map<string, vector<string>> inverseGraph;
     void constructLadder(const string& beginWord, const string& endWord, vector<string> ladder, vector<vector<string>>& results) {
         if (beginWord.compare(endWord) == 0) {
             results.emplace_back(ladder);
             return;
         }
-        if (directedGraph.count(beginWord) == 0) return;
-        for (string s : directedGraph[beginWord]) {
+        if (inverseGraph.count(beginWord) == 0) return;
+        for (string s : inverseGraph[beginWord]) {
             ladder.emplace(ladder.begin(), s);
             constructLadder(s, endWord, ladder, results);
             ladder.erase(ladder.begin());
