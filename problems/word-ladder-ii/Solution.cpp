@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <queue>
-#include <set>
+#include <unordered_set>
 #include <vector>
 #include <unordered_map>
 
@@ -12,7 +12,7 @@ public:
     vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
         vector<vector<string>> results;
         queue<string> currNeighbors({beginWord});
-        set<string> known({beginWord}), uniqueCurrNeighbors;
+        unordered_set<string> known({beginWord}), uniqueCurrNeighbors;
         int currNeighborsCount = currNeighbors.size();
 
         // BFS to find endWord
@@ -60,7 +60,7 @@ private:
         }
     }
 
-    vector<string> findNeighbors(string currWord, vector<string>& wordList, set<string>& visited) {
+    vector<string> findNeighbors(string currWord, vector<string>& wordList, unordered_set<string>& visited) {
         vector<string> results;
         for (auto itr = wordList.begin(); itr != wordList.end(); itr++) {
             if (visited.count(*itr) > 0) continue;
