@@ -47,10 +47,9 @@ public:
         vector<int> memo(s.size() - 1, 1);
         int count = 0;
         for (int i = s.size() - 2; i >= 0; i--) {
-            int prev = -1, temp;
+            int prev = 1, temp;
             for (int j = i + 1; j < s.size(); j++) {
                 temp = memo[j];
-                if (prev == -1) prev = temp;
                 memo[j] = (s[i] == s[j]) ? prev : 0;
                 if (memo[j]) count++;
                 prev = temp;
