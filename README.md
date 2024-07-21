@@ -143,4 +143,5 @@
 |   139 | [Word Break II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-break-ii/)| Hard | C++ ||
 |   140 | [Word Ladder II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-ladder-ii/)| Hard | C++ ||
 |   141 | [Valid Word Abbreviation](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-word-abbreviation/)| Easy | C++ | Y |
+|   142 | [Palindromic Substrings](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/palindromic-substrings/)| Medium | C++ ||
 
