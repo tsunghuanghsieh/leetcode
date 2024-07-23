@@ -144,4 +144,5 @@
 |   140 | [Word Ladder II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/word-ladder-ii/)| Hard | C++ ||
 |   141 | [Valid Word Abbreviation](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/valid-word-abbreviation/)| Easy | C++ | Y |
 |   142 | [Palindromic Substrings](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/palindromic-substrings/)| Medium | C++ ||
+|   143 | [Shortest Distance from All Buildings](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/shortest-distance-from-all-buildings/)| Hard | C++ | Y |
 
