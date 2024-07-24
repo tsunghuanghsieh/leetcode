@@ -68,10 +68,20 @@ public:
     }
 private:
     void printGrid(const vector<vector<int>>& grid) {
+        int maxDist = 0;
         for (int r = 0; r < grid.size(); r++) {
             for (int c = 0; c < grid[0].size(); c++) {
-                if (grid[r][c] == INT_MAX) cout << setw(3) << -1 << " ";
-                else cout << setw(3) << grid[r][c] << " ";
+                if (grid[r][c] == INT_MAX) continue;
+                maxDist = max(maxDist, grid[r][c]);
+            }
+        }
+        int digits = 1;
+        while (maxDist /= 10) digits++;
+        if (digits == 1) digits++;
+        for (int r = 0; r < grid.size(); r++) {
+            for (int c = 0; c < grid[0].size(); c++) {
+                if (grid[r][c] == INT_MAX) cout << setw(digits) << -1 << " ";
+                else cout << setw(digits) << grid[r][c] << " ";
             }
             cout << endl;
         }
