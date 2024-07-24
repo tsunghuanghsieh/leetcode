@@ -27,9 +27,10 @@ public:
         if (pos0s.size() == 0) return -1;
         for (int pos : pos1s) {
             // do bfs from each building to determine distance from all empty space in the grid
-            unordered_set<int> visited;
+            unordered_set<int> visited, seen1;
             queue<int> q;
             q.push(pos);
+            seen1.insert(pos);
             int qsize = q.size(), step = 1;
             while (qsize > 0) {
                 int val = q.front(), r = val / col_size, c = val % col_size;
@@ -38,6 +39,7 @@ public:
                 visited.insert(val);
                 for (vector<int> dir : dirs) {
                     int dr = r + dir[0], dc = c + dir[1], adj = dr * col_size + dc;
+                    if (pos1s.count(adj) > 0) seen1.insert(adj);
                     if (visited.count(adj) > 0 || dr < 0 || dr >= row_size || dc < 0 || dc >= col_size) continue;
                     if (grid[dr][dc] == INT_MAX) continue;
                     grid[dr][dc] += step;
@@ -49,6 +51,7 @@ public:
                     step++;
                 }
             }
+            if (pos1s.size() != seen1.size()) return -1;   // some buildings are unreachable
             for (int pos : pos0s) {
                 if (visited.count(pos) > 0) continue;
                 grid[pos / col_size][pos % col_size] = INT_MAX;
