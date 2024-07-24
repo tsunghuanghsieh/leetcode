@@ -9,6 +9,10 @@ using namespace std;
 
 class Solution {
 public:
+    // The approach is to use bfs to determine all distances from any cell to all other cell in the grid.
+    // It can start from a building, 1, to calculate distance to all empty space, 0, in the grid.
+    // Alternatively, it can start from an empty space, 0, to calculate distances to all buildings, 1.
+    // The approach here is the latter. The speculation was there may tend to have more 0s than 1s.
     int shortestDistance(vector<vector<int>>& grid) {
         int shortest = INT_MAX, row_size = grid.size(), col_size = grid[0].size();
         unordered_set<int> pos0s, pos1s;
@@ -54,7 +58,7 @@ public:
             if (pos1s.size() != seen1.size()) return -1;   // some buildings are unreachable
             for (int pos : pos0s) {
                 if (visited.count(pos) > 0) continue;
-                grid[pos / col_size][pos % col_size] = INT_MAX;
+                grid[pos / col_size][pos % col_size] = INT_MAX;   // marking unreachable empty spaces
             }
         }
         for (int pos : pos0s) {
