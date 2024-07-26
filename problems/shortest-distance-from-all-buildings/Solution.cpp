@@ -27,7 +27,7 @@ public:
     int shortestDistance(vector<vector<int>>& grid) {
         int shortest = INT_MAX, row_size = grid.size(), col_size = grid[0].size();
         unordered_set<int> pos0s, pos1s;
-        vector<vector<int>> dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};   // up, right, down, left
+        int dirs[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};   // up, right, down, left
 
         for (int i = 0; i < row_size; i++) {
             for (int j = 0; j < col_size; j++) {
@@ -52,7 +52,7 @@ public:
                 q.pop();
                 qsize--;
                 visited.insert(val);
-                for (vector<int> dir : dirs) {
+                for (auto dir : dirs) {
                     int dr = r + dir[0], dc = c + dir[1], adj = dr * col_size + dc;
                     if (pos1s.count(adj) > 0) seen1.insert(adj);
                     if (visited.count(adj) > 0 || dr < 0 || dr >= row_size || dc < 0 || dc >= col_size) continue;
