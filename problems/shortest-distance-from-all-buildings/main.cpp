@@ -6,9 +6,11 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution2 soln2;
     ifstream fin;
     fin.open(argv[1]);
     if (!fin) {
@@ -49,9 +51,11 @@ int main(int argc, char **argv) {
         cout << "ERROR: " << argv[1] << " does not contain any 1s." << endl;
         exit(1);
     }
+    vector<vector<int>> grid2(grid);
     cout << line << ": line" << endl;
     cout << expected << ": expected" << endl;
-    cout << soln.shortestDistance(grid) << ": actual" << endl;
+    cout << soln.shortestDistance(grid) << ": actual soln" << endl;
+    cout << soln2.shortestDistance(grid2) << ": actual soln2" << endl;
 
     return 0;
 }

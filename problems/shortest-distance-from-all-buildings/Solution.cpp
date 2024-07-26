@@ -21,6 +21,9 @@ public:
     //
     // The implementation using set<pair<int, int>> runs noticeably faster on big test cases individually,
     // however it fails at LC test case 84 (test8.txt) with TLE. Running test case 84 individually passes.
+    //
+    // Solution2.cpp using LC soln #3 take less time for execution.
+    //
     int shortestDistance(vector<vector<int>>& grid) {
         int shortest = INT_MAX, row_size = grid.size(), col_size = grid[0].size();
         unordered_set<int> pos0s, pos1s;
