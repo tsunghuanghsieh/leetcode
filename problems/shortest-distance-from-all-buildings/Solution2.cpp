@@ -36,7 +36,7 @@ public:
 private:
     int row_size, col_size;
     vector<vector<int>> distances;
-    vector<vector<int>> dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};   // up, right, down, left
+    int dirs[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};   // up, right, down, left
     int bfs(int r1, int c1, int value, vector<vector<int>>& grid) {
         queue<pair<int, int>> q;
         q.push({r1, c1});
