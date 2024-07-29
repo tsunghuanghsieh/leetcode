@@ -26,4 +26,4 @@ Output: [0,0,9,0,0]
 **Follow up:** Can you solve the problem in `O(1)` extra space complexity? (The output array **does not** count as extra space for space complexity analysis.)
 
 ## Interview
-As of 07/26/2024, leetcode premium subscription says Microsoft 9 times, Amazon 6 times and Facebook 5 times in the last 6 months.
+As of 07/26/2024, leetcode premium subscription says Microsoft 9 times, Amazon 6 times and Facebook 5 times in the last 3 months.
