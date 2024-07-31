@@ -18,32 +18,18 @@ private:
         if (si == ssize && pi == psize) return true;
         if (si < ssize && pi == psize) return false;
 
-        if (p[pi] - 'a' >= 0 && p[pi] - 'a' < 26) {
-            if (pi + 1 < psize) lookAhead = p[pi + 1];
-            if (lookAhead == '*') {
-                if (p[pi] != s[si]) checked[si][pi] = isMatch(s, si, p, pi + 2);
-                else {
-                    if (si == ssize) checked[si][pi] = isMatch(s, si, p, pi + 2);
-                    else checked[si][pi] = isMatch(s, si, p, pi + 2) || isMatch(s, si + 1, p, pi);
-                }
-            }
-            else {
-                if (si == ssize || p[pi] != s[si]) checked[si][pi] = false;
-                else checked[si][pi] = isMatch(s, si + 1, p, pi + 1);
-            }
+        if (pi + 1 < psize) lookAhead = p[pi + 1];
+        if (lookAhead == '*') {
+            // case: no more s or (a-z and different)
+            if (si == ssize || (p[pi] != '.' && p[pi] != s[si])) checked[si][pi] = isMatch(s, si, p, pi + 2);
+            // case: '.' or (a-z and same)
+            else checked[si][pi] = isMatch(s, si, p, pi + 2) || isMatch(s, si + 1, p, pi);
         }
         else {
-            // case: '.'
-            if (pi + 1 < psize) lookAhead = p[pi + 1];
-            if (lookAhead == '*') {
-                if (si == ssize) checked[si][pi] = isMatch(s, si, p, pi + 2);
-                else checked[si][pi] = isMatch(s, si, p, pi + 2) || isMatch(s, si + 1, p, pi);
-            }
-            else {
-                if (si == ssize) checked[si][pi] = false;
-                else checked[si][pi] = isMatch(s, si + 1, p, pi + 1);
-            }
+            if (si == ssize || (p[pi] != '.' && p[pi] != s[si])) checked[si][pi] = false;
+            else checked[si][pi] = isMatch(s, si + 1, p, pi + 1);
         }
+
         return checked[si][pi];
     }
 };
