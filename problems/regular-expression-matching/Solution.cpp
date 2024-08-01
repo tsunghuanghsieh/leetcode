@@ -26,7 +26,9 @@ private:
             else checked[si][pi] = isMatch(s, si, p, pi + 2) || isMatch(s, si + 1, p, pi);
         }
         else {
+            // case: no more s or (a-z and different)
             if (si == ssize || (p[pi] != '.' && p[pi] != s[si])) checked[si][pi] = false;
+            // case: '.' or (a-z and same)
             else checked[si][pi] = isMatch(s, si + 1, p, pi + 1);
         }
 
