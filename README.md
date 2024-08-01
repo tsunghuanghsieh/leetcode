@@ -147,4 +147,5 @@
 |   143 | [Shortest Distance from All Buildings](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/shortest-distance-from-all-buildings/)| Hard | C++ | Y |
 |   144 | [Product of Array Except Self](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/product-of-array-except-self/)| Medium | C++ ||
 |   145 | [Regular Expression Matching](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/regular-expression-matching/)| Hard | C++ ||
+|   146 | [Range Sum of BST](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/range-sum-of-bst/)| Easy | C++ ||
 
