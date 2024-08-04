@@ -6,6 +6,13 @@ using namespace std;
 
 class Solution {
 public:
+    // Runtime and space complexity is O(n)
+    // The initial approach was to use unordered_map to store starting (value) and ending (key) index
+    // containing the same number of 0s and 1s. However, unordered_map takes more time to execute the
+    // same opearations than plain old array. With unordered_map, O(n) will be the worst case space
+    // complexity, average case will be better.
+    // Array implementation is LC soln 2.
+    // unordered_map implementaion is LC soln 3.
     int findMaxLength(vector<int>& nums) {
         if (nums.size() == 1) return 0;
         int maxL = 0;
