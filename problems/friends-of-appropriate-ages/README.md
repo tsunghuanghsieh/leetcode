@@ -36,7 +36,7 @@ Explanation: Friend requests are made 110 -> 100, 120 -> 110, 120 -> 100.
 
 **Constraints:**
 * `n == ages.length`
-* <code>1 <= n <= 2 * 10<sub>4</sub></code>
+* <code>1 <= n <= 2 * 10<sup>4</sup></code>
 * `1 <= ages[i] <= 120`
 
 ## Interview

@@ -19,9 +19,9 @@ Explanation: Nodes 6, 7, and 10 are in the range [6, 10]. 6 + 7 + 10 = 23.
 ```
 
 **Constraints:**
-* The number of nodes in the tree is in the range <code>[1, 2 * 10<sub>4</sub>]</code>.
-* <code>1 <= Node.val <= 10<sub>5</sub></code>
-* <code>1 <= low <= high <= 10<sub>5</sub></code>
+* The number of nodes in the tree is in the range <code>[1, 2 * 10<sup>4</sup>]</code>.
+* <code>1 <= Node.val <= 10<sup>5</sup></code>
+* <code>1 <= low <= high <= 10<sup>5</sup></code>
 * All `Node.val` are **unique**.
 
 ## Interview

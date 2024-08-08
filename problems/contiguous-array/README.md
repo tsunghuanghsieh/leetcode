@@ -17,7 +17,7 @@ Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal numb
 ```
 
 **Constraints:**
-* <code>1 <= nums.length <= 10<sub>5</sub></code>
+* <code>1 <= nums.length <= 10<sup>5</sup></code>
 * `nums[i]` is either `0` or `1`.
 
 ## Interview

@@ -19,7 +19,7 @@ Output: [0,0,9,0,0]
 ```
 
 **Constraints:**
-* <code>2 <= nums.length <= 10<sub>5</sub></code>
+* <code>2 <= nums.length <= 10<sup>5</sup></code>
 * `-30 <= nums[i] <= 30`
 * The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
 
