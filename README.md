@@ -149,4 +149,5 @@
 |   145 | [Regular Expression Matching](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/regular-expression-matching/)| Hard | C++ ||
 |   146 | [Range Sum of BST](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/range-sum-of-bst/)| Easy | C++ ||
 |   147 | [Contiguous Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/contiguous-array/)| Medium | C++ ||
+|   148 | [Friends Of Appropriate Ages](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/friends-of-appropriate-ages/)| Medium | C++ ||
 
