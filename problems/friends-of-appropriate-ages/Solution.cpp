@@ -8,7 +8,8 @@ public:
     int numFriendRequests(vector<int>& ages) {
         int count = 0;
         int ages_count[121], y[121];
-        for (int i = 0; i < 121; i++) ages_count[i] = y[i] = 0;
+        // 1 - 15 yo users can't send any requests
+        for (int i = 15; i < 121; i++) ages_count[i] = y[i] = 0;
 
         for (int i = 0; i < ages.size(); i++) {
             // minimum age of x when (1/2 * x + 7) will be older than x
@@ -18,7 +19,7 @@ public:
                 y[a]++;
             }
         }
-        for (int i = 1; i < 121; i++) {
+        for (int i = 15; i < 121; i++) {
             if (ages_count[i] > 0) count += y[i] * ages_count[i];   // request count * age count
             if (ages_count[i] > 1) count += ages_count[i] * (ages_count[i] - 1);   // edges for vertices
         }
