@@ -33,9 +33,9 @@ You can return the answer in any order.
 As of 08/29/2023, there are 3 constraints and additional examples to clarify the problem.
 
 **Constraints:**
-* 2 <= nums.length <= 10<sup>4</sup>
-* -10<sup>9</sup> <= nums[i] <= 10<sup>9</sup>
-* -10<sup>9</sup> <= target <= 10<sup>9</sup>
+* <code>2 <= nums.length <= 10<sup>4</sup></code>
+* <code>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></code>
+* <code>-10<sup>9</sup> <= target <= 10<sup>9</sup></code>
 
 
 Note:

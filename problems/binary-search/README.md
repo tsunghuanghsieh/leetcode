@@ -19,8 +19,8 @@ Explanation: 2 does not exist in nums so return -1
 ```
 
 **Constraints:**
-* 1 <= nums.length <= 10<sup>4</sup>
-* -10<sup>4</sup> < nums[i], target < 10<sup>4</sup>
+* <code>1 <= nums.length <= 10<sup>4</sup></code>
+* <code>-10<sup>4</sup> < nums[i], target < 10<sup>4</sup></code>
 * All the integers in `nums` are **unique**.
 * `nums` is sorted in ascending order.
 

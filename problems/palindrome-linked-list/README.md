@@ -19,7 +19,7 @@ Output: false
 ```
 
 **Constraints:**
-* The number of nodes in the list is in the range [1, 10<sup>5</sup>].
+* The number of nodes in the list is in the range <code>[1, 10<sup>5</sup>]</code>.
 * `0 <= Node.val <= 9`
 
 **Follow up**: Could you do it in `O(n)` time and `O(1)` space?

@@ -27,7 +27,7 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 ```
 
 **Constraints:**
-* 1 <= s.length <= 2 * 10<sup>5</sup>
+* <code>1 <= s.length <= 2 * 10<sup>5</sup></code>
 * `s` consists only of printable ASCII characters.
 
 ## Interview

@@ -24,6 +24,6 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ```
 
 **Constraints:**
-* -2<sup>31</sup> <= x <= 2<sup>31</sup> - 1
+* <code>-2<sup>31</sup> <= x <= 2<sup>31</sup> - 1</code>
 
 **Follow up**: Could you solve it without converting the integer to a string?

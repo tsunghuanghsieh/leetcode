@@ -28,7 +28,7 @@ Output: false
 ```
 
 **Constraints:**
-* 1 <= n <= 2<sup>31</sup> - 1
+* <code>1 <= n <= 2<sup>31</sup> - 1</code>
 
 ## Interview
 As of 09/11/2023, leetcode premium subscription says Accenture 8 times, Apple 5 times, Amazon 4 times, Adobe and Cisco 3 times in the last 6 months.

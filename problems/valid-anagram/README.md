@@ -17,7 +17,7 @@ Output: false
 ```
 
 **Constraints:**
-* 1 <= s.length, t.length <= 5 * 10<sup>4</sup>
+* <code>1 <= s.length, t.length <= 5 * 10<sup>4</sup></code>
 * `s` and `t` consist of lowercase English letters.
 
 Empirical data confirms if `s.length` and `t.length` are not the same, `t` is not an anagram of `s`. From the explanation of **Anagram** above, I thought `t` would still be an anagram of `s` if `t` has extra letters in addition to all the original letters in `s`.

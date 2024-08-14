@@ -25,4 +25,4 @@ Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13"
 ```
 
 **Constraints:**
-* 1 <= n <= 10<sup>4</sup>
+* <code>1 <= n <= 10<sup>4</sup></code>
