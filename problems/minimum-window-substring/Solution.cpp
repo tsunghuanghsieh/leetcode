@@ -17,6 +17,7 @@ public:
         unordered_map<char, vector<int>> matches;
         vector<vector<int>> positions;
         vector<int> counts;
+        res[0] = INT_MAX;
         for (int i = 0; i < 52; i++) vt[i] = vs[i] = 0;
         for (char c : t) {
             vt[(c - 'a' < 0) ? c - 'A' : c - 'a' + 26]++;
@@ -29,21 +30,31 @@ public:
         for (int i = 0; i < 52; i++) {
             if (vt[i] == 0) continue;
             if (vt[i] > vs[i]) return "";
-            positions.emplace_back(matches[(i < 26) ? 'A' + i : 'a' + i - 26]);
-            counts.emplace_back(vt[i]);
+            if (vt[i] == vs[i]) {
+                char ch = (i < 26) ? 'A' + i : 'a' + i - 26;
+                first = min(first, matches[ch][0]);
+                last = max(last, matches[ch][matches[ch].size() - 1]);
+            }
+            else {
+                positions.emplace_back(matches[(i < 26) ? 'A' + i : 'a' + i - 26]);
+                counts.emplace_back(vt[i]);
+            }
         }
 
         dfs(positions, 0, 0, counts, first, last);
-        return s.substr(q.top()[1], q.top()[2] - q.top()[1] + 1);
+        return s.substr(res[1], res[0] + 1);
     }
 private:
+    int res[3];
     set<pair<int, int>> memo;
-    priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> q;   // min priority queue
     void dfs(vector<vector<int>>& positions, int r, int c, vector<int>& counts, int first, int last) {
+        if (res[0] < last - first) return;
         if (memo.count(pair<int, int>(first, last)) > 0) return;
         if (r >= positions.size()) {
             memo.insert(pair<int, int>(first, last));
-            q.push({last - first, first, last});
+            res[0] = last - first;
+            res[1] = first;
+            res[2] = last;
             return;
         }
 
