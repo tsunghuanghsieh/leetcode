@@ -8,6 +8,10 @@ using namespace std;
 
 class Solution {
 public:
+    // The approach is to identify letters in t and their frequency and filter s based on that to get
+    // their positions in s. I failed to identify the pattern and used brute force to find the minimum
+    // window substring. Even with memoization and pruning, it passes LC test case 224 (test6.txt), out
+    // of 268 total. However, it is not able to pass LC test case 264 (test7.txt) TLE.
     string minWindow(string s, string t) {
         if (t.size() > s.size()) return "";
 
