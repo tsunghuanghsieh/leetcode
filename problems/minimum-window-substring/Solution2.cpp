@@ -6,6 +6,12 @@ using namespace std;
 
 class Solution2 {
 public:
+    // LC Editorial soln 1
+    // It uses a sliding window and keeps track of left (l) and right (r) edge of the window.
+    // It keeps incrementing r until all letters in t are encountered in s. It will starts
+    // incrementing l to tighten the sliding window to determine the minimum sliding window,
+    // until some letter in t is missing. It then resumes incrementing r again. The process
+    // repeats until end of s is reached.
     string minWindow(string s, string t) {
         int m = s.size(), n = t.size();
         unordered_map<char, int> um_t;
