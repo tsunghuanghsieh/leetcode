@@ -48,16 +48,18 @@ So function 0 spends 2 + 4 + 1 = 7 units of total time executing, and function 1
 ```
 
 **Note:**
-The online judging system doesn't flag the following situations in the input at the runtime and may output incorrect and negative exclusive time of functions. The burden is on the test case creator to ensure the correctness of the test.
-* Timestamps in the log have to be in chronological order.
-* Earlier function ends before later function.
+The online judging system doesn't flag the following situations in the input at the runtime and may output incorrect ~~and negative~~ exclusive time of functions. The burden is on the test case creator to ensure the correctness of the test.
+~~* Timestamps in the log have to be in chronological order.~~ (now flagged)
+~~* Earlier function ends before later function.~~ (now flagged)
 * Multiple start or end events at the same timestamp.
 
 From the problem description, it is stated that functions are pushed onto and popped off the top of a stack as functions start and end. The function on the top of the stack is the current function being executed. A function that is not currently being executed shouldn't somehow end itself and write to the log to pop another process off the stack. It is counterintuitive; if that's the case and should be explicitly stated.
 
-LC test case 121 ([test6.txt](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/exclusive-time-of-functions/tests/test6.txt)) does just that. In order to have the expected result, `[2,6,1]`, process `1` at the top of the stack is being executed when process `0`, while not being executed, ends and is able to writes to log to pop process `1` off the stack. And then process `0` now at the top of the stack is then being executed at `t = 7` even though it had previously ended at `t = 6`.
+The issue with LC test case 121 has been resolved.
 
-Bug [22693](https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/22693) and [22581](https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/22581) have been opened to track this.
+~~LC test case 121 ([test6.txt](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/exclusive-time-of-functions/tests/test6.txt)) does just that. In order to have the expected result, `[2,6,1]`, process `1` at the top of the stack is being executed when process `0`, while not being executed, ends and is able to writes to log to pop process `1` off the stack. And then process `0` now at the top of the stack is then being executed at `t = 7` even though it had previously ended at `t = 6`.~~
+
+~~Bug [22693](https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/22693) and [22581](https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/22581) have been opened to track this.~~
 
 **Constraints:**
 * `1 <= n <= 100`
