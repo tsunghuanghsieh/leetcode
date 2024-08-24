@@ -49,6 +49,7 @@ So function 0 spends 2 + 4 + 1 = 7 units of total time executing, and function 1
 
 **Note:**
 The online judging system doesn't flag the following situations in the input at the runtime and may output incorrect ~~and negative~~ exclusive time of functions. The burden is on the test case creator to ensure the correctness of the test.
+
 ~~* Timestamps in the log have to be in chronological order.~~ (now flagged)
 ~~* Earlier function ends before later function.~~ (now flagged)
 * Multiple start or end events at the same timestamp.
