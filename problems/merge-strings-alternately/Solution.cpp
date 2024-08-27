@@ -5,13 +5,10 @@ using namespace std;
 class Solution {
 public:
     string mergeAlternately(string word1, string word2) {
-        int l1 = word1.size(), l2 = word2.size(), shorter = min(l1, l2);
-        string res;
-        for (int i = 0; i < shorter; i++) {
-            res.insert(res.end(), word1[i]);
-            res.insert(res.end(), word2[i]);
+        for (int i1 = 0; i1 < word1.size() && i1 / 2 < word2.size(); i1 += 2) {
+            word1.insert(i1 + 1, 1, word2[i1 / 2]);
         }
-        res += (l1 > l2) ? word1.substr(l2) : word2.substr(l1);
-        return res;
+        if (word1.size() / 2 < word2.size()) word1.append(word2.substr(word1.size() / 2));
+        return word1;
     }
 };
