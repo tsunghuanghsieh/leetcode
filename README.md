@@ -154,4 +154,5 @@
 |   150 | [Integer to English Words](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/integer-to-english-words/)| Hard | C++ ||
 |   151 | [Merge Strings Alternately](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/merge-strings-alternately/)| Easy | C++ ||
 |   152 | [Container With Most Water](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/container-with-most-water/)| Medium | C++ ||
+|   153 | [Largest Rectangle in Histogram](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/largest-rectangle-in-histogram/)| Hard | C++ ||
 
