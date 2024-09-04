@@ -16,19 +16,13 @@ public:
         int larea = 0;
         stack<int> lows;
         for (int i = 0; i < heights.size(); i++) {
-            larea = max(larea, heights[i]);
-            if (lows.empty() || heights[lows.top()] <= heights[i]) {
-                lows.push(i);
+            while (!lows.empty() && heights[lows.top()] >= heights[i]) {
+                int height = heights[lows.top()];
+                lows.pop();
+                int pos = (!lows.empty()) ? lows.top() + 1 : 0;
+                larea = max(larea, height * (i - pos));
             }
-            else {
-                while (!lows.empty() && heights[lows.top()] >= heights[i]) {
-                    int height = heights[lows.top()];
-                    lows.pop();
-                    int pos = (!lows.empty()) ? lows.top() + 1 : 0;
-                    larea = max(larea, height * (i - pos));
-                }
-                lows.push(i);
-            }
+            lows.push(i);
         }
         while (!lows.empty()) {
             int height = heights[lows.top()];
