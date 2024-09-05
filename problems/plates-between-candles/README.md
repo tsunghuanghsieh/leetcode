@@ -8,6 +8,7 @@ For example, `s = "||**||**|*"`, and a query `[3, 8]` denotes the substring `"*|
 Return _an integer array `answer` where `answer[i]` is the answer to the `i^th` query_.
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/10/04/ex-1.png)
 ```
 Input: s = "**|**|***|", queries = [[2,5],[5,9]]
@@ -18,6 +19,7 @@ Explanation:
 ```
 
 **Example 2:**
+
 ![Example 2](https://assets.leetcode.com/uploads/2021/10/04/ex-2.png)
 ```
 Input: s = "***|**|*****|**||**|*", queries = [[1,17],[4,5],[14,17],[5,11],[15,16]]

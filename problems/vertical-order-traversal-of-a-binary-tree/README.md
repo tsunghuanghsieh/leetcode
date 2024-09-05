@@ -9,6 +9,7 @@ The **vertical order traversal** of a binary tree is a list of top-to-bottom ord
 Return _the **vertical order traversal** of the binary tree_.
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/01/29/vtree1.jpg)
 ```
 Input: root = [3,9,20,null,null,15,7]
@@ -21,6 +22,7 @@ Column 2: Only node 7 is in this column.
 ```
 
 **Example 2:**
+
 ![Example 2](https://assets.leetcode.com/uploads/2021/01/29/vtree2.jpg)
 ```
 Input: root = [1,2,3,4,5,6,7]
@@ -36,6 +38,7 @@ Column 2: Only node 7 is in this column.
 ```
 
 **Example 3:**
+
 ![Example 3](https://assets.leetcode.com/uploads/2021/01/29/vtree3.jpg)
 ```
 Input: root = [1,2,3,4,6,5,7]

@@ -10,6 +10,7 @@ The **length of a clear path** is the number of visited cells of this path.
 
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/02/18/example1_1.png)
 ```
 Input: grid = [[0,1],[1,0]]
@@ -17,6 +18,7 @@ Output: 2
 ```
 
 **Example 2:**
+
 ![Example 2](https://assets.leetcode.com/uploads/2021/02/18/example2_1.png)
 ```
 Input: grid = [[0,0,0],[1,1,0],[1,1,0]]

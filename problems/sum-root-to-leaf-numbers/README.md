@@ -9,6 +9,7 @@ Return _the total sum of all root-to-leaf numbers_. Test cases are generated so 
 A **leaf** node is a node with no children.
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg)
 ```
 Input: root = [1,2,3]
@@ -20,6 +21,7 @@ Therefore, sum = 12 + 13 = 25.
 ```
 
 **Example 2:**
+
 ![Example 2](https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg)
 ```
 Input: root = [4,9,0,5,1]

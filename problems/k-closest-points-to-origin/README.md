@@ -7,6 +7,7 @@ The distance between two points on the **X-Y** plane is the Euclidean distance (
 You may return the answer in **any order**. The answer is **guaranteed** to be **unique** (except for the order that it is in).
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/03/03/closestplane1.jpg)
 ```
 Input: points = [[1,3],[-2,2]], k = 1

@@ -11,6 +11,7 @@ A function's **exclusive time** is the sum of execution times for all function c
 Return _the **exclusive time** of each function in an array, where the value at the `i^th` index represents the exclusive time for the function with ID `i`_.
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2019/04/05/diag1b.png)
 ```
 Input: n = 2, logs = ["0:start:0","1:start:2","1:end:5","0:end:6"]

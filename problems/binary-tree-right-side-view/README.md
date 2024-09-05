@@ -3,6 +3,7 @@
 Given the root of a binary tree, imagine yourself standing on the **right side** of it, return _the values of the nodes you can see ordered from top to bottom_.
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/02/14/tree.jpg)
 ```
 Input: root = [1,2,3,null,5,null,4]

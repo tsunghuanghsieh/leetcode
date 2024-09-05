@@ -7,6 +7,7 @@ If there are multiple suitable places for insertion, you may choose any place to
 If the list is empty (i.e., the given node is `null`), you should create a new single circular list and return the reference to that single node. Otherwise, you should return the originally given node.
 
 **Example 1:**
+
 ![Example 1 Before](https://assets.leetcode.com/uploads/2019/01/19/example_1_before_65p.jpg)
 ```
 Input: head = [3,4,1], insertVal = 2

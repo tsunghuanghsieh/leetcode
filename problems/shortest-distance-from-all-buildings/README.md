@@ -15,6 +15,7 @@ The **total travel distance** is the sum of the distances between the houses of 
 The distance is calculated using [Manhattan Distance](http://en.wikipedia.org/wiki/Taxicab_geometry), where `distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|`.
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/03/14/buildings-grid.jpg)
 ```
 Input: grid = [[1,0,2,0,1],[0,0,0,0,0],[0,0,1,0,0]]
