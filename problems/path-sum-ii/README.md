@@ -5,6 +5,7 @@ Given the `root` of a binary tree and an integer `targetSum`, return _all **root
 A **root-to-leaf** path is a path starting from the root and ending at any leaf node. A **leaf** is a node with no children.
 
 **Example 1:**
+
 ![Example 1](https://assets.leetcode.com/uploads/2021/01/18/pathsumii1.jpg)
 ```
 Input: root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
@@ -15,6 +16,7 @@ Explanation: There are two paths whose sum equals targetSum:
 ```
 
 **Example 2:**
+
 ![Example 2](https://assets.leetcode.com/uploads/2021/01/18/pathsum2.jpg)
 ```
 Input: root = [1,2,3], targetSum = 5
