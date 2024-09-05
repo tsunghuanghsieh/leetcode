@@ -24,6 +24,8 @@ public:
             }
             lows.push(i);
         }
+        // Saw it in LC sample code. A simple change of appending 0 to heights will eliminate
+        // the need of a repeated while loop below.
         while (!lows.empty()) {
             int height = heights[lows.top()];
             if (height == 0) break;
