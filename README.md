@@ -156,4 +156,5 @@
 |   152 | [Container With Most Water](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/container-with-most-water/)| Medium | C++ ||
 |   153 | [Largest Rectangle in Histogram](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/largest-rectangle-in-histogram/)| Hard | C++ ||
 |   154 | [Path Sum II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/path-sum-ii/)| Medium | C++ ||
+|   155 | [Longest Consecutive Sequence](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-consecutive-sequence/)| Medium | C++ ||
 
