@@ -7,7 +7,12 @@ using namespace std;
 
 class Solution {
 public:
-    // The approach is enumerate through nums once to identify and store unique individual numbers in
+    // LC Editorial soln 3
+    // It is simpler and more elegant in a way that it eliminates the need for unordered_map<int, int>
+    // in my approach. When enumerating through unordered_set<int>, it simply ignores numbers that's not
+    // the starting of a sequence by checking the existing of (num - 1) in the set.
+    //
+    // My approach is enumerate through nums once to identify and store unique individual numbers in
     // unordered_set for constant (on average) find, insert, delete ops. We then enumerate through the
     // unordered_set, identify and delete consecutive numbers, and store the starting number (key) and
     // count (value) in unordered_map. Finally, we enumerate through the unordered_map to link up
