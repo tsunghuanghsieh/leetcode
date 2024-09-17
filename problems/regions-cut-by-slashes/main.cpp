@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
     }
 
     string line;
-    bool expected;
+    int expected;
     getline(fin, line);
     fin >> expected;
 
