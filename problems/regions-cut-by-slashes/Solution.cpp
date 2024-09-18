@@ -33,7 +33,7 @@ public:
 
         int **vertices = new int *[n + 1];
         for (int i = 0; i <= n; i++) vertices[i] = new int[n + 1]();   // () to initialize to 0
-        for (int r= 0; r < n; r++) {
+        for (int r = 0; r < n; r++) {
             for (int c = 0; c < n; c++) {
                 if (grid[r][c] == '/') {
                     vertices[r + 1][c] |= 1;
