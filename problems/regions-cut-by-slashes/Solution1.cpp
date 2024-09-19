@@ -18,7 +18,9 @@ public:
         int regions = 0, n = grid.size(), nx3 = n * 3;
 
         int **grid3x = new int *[nx3];
+        // expand grid by 3x
         for (int i = 0; i < nx3; i++) grid3x[i] = new int[nx3]();   // () to initialize to 0
+        // use 1s to represent forward and backward slash and 0 for whitespace.
         for (int r = 0; r < n; r++) {
             for (int c = 0; c < n; c++) {
                 if (grid[r][c] == '/') {
@@ -29,6 +31,7 @@ public:
                 }
             }
         }
+        // use bfs to counter clusters of 0s.
         for (int r = 0; r < nx3; r++) {
             for (int c = 0; c < nx3; c++) {
                 if (grid3x[r][c] != 0) continue;
