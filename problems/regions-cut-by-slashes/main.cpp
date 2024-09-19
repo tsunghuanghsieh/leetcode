@@ -6,9 +6,11 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution1.cpp"
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution1 soln1;
     ifstream fin;
     fin.open(argv[1]);
     if (!fin) {
@@ -42,7 +44,8 @@ int main(int argc, char **argv) {
 
     cout << line << ": grid" << endl;
     cout << expected << ": expected" << endl;
-    cout << soln.regionsBySlashes(grid) << ": actual" << endl;
+    cout << soln.regionsBySlashes(grid) << ": actual Solution" << endl;
+    cout << soln1.regionsBySlashes(grid) << ": actual Solution1" << endl;   // runtime O((3n)^2)
     return 0;
 
 }
