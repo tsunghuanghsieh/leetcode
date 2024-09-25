@@ -8,6 +8,11 @@ using namespace std;
 class Solution2 {
 public:
     // LC Editorial soln 3: disjoint set
+    //
+    // To union 2 sets, my initial implementation was to update the entire set to another using bfs,
+    // since findParent() implementation simply returns the index when -1 is encountered or the value
+    // contained, which will be topmost parent of the set. It is not as efficient as LC Editorial soln
+    // 3 which uses daisy-chain appraoch to link topmost parents of 2 sets.
     int regionsBySlashes(vector<string>& grid) {
         int regions = 1, n = grid.size(), vertices_size = (n + 1) * (n + 1);
 
