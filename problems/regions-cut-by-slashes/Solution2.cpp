@@ -1,6 +1,5 @@
 #include <iomanip>
 #include <iostream>
-#include <queue>
 #include <vector>
 
 using namespace std;
@@ -26,55 +25,42 @@ public:
                 else vertices[r * (n + 1) + c] = -1;
             }
         }
+        vertices[0] = -1;   // the topmost parent of the border vertices
         // enumerate through the grid
         for (int r = 0; r < n; r++) {
             for (int c = 0; c < n; c++) {
-                int idx1r = 0, idx1c = 0, idx2r = 0, idx2c = 0;
+                int idx1, idx2;
                 if (grid[r][c] == ' ') continue;
                 if (grid[r][c] == '/') {
-                    idx1r = r + slash_fwd[0][0], idx1c = c + slash_fwd[0][1];
-                    idx2r = r + slash_fwd[1][0], idx2c = c + slash_fwd[1][1];
+                    idx1 = (r + slash_fwd[0][0]) * (n + 1) + c + slash_fwd[0][1];
+                    idx2 = (r + slash_fwd[1][0]) * (n + 1) + c + slash_fwd[1][1];
                 }
                 else if (grid[r][c] == '\\') {
-                    idx1r = r + slash_bwd[0][0], idx1c = c + slash_bwd[0][1];
-                    idx2r = r + slash_bwd[1][0], idx2c = c + slash_bwd[1][1];
+                    idx1 = (r + slash_bwd[0][0]) * (n + 1) + c + slash_bwd[0][1];
+                    idx2 = (r + slash_bwd[1][0]) * (n + 1) + c + slash_bwd[1][1];
                 }
-                int parent1 = findParent(vertices, idx1r * (n + 1) + idx1c);
-                int parent2 = findParent(vertices, idx2r * (n + 1) + idx2c);
-                if (parent1 == parent2) regions++;
-                else {
-                    if (parent1 > parent2) findUnion(n + 1, vertices, parent1, parent2, idx1r, idx1c);
-                    else findUnion(n + 1, vertices, parent2, parent1, idx2r, idx2c);
-                }
+                regions += findUnion(n + 1, vertices, idx1, idx2);
             }
         }
         return regions;
     }
 private:
-    const int dirs[4][2] = {{1, 1}, {-1, 1}, {-1, -1}, {1, -1}};
     const int slash_fwd[2][2] = {{1, 0}, {0, 1}};
     const int slash_bwd[2][2] = {{0, 0}, {1, 1}};
 
     int findParent(int *vertices, int idx) {
-        if (vertices[idx] == -1) return vertices[idx] = idx;
-        return vertices[idx];
+        if (vertices[idx] == -1) return idx;
+        // keep going up the chain until -1 is encountered
+        return vertices[idx] = findParent(vertices, vertices[idx]);
     }
 
-    void findUnion(int size, int *vertices, int fromParent, int toParent, int r, int c) {
-        queue<pair<int, int>> q;
-        q.push({r, c});
-        while (!q.empty()) {
-            auto [r, c] = q.front();
-            q.pop();
-            vertices[r * size + c] = toParent;
-            for (int d = 0; d < 4; d++) {
-                int adj_r = r + dirs[d][0], adj_c = c + dirs[d][1];
-                int adj_idx = adj_r * size + adj_c;
-                if  (vertices[adj_idx] == fromParent) {
-                    q.push({adj_r, adj_c});
-                }
-            }
-        }
+    int findUnion(int size, int *vertices, int idx1, int idx2) {
+        int parent1 = findParent(vertices, idx1);
+        int parent2 = findParent(vertices, idx2);
+        if (parent1 == parent2) return 1;   // loop encountered
+        // daisy-chaining: update topmost parent of a set to that of the other set
+        vertices[parent2] = parent1;
+        return 0;
     }
 
     void printVertices(int size, int *vertices) {
