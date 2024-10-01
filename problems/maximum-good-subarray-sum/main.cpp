@@ -17,7 +17,8 @@ int main(int argc, char **argv) {
     }
 
     string line;
-    int k, expected;
+    int k;
+    long expected;
     fin >> line >> k >> expected;
 
     vector<int> nums;
