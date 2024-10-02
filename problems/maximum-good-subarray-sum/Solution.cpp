@@ -8,9 +8,11 @@ using namespace std;
 class Solution {
 public:
     // Second iteration uses prefix sum to eliminate repeated sum calculations. It stil runs through
-    // all combinations of indices of nums[i] and nums[j]. However, empirical evidence on LC platform
-    // shows longer execution time using unordered_map<int, vector<int>>, vs unordered_map<int, int>.
-    // It encountered TLE error.
+    // all combinations of indices of nums[i] and nums[j]. It encountered TLE error on LC platform.
+    // Without breakdown of the test cases exeuction time, I cannot conclusively determine the exact
+    // cause of TLE:
+    // 1) the length of repeated numbers in test cases
+    // 2) the execution time of unordered_map<int, vector<int>> vs unordered_map<int, int>
     long long maximumSubarraySum(vector<int>& nums, int k) {
         unordered_map<int, vector<int>> vals_indices;
         unordered_set<int> seen;
