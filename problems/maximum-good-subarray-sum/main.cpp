@@ -33,5 +33,4 @@ int main(int argc, char **argv) {
     cout << expected << ": expected" << endl;
     cout << soln.maximumSubarraySum(nums, k) << ": actual" << endl;
     return 0;
-
 }
