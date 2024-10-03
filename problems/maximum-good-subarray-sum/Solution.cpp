@@ -6,6 +6,13 @@ using namespace std;
 
 class Solution {
 public:
+    // Third iteration: runtime and space complexity O(n)
+    // Instead of getting all indices of a number in the first pass and looking forward to get all
+    // combinations of prefix sum of nums[i] and nums[j] in the second pass as in the second iteration,
+    // it keeps track of the minimum prefix sum of the current number encountered, while comparing the
+    // minimum prefix sum of (currnet number +/- k) against the prefix sum of the current number, all in
+    // the same pass.
+    //
     // Second iteration uses prefix sum to eliminate repeated sum calculations. It stil runs through
     // all combinations of indices of nums[i] and nums[j]. It encountered TLE error on LC platform.
     // Without breakdown of the test cases exeuction time, I cannot conclusively determine the exact
