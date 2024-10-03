@@ -1,6 +1,5 @@
 #include <iostream>
 #include <unordered_map>
-#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -14,31 +13,26 @@ public:
     // 1) the length of repeated numbers in test cases
     // 2) the execution time of unordered_map<int, vector<int>> vs unordered_map<int, int>
     long long maximumSubarraySum(vector<int>& nums, int k) {
-        unordered_map<int, vector<int>> vals_indices;
-        unordered_set<int> seen;
-        vector<int> k2 = {k, -k};
-        vector<long> prefix_sums;
-        long sum = LONG_MIN;
+        unordered_map<int, long long> seen_psums;   // key: number, value: min prefix sum of the number
+        vector<long long> prefix_sums;
+        long long sum = LLONG_MIN;
         for (int i = 0; i < nums.size(); i++) {
-            vals_indices[nums[i]].emplace_back(i);
+            // prefix sum for nums[i]
             prefix_sums.emplace_back(nums[i]);
             if (i > 0) prefix_sums[i] += prefix_sums[i - 1];
-        }
-        for (int i = 0; i < nums.size(); i++) {
-            if (seen.count(nums[i])) continue;
-            seen.insert(nums[i]);
-            for (int k = 0; k < 2; k++) {
-                int target = nums[i] + k2[k];
-                if (vals_indices.count(target)) {
-                    for (int ii = 0; ii < vals_indices[nums[i]].size(); ii++) {
-                        for (int j =  0; j < vals_indices[target].size(); j++) {
-                            if (vals_indices[nums[i]][ii] > vals_indices[target][j]) continue;
-                            long temp = prefix_sums[vals_indices[target][j]] -
-                                prefix_sums[vals_indices[nums[i]][ii]] + nums[i];
-                            if (temp > sum) sum = temp;
-                        }
-                    }
-                }
+
+            // sum of nums[i] and nums[j]
+            int target1 = nums[i] + k;
+            if (seen_psums.count(target1)) sum = max(sum, prefix_sums[i] - seen_psums[target1] + target1);
+            int target2 = nums[i] - k;
+            if (seen_psums.count(target2)) sum = max(sum, prefix_sums[i] - seen_psums[target2] + target2);
+
+            // keep track of the minimum prefix sum for nums[i]
+            if (seen_psums.count(nums[i])) {
+                seen_psums[nums[i]] = min(seen_psums[nums[i]], prefix_sums[i]);
+            }
+            else {
+                seen_psums[nums[i]] = prefix_sums[i];
             }
         }
         return (sum == LONG_MIN) ? 0 : sum;
