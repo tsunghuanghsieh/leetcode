@@ -159,4 +159,5 @@
 |   155 | [Longest Consecutive Sequence](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-consecutive-sequence/)| Medium | C++ ||
 |   156 | [Regions Cut By Slashes](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/regions-cut-by-slashes/)| Medium | C++ ||
 |   157 | [Maximum Good Subarray Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-good-subarray-sum/)| Medium | C++ ||
+|   158 | [Minimum Number of Increments on Subarrays to Form a Target Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/)| Hard | C++ ||
 
