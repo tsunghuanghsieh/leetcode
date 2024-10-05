@@ -30,7 +30,7 @@ The test cases are generated so that the answer fits in a 32-bit integer.
 <pre>
 <b>Input:</b>  target = [3,1,5,4,2]
 <b>Output:</b> 7
-<b>Explanation:</b> [<ins><b>0</b></ins>,<ins><b>0</b></ins>,<ins><b>0</b></ins>,<ins><b>0</b></ins>,<ins><b>0</b></ins>] -> [<ins><b>1</b></ins>,1,1,1,1] -> [<ins><b>2</b></ins>,1,1,1,1] -> [3,1,<ins><b>1</b></ins>,<ins><b>1</b></ins>,<ins><b>1</b></ins>] -> [3,1,<ins><b>2</b></ins>,<ins><b>2</b></ins>,2] -> [3,1,<ins><b>3</b></ins>,<ins><b>3</b></ins>,2] -> [3,1,<ins><b>4</b></ins>,4,2] -> [3,1,5,4,2].
+<b>Explanation:</b> [<ins><b>0</b></ins>,<ins><b>0</b></ins>,<ins><b>0</b></ins>,<ins><b>0</b></ins>,<ins><b>0</b></ins>] -> [<ins><b>1</b></ins>,1,1,1,1] -> [<ins><b>2</b></ins>,1,1,1,1] -> [3,1,<ins><b>1</b></ins>,<ins><b>1</b></ins>,<ins><b>1</b></ins>] -> [3,1,<ins><b>2</b></ins>,<ins><b>2</b></ins>,2] -> [3,1,<ins><b>3</b></ins>,<ins><b>3</b></ins>,2] -> [3,1,<ins><b>4</b></ins>,4,2] <br> -> [3,1,5,4,2].
 </pre>
 
 **Constraints:**
