@@ -34,22 +34,11 @@ public:
 private:
     int checkLength(const unordered_map<int, int>& freq, int num) {
         int maxLen = 2;
-        int pow2idx = 4;
-        int pow2[] = {1, 2, 4, 8, 16};
-        if (num <= 3) {   // 3^16 < 10^9
-            pow2idx = 4;
-        } else if (num <= 13) {   // 13^8 < 10^9
-            pow2idx = 3;
-        } else if (num <= 177) {   // 177^4 < 10^9
-            pow2idx = 2;
-        } else if (num <= 31622) {   // 31622^2 < 10^9
-            pow2idx = 1;
-        } else {
-            pow2idx = 0;
-        }
-        for (int i = 1; i <= pow2idx; i++) {
-            if (num > 31622) break;   // 31622^2 < 10^9
-            int next_num = pow(num, pow2[i]);
+        int maxInput = pow(10, 9);
+        long long next_num = num;
+        while (1) {
+            next_num *= next_num;
+            if (next_num > maxInput) break;
             if (freq.count(next_num) == 0) {
                 maxLen--;
                 break;
@@ -58,9 +47,39 @@ private:
                 maxLen++;
                 break;
             }
-            maxLen += (i == pow2idx) ? 1 : 2;
+            maxLen += 2;
         }
-        if (maxLen == 2) maxLen--;
+        if (maxLen % 2 == 0) maxLen--;
         return maxLen;
+
+        // int maxLen = 2;
+        // int pow2idx = 4;
+        // int pow2[] = {1, 2, 4, 8, 16};
+        // if (num <= 3) {   // 3^16 < 10^9
+        //     pow2idx = 4;
+        // } else if (num <= 13) {   // 13^8 < 10^9
+        //     pow2idx = 3;
+        // } else if (num <= 177) {   // 177^4 < 10^9
+        //     pow2idx = 2;
+        // } else if (num <= 31622) {   // 31622^2 < 10^9
+        //     pow2idx = 1;
+        // } else {
+        //     pow2idx = 0;
+        // }
+        // for (int i = 1; i <= pow2idx; i++) {
+        //     if (num > 31622) break;   // 31622^2 < 10^9
+        //     int next_num = pow(num, pow2[i]);
+        //     if (freq.count(next_num) == 0) {
+        //         maxLen--;
+        //         break;
+        //     }
+        //     else if (freq.at(next_num) == 1) {
+        //         maxLen++;
+        //         break;
+        //     }
+        //     maxLen += (i == pow2idx) ? 1 : 2;
+        // }
+        // if (maxLen == 2) maxLen--;
+        // return maxLen;
     }
 };
