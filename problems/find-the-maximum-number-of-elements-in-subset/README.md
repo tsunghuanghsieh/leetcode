@@ -23,7 +23,7 @@ Explanation: We can select the subset {1}, which can be placed in the array as [
 ```
 
 **Constraints:**
-* <coded>2 <= nums.length <= 10<sup>5</sup></code>
+* <code>2 <= nums.length <= 10<sup>5</sup></code>
 * <code>1 <= nums[i] <= 10<sup>9</sup></code>
 
 ## Interview
