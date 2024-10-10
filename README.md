@@ -160,4 +160,5 @@
 |   156 | [Regions Cut By Slashes](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/regions-cut-by-slashes/)| Medium | C++ ||
 |   157 | [Maximum Good Subarray Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-good-subarray-sum/)| Medium | C++ ||
 |   158 | [Minimum Number of Increments on Subarrays to Form a Target Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/)| Hard | C++ ||
+|   159 | [Find the Maximum Number of Elements in Subset](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-the-maximum-number-of-elements-in-subset/)| Medium | C++ ||
 
