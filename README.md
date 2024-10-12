@@ -161,4 +161,5 @@
 |   157 | [Maximum Good Subarray Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-good-subarray-sum/)| Medium | C++ ||
 |   158 | [Minimum Number of Increments on Subarrays to Form a Target Array](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/)| Hard | C++ ||
 |   159 | [Find the Maximum Number of Elements in Subset](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-the-maximum-number-of-elements-in-subset/)| Medium | C++ ||
+|   160 | [Find Beautiful Indices in the Given Array II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-beautiful-indices-in-the-given-array-ii/)| Hard | C++ ||
 
