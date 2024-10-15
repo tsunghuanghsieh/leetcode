@@ -30,6 +30,10 @@ int main(int argc, char **argv) {
     int k;
     fin >> s >> a >> b >> k >> expected;
 
+    if (k > s.size()) {
+        cout << "ERROR: value of k " << k << " must be <= to size of s " << s.size() << "." << endl;
+        exit(1);
+    }
 
     cout << s << ": s" << endl;
     cout << a << ": a" << endl;
