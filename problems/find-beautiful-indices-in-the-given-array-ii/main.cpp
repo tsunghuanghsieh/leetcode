@@ -35,11 +35,40 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-    cout << s << ": s" << endl;
-    cout << a << ": a" << endl;
-    cout << b << ": b" << endl;
+    vector<int> exp_res;
+    regex patternNum("\\d+");
+    sregex_token_iterator itr(expected.begin(), expected.end(), patternNum);
+    for (; itr != sregex_token_iterator(); itr++) {
+        exp_res.emplace_back(stoi((*itr)));
+    }
+
+    cout << ((s.size() > 80) ? (s.substr(0, 40) + "...(" +  to_string(s.size()) + ")") : s) << ": s" << endl;
+    cout << ((a.size() > 80) ? (a.substr(0, 40) + "...(" +  to_string(a.size()) + ")") : a) << ": a" << endl;
+    cout << ((b.size() > 80) ? (b.substr(0, 40) + "...(" +  to_string(b.size()) + ")") : b) << ": b" << endl;
     cout << k << ": k" << endl;
-    cout << expected << ": expected" << endl;
-    printResult(soln.beautifulIndices(s, a, b, k));
+    vector<int> act_res = soln.beautifulIndices(s, a, b, k);
+    if (exp_res.size() <= 20) {
+        cout << expected << ": expected" << endl;
+        printResult(act_res);
+    }
+    else {
+        bool diff = false;
+        if (exp_res.size() != act_res.size()) {
+            cout << exp_res.size() << ": expected count " << endl << act_res.size() << ": actual count " << endl;
+            diff = true;
+        }
+
+        int i = 0;
+        for (; i < exp_res.size() && i < act_res.size(); i++) {
+            if (exp_res[i] != act_res[i]) {
+                diff = true;
+                cout << "i: " << i << " exp_res " << exp_res[i] << " act_res " << act_res[i] << endl;
+            }
+        }
+        while (i < exp_res.size()) cout << "i: " << i << " exp_res " << exp_res[i++] << endl;
+        while (i < act_res.size()) cout << "i: " << i << " act_res " << act_res[i++] << endl;
+
+        if (!diff) cout << "actual result and expected result are identical." << endl;
+    }
     return 0;
 }
