@@ -11,7 +11,7 @@ public:
     // This approach is similar to LC soln 4 and is probably faster because of the index jump and the use
     // of count, but slower than soln 5 and 6 which use sliding window.
     bool checkInclusion(string s1, string s2) {
-        int s1_freq[26];
+        int s1_freq[26] = {};   // init array to 0
         int count_s1 = s1.size(), count_s2 = s2.size();
         if (count_s1 > count_s2) return false;
 
