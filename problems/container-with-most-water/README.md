@@ -24,7 +24,7 @@ Output: 1
 
 **Constraints:**
 * `n == height.length`
-* <code>2 <= n <= 10<sup>5</sup</code>
+* <code>2 <= n <= 10<sup>5</sup></code>
 * <code>0 <= height[i] <= 10<sup>4</sup></code>
 
 ## Interview
