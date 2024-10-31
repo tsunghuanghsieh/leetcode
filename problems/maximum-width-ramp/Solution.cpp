@@ -1,25 +1,37 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
 
 class Solution {
 public:
-    // Use map to store the number in vector as key and its indices as value. Enumerate through the map
-    // backward to find the maximum width of the ramp (see README.md for definition).
+    // use unordered_map to store the index of the last occurrence of a number and a vector for
+    // the sorted unique numbers in nums. run through unordered_map the second time to determine
+    // the largest index among (the numbers >= the current number) and sort the vector. enumerate
+    // nums to determine the largest width ramp.
     int maxWidthRamp(vector<int>& nums) {
-        map<int, vector<int>> nummap;
-        int lastidx = -1, maxWidth = 0;
+        unordered_map<int, int> back;
+        vector<int> sorted_nums;
+        int lastidx, maxWidth = 0;
 
         for (int i = 0; i < nums.size(); i++) {
-            nummap[nums[i]].emplace_back(i);
+            if (back.count(nums[i]) == 0) sorted_nums.emplace_back(nums[i]);
+            back[nums[i]] = i;
         }
-        for (auto itr = nummap.rbegin(); itr != nummap.rend(); itr++) {
-            lastidx = max(lastidx, (*itr).second.back());
-            if ((*itr).second.front() <= lastidx) maxWidth = max(maxWidth, lastidx - (*itr).second.front());
+        sort(sorted_nums.begin(), sorted_nums.end(), greater<int>());
+        lastidx = back[sorted_nums[0]];
+        for (int i = 1; i < sorted_nums.size(); i++) {
+            if (back[sorted_nums[i]] < lastidx) {
+                back[sorted_nums[i]] = lastidx;
+            }
+            else {
+                lastidx = back[sorted_nums[i]];
+            }
         }
-
+        for (int i = 0; i < nums.size(); i++) {
+            maxWidth = max(maxWidth, back[nums[i]] - i);
+        }
         return maxWidth;
     }
 };
