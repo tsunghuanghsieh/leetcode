@@ -11,7 +11,8 @@ public:
     // index) until the high is less than the low or is the smallest high. If it is the smallest low,
     // I am done. If not, increment the low and continue with the current high.
     //
-    // Also tried dynamic programming, it is essentially an optimized brute force which results in TLE.
+    // Also tried dynamic programming, it is in fact a brute force attempt. Even with memoization,
+    // it results in TLE.
     int maxWidthRamp(vector<int>& nums) {
         vector<int> fromRight_max, fromLeft_min;
         int count = nums.size(), maxNum = INT_MIN, minNum = INT_MAX, maxWidth = 0;
