@@ -5,6 +5,10 @@ using namespace std;
 
 class Solution1 {
 public:
+    // This is similar to LC soln 3, two pointers approach. I believe this is slightly more efficient
+    // in execution time since it doesn't enumerate the entire vector again as in LC soln 3, and only
+    // the recorded lows and highs. It does incur additional vector for lows in time and space though.
+    //
     // From left to right, I need to keep track of the new lowest encountered. On the other hand,
     // from right to left, I need to keep track of the new highest encountered. With those, I start
     // with the largest low (smallest index) and find the width against the largest high (smallest
