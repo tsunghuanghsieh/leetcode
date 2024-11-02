@@ -6,6 +6,7 @@ using namespace std;
 
 class Solution {
 public:
+    // This approach is similar to LC soln 2, sorting. However, the implementation differs.
     // use unordered_map to store the index of the last occurrence of a number and a vector for
     // the sorted unique numbers in nums. run through unordered_map the second time to determine
     // the largest index among (the numbers >= the current number) and sort the vector. enumerate
