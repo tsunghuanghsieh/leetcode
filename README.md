@@ -164,4 +164,5 @@
 |   160 | [Find Beautiful Indices in the Given Array II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-beautiful-indices-in-the-given-array-ii/)| Hard | C++ ||
 |   161 | [Permutation in String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/permutation-in-string/)| Medium | C++ ||
 |   162 | [Maximum Width Ramp](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-width-ramp/)| Medium | C++ ||
+|   163 | [Longest Happy String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-happy-string/)| Medium | C++ ||
 
