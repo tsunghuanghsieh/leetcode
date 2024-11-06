@@ -165,4 +165,5 @@
 |   161 | [Permutation in String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/permutation-in-string/)| Medium | C++ ||
 |   162 | [Maximum Width Ramp](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-width-ramp/)| Medium | C++ ||
 |   163 | [Longest Happy String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-happy-string/)| Medium | C++ ||
+|   164 | [All O`one Data Structure](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/all-oone-data-structure/)| Hard | C++ ||
 
