@@ -4,8 +4,13 @@ using namespace std;
 
 class AllOne {
 public:
-    AllOne() {
+    AllOne() : _className(__func__) {
 
+    }
+
+    // For main.cpp setup check
+    string ClassName() {
+        return _className;
     }
 
     void inc(string key) {
