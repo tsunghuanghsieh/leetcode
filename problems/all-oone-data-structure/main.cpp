@@ -25,6 +25,8 @@ int main(int argc, char **argv) {
 
     string ops, values, expected;
     fin >> ops >> values >> expected;
+    cout << ops << ": input" << endl;
+    cout << values << ": input" << endl;
     cout << expected << ": expected" << endl;
 
     regex patternCmd("\\w+");
