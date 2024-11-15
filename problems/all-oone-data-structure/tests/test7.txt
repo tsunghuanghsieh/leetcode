@@ -1,0 +1,3 @@
+["AllOne","inc","inc","inc","dec","inc","inc","getMaxKey","dec","dec","dec","getMaxKey"]
+[[],["hello"],["world"],["hello"],["world"],["hello"],["leet"],[],["hello"],["hello"],["hello"],[]]
+[null,null,null,null,null,null,null,"hello",null,null,null,"leet"]
