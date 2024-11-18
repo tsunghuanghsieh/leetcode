@@ -89,33 +89,33 @@ public:
         }
         Item *temp = item->next;
         // finding the last item of the previous count before the first item of the decrement count
+        // this operation is not constant time
         while (temp->size > item->size) temp = temp->next;
-        if (item->size > 0) {
+        if (item->size > 0) {   // decrement count is more than 0
             MinCount = min(MinCount, item->size);
             // first item and more than one item at the previous count
             if (keys_freq[item->size + 1] == item && item->next->size == item->size + 1) keys_freq[item->size + 1] = item->next;
+            // not the last item at the previous count
             if (item->next != temp) {
-                // unhook item
+                // unhook from the previous location
                 item->prev->next = item->next;
                 item->next->prev = item->prev;
-                // insert
+                // insert at the new location
                 item->prev = temp->prev;
                 item->next = temp;
                 temp->prev->next = item;
                 temp->prev = item;
             }
-            keys_freq[item->size] = item;
+            keys_freq[item->size] = item;   // update the first item at the incremented count
             if (MaxCount == item->size + 1 && keys_freq[item->size + 1] == item &&
                 item->next->size != item->size + 1) {
+                // only 1 item at the previous count
                 keys_freq.erase(MaxCount);
                 MaxCount = item->size;
             }
         }
-        else {
-            // only 1 total
-            // more than 1 at idx 1 and first one
-            // more than 1 at idx and not the first one
-            // only 1 at idx 1
+        else {   // decremented count is 0
+            // only 1 item in the doubly linked list
             if (item->next == item) {
                 keys_freq.erase(item->size + 1);
                 MaxCount = MinCount = 0;
@@ -124,15 +124,19 @@ public:
                 delete item;
                 return;
             }
+            // first item at the previous count
             if (keys_freq[item->size + 1] == item) {
+                // only item at the previous count
                 if (item->next->size != item->size + 1) {
                     MinCount = item->prev->size;
                     keys_freq.erase(item->size + 1);
                 }
+                // more than one items at the previous count
                 else {
                     keys_freq[item->size + 1] = item->next;
                 }
             }
+            // unhook from the previous location
             item->next->prev = item->prev;
             item->prev->next = item->next;
             keys.erase(key);
