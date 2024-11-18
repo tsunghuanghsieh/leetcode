@@ -115,15 +115,6 @@ public:
             }
         }
         else {   // decremented count is 0
-            // only 1 item in the doubly linked list
-            if (item->next == item) {
-                keys_freq.erase(item->size + 1);
-                MaxCount = MinCount = 0;
-                items = nullptr;
-                keys.erase(key);
-                delete item;
-                return;
-            }
             // first item at the previous count
             if (keys_freq[item->size + 1] == item) {
                 // only item at the previous count
