@@ -8,8 +8,14 @@ public:
     // Use doubly linked list to keep track of the list of strings and their respective count.
     // Each item contains the string, its count and links to its prev and next item(s).
     // Unordered maps provide constant time access to items using string and count (not entirely true).
-    // At each increment, the item, newly created or existing, will be moved in the list if there exists
-    // item(s) at the incremented count or is not the first item at previous count prior to increment.
+    // At each increment, the incoming item, newly created or existing, will be moved in the list if there
+    // exists item(s) at the incremented count or the incoming item is not the first item at the previous
+    // count prior to increment.
+    //
+    //     ______________________________________________
+    //     \-> |a| -> |b| -> |c| -> |d| -> |e| -> |f| --/  next*
+    //     /-- |5| <- |3| <- |3| <- |3| <- |2| <- |2| <-\  prev*
+    //     \____________________________________________/
     AllOne() : _className(__func__) {
 
     }
