@@ -8,6 +8,7 @@ using namespace std;
 
 class Solution {
 public:
+    // This is also LC soln #2.
     // In my approach, I just need to read and sort the first numbers in nums. Once the smallest number is
     // discarded, the next number in the same row is read and sorted. After that we update curr_min and
     // curr_max. When it reaches the last number in any of the vector<int> in nums, the current res is the
