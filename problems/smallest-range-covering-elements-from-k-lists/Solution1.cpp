@@ -9,6 +9,10 @@ using namespace std;
 class Solution1 {
 public:
     // LC soln #3 2-pointer (sliding window)
+    // Sort all numbers in all vectors in nums and use 2 pointers to indicate the range that includes at
+    // least one number from all vectors in nums. Keep traversing right until a number from all vectors
+    // has been encountered and then traverse the left pointer to find the minimum range until one vector
+    // is missing from the range.
     vector<int> smallestRange(vector<vector<int>>& nums) {
         vector<int> res(2);
         vector<pair<int, int>> nums_order;
