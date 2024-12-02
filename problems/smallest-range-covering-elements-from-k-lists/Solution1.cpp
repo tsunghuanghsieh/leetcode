@@ -13,6 +13,9 @@ public:
     // least one number from all vectors in nums. Keep traversing right until a number from all vectors
     // has been encountered and then traverse the left pointer to find the minimum range until one vector
     // is missing from the range.
+    // Time complexity O(nlogn) I would have expected this would take more time executing, compared to
+    // LC soln #2, since k is smaller than n. However, this takes less time executing on LC platform.
+    // Space complexity O(n)
     vector<int> smallestRange(vector<vector<int>>& nums) {
         vector<int> res(2);
         vector<pair<int, int>> nums_order;

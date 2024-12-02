@@ -17,6 +17,9 @@ public:
     //   4     10    15       24 26
     // 0     9    12      20
     //     5           18    22     30
+    // Time complexity O(nlogk) I would have expected this would take less time executing, compared to
+    // LC soln #3, since k is smaller than n. However, this takes more time executing on LC platform.
+    // Space complexity O(k)
     vector<int> smallestRange(vector<vector<int>>& nums) {
         vector<int> res(2), curr_nums_idx(nums.size(), 0);
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> nums_order;
