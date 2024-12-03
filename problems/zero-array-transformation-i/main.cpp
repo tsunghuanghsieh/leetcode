@@ -7,15 +7,6 @@ using namespace std;
 
 #include "Solution.cpp"
 
-void printResult(vector<int> result) {
-    cout << "[";
-    for (int i = 0; i < result.size(); i++) {
-        cout << result[i];
-        if (i < result.size() - 1) cout << ",";
-    }
-    cout << "]: actual " << endl;
-}
-
 int main(int argc, char **argv) {
     Solution soln;
     ifstream fin;
