@@ -168,4 +168,5 @@
 |   164 | [All O`one Data Structure](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/all-oone-data-structure/)| Hard | C++ ||
 |   165 | [Smallest Range Covering Elements from K Lists](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/smallest-range-covering-elements-from-k-lists/)| Hard | C++ ||
 |   166 | [Zero Array Transformation I](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/zero-array-transformation-i/)| Medium | C++ ||
+|   167 | [Zero Array Transformation II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/zero-array-transformation-ii/)| Medium | C++ ||
 
