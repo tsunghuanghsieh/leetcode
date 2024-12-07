@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
         exit(1);
     }
     string input1, input2;
-    bool expected;
+    int expected;
     fin >> input1 >> input2 >> expected;
 
     vector<int> nums;
