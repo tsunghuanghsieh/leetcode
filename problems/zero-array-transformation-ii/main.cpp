@@ -33,8 +33,10 @@ int main(int argc, char **argv) {
         queries.emplace_back(query);
     }
 
-    cout << input1 << ": nums" << endl;
-    cout << input2 << ": queries" << endl;
+    cout << ((input1.size() > 140) ?
+        (input1.substr(0, 40) + "...(" +  to_string(input1.size()) + ")") : input1) << ": nums" << endl;
+    cout << ((input2.size() > 140) ?
+        (input2.substr(0, 40) + "...(" +  to_string(input2.size()) + ")") : input2) << ": queries" << endl;
     cout << expected << ": expected" << endl;
     cout << soln.minZeroArray(nums, queries) << ": actual" << endl;
     return 0;
