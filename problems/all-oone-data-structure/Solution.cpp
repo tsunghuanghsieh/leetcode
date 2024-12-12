@@ -5,6 +5,10 @@ using namespace std;
 
 class AllOne {
 public:
+    // LC soln also uses doubly linked list. However, it's simpler. Each item represents each count and
+    // contains a unordered_set for all strings at the particular count. Its prev and next pointers are
+    // only between counts, while my approach are between counts and between strings at the all counts.
+    //
     // Use doubly linked list to keep track of the list of strings and their respective count.
     // Each item contains the string, its count and links to its prev and next item(s).
     // Unordered maps provide constant time access to items using string and count (not entirely true).
