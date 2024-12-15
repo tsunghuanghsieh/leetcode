@@ -5,6 +5,9 @@ using namespace std;
 
 class Solution {
 public:
+    // This is similar to https://leetcode.com/problems/zero-array-transformation-i, and we can use
+    // prefix sum and compare against nums vector. However, we need to determine the least k elements,
+    // if possible.  The naive approach results in TLE error. LC hint suggests using binary search.
     int minZeroArray(vector<int>& nums, vector<vector<int>>& queries) {
         int l = 0, r = queries.size() - 1, qsize = queries.size() - 1, zeros = 0;
         // handle special case when nums is all 0s
