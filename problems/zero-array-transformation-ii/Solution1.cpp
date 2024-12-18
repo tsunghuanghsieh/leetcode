@@ -5,6 +5,8 @@ using namespace std;
 
 class Solution1 {
 public:
+    // Online solution uses prefix sum without doing binary search.
+    // This is more elegant than binary search approach. Prefix sum is only done once.
     int minZeroArray(vector<int>& nums, vector<vector<int>>& queries) {
         vector<int> prefix(nums.size() + 1);
         int k = 0, diff = 0;
