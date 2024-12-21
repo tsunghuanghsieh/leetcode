@@ -1,6 +1,6 @@
 # [1101. The Earliest Moment When Everyone Become Friends](https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends/) **Premium**
 
-There are n people in a social group labeled from `0` to `n - 1`. You are given an array `logs` where `logs[i] = [timestampi, xi, yi]` indicates that `x`<sub>i</sub> and `y`<sub>i</sub> will be friends at the time `timestamp`<sub>i</sub>.
+There are n people in a social group labeled from `0` to `n - 1`. You are given an array `logs` where <code>logs[i] = [timestamp<sub>i</sub>, x<sub>i</sub>, y<sub>i</sub>]</code> indicates that <code>x<sub>i</sub></code> and <code>y<sub>i</sub></code> will be friends at the time <code>timestamp<sub>i</sub></code>.
 
 Friendship is **symmetric**. That means if `a` is friends with `b`, then `b` is friends with `a`. Also, person `a` is acquainted with `a` person `b` if `a` is friends with `b`, or `a` is a friend of someone acquainted with `b`.
 
@@ -30,11 +30,11 @@ Explanation: At timestamp = 3, all the persons (i.e., 0, 1, 2, and 3) become fri
 * `2 <= n <= 100`
 * `1 <= logs.length <= 10`<sup>4</sup>
 * `logs[i].length == 3`
-* `0 <= timestampi <= 10`<sup>9</sup>
-* `0 <= x`<sub>i</sub>, `y`<sub>i</sub>` <= n - 1`
-* `x`<sub>i</sub>` != y`<sub>i</sub>
+* <code>0 <= timestampi <= 10<sup>9</sup></code>
+* <code>0 <= x<sub>i</sub>, y<sub>i</sub> <= n - 1</code>
+* <code>x<sub>i</sub> != y<sub>i</sub></code>
 * All the values `timestamp`<sub>i</sub> are **unique**.
-* All the pairs `(x`<sub>i</sub>`, y`<sub>i</sub>`)` occur at most one time in the input.
+* All the pairs <code>(x<sub>i</sub>, y<sub>i</sub>)</code> occur at most one time in the input.
 
 ## Interview
 As of 12/17/2024, leetcode premium subscription says Google 15 times in the last 3 months.
