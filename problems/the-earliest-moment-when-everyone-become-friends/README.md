@@ -28,12 +28,12 @@ Explanation: At timestamp = 3, all the persons (i.e., 0, 1, 2, and 3) become fri
 
 **Constraints:**
 * `2 <= n <= 100`
-* `1 <= logs.length <= 10`<sup>4</sup>
+* <code>1 <= logs.length <= 10<sup>4</sup></code>
 * `logs[i].length == 3`
 * <code>0 <= timestampi <= 10<sup>9</sup></code>
 * <code>0 <= x<sub>i</sub>, y<sub>i</sub> <= n - 1</code>
 * <code>x<sub>i</sub> != y<sub>i</sub></code>
-* All the values `timestamp`<sub>i</sub> are **unique**.
+* All the values <code>timestamp<sub>i</sub></code> are **unique**.
 * All the pairs <code>(x<sub>i</sub>, y<sub>i</sub>)</code> occur at most one time in the input.
 
 ## Interview
