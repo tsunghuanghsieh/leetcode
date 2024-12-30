@@ -26,6 +26,8 @@ Output: 3
 Explanation: At timestamp = 3, all the persons (i.e., 0, 1, 2, and 3) become friends.
 ```
 
+**Note:** The `timestamps` in the 2 examples are sorted and the description and **constraints** don't mention anything to suggest otherwise. Howevre, empiricaal data from several actual test cases shows `timestamps` are **not** sorted.
+
 **Constraints:**
 * `2 <= n <= 100`
 * <code>1 <= logs.length <= 10<sup>4</sup></code>
