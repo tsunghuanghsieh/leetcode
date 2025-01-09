@@ -6,6 +6,15 @@ using namespace std;
 
 class Solution {
 public:
+    // LC Editorial soln #1, count letters in between, which  first identify unique letters in s,
+    // then find first and the last index of each unique letter before couting the unique letters
+    // between the first and the last index.
+    // My initial approach is similar to LC Editorial soln #1.
+    // The runtime complexity is O(n) and space complexity is O(1) since there are only 26 letters.
+    //
+    // LC Editorial soln #2 precompute the first and the last index of all 26 letters, the first
+    // index is -1 if the letter is not in s. After that, count the unique letters between the first
+    // and the last index.
     int countPalindromicSubsequence(string s) {
         int count = 0;
         vector<int> dist(26), counts(26);
