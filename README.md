@@ -173,4 +173,5 @@
 |   169 | [House Robber](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/house-robber/)| Medium | C++ ||
 |   170 | [Unique Length-3 Palindromic Subsequences](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/unique-length-3-palindromic-subsequences/)| Medium | C++ ||
 |   171 | [Best Sightseeing Pair](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/best-sightseeing-pair/)| Medium | C++ ||
+|   172 | [Decode String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/decode-string/)| Medium | C++ ||
 
