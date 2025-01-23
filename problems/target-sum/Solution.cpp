@@ -19,7 +19,6 @@ public:
     int findTargetSumWays(vector<int>& nums, int target) {
         // instead of hardcoding an arbitrary number
         int totalSum = accumulate(nums.begin(), nums.end(), 0);
-        totalSum = max(totalSum, (int) nums.size());   // special case when all numbers in nums are 0s
         vector<int> curr(2 * totalSum + 1);   // the range of the possible sum of nums
         int offset = totalSum;
         curr[nums[0] + offset] += 1;
@@ -31,10 +30,10 @@ public:
         if ((totalSum + target) % 2) return 0;
         for (int i = 1; i < nums.size(); i++) {
             vector<int> next(curr.size());
-            for (int j = 0; j < curr.size(); j++) {
-                if (curr[j] == 0) continue;
-                next[j + nums[i]] += curr[j];
-                next[j - nums[i]] += curr[j];
+            for (int j = -totalSum; j <= totalSum; j++) {
+                if (curr[j + totalSum] == 0) continue;
+                next[j + nums[i] + totalSum] += curr[j + totalSum];
+                next[j - nums[i] + totalSum] += curr[j + totalSum];
             }
             curr = next;
         }
