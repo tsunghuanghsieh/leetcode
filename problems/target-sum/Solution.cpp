@@ -19,15 +19,16 @@ public:
     int findTargetSumWays(vector<int>& nums, int target) {
         // instead of hardcoding an arbitrary number
         int totalSum = accumulate(nums.begin(), nums.end(), 0);
+        // special cases handling
+        // When totalSum is even, all possible sums are even. Likewise for odd.
+        // When (totalSum + target) is odd, i.e., one is even and the other is odd, there is no way
+        // to arrive at the target.
+        // Second part is self explanatory.
+        if ((totalSum + target) % 2 || abs(target) > totalSum) return 0;
         vector<int> curr(2 * totalSum + 1);   // the range of the possible sum of nums
         int offset = totalSum;
         curr[nums[0] + offset] += 1;
         curr[-nums[0] + offset] += 1;
-        // special case handling
-        // When totalSum is even, all possible sums are even. Likewise for odd.
-        // When (totalSum + target) is odd, one of even and the other is odd, there is no way to arrive
-        // at the target.
-        if ((totalSum + target) % 2) return 0;
         for (int i = 1; i < nums.size(); i++) {
             vector<int> next(curr.size());
             for (int j = -totalSum; j <= totalSum; j++) {
@@ -37,7 +38,7 @@ public:
             }
             curr = next;
         }
-        return (abs(target) > totalSum) ? 0 : curr[target + offset];
+        return curr[target + offset];
         // unordered_map<int, int> curr({{nums[0], 1}, {-nums[0], 1}});
         // if (nums[0] == 0) curr[nums[0]]++;
         // for (int i = 1; i < nums.size(); i++) {
