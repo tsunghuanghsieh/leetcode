@@ -175,4 +175,5 @@
 |   171 | [Best Sightseeing Pair](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/best-sightseeing-pair/)| Medium | C++ ||
 |   172 | [Decode String](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/decode-string/)| Medium | C++ ||
 |   173 | [Target Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/target-sum/)| Medium | C++ ||
+|   174 | [Minimum Size Subarray Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-size-subarray-sum/)| Medium | C++ ||
 
