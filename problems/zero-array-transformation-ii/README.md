@@ -41,8 +41,8 @@ Return the **minimum** possible **non-negative** value of `k`, such that after p
 * <code>0 <= nums[i] <= 10<sup>5</sup></code>
 * <code>1 <= queries.length <= 10<sup>5</sup></code>
 * `queries[i].length == 3`
-* <code>0 <= l<sub>i</sub> <= r<sub>i</sub> < nums.length<code>
-* <code>1 <= val<sub>i</sub> <= 5<code>
+* <code>0 <= l<sub>i</sub> <= r<sub>i</sub> < nums.length</code>
+* <code>1 <= val<sub>i</sub> <= 5</code>
 
 ## Interview
 As of 12/04/2024, leetcode premium subscription says Google 20 times in the last 3 months.
