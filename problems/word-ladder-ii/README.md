@@ -30,9 +30,9 @@ Explanation: The endWord "cog" is not in wordList, therefore there is no valid t
 * `1 <= wordList.length <= 500`
 * `wordList[i].length == beginWord.length`
 * `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.
-* `beginWord != endWord
+* `beginWord != endWord`
 * All the words in `wordList` are **unique**.
-* The **sum** of all shortest transformation sequences does not exceed `10^5`.
+* The **sum** of all shortest transformation sequences does not exceed <code>10<sup>5</sup></code>.
 
 ## Interview
 As of 07/03/2024, leetcode premium subscription says Facebook and Tiktok 2 times in the last 6 months.
