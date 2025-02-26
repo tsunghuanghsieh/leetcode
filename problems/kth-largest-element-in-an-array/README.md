@@ -1,8 +1,8 @@
 # [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
-Given an integer array `nums` and an integer `k`, return _the `k^th` largest element in the array_.
+Given an integer array `nums` and an integer `k`, return _the <code>k<sup>th</sup></code> largest element in the array_.
 
-Note that it is the `k^th` largest element in the sorted order, not the `k^th` distinct element.
+Note that it is the <code>k<sup>th</sup></code> largest element in the sorted order, not the <code>k<sup>th</sup></code> distinct element.
 
 Can you solve it without sorting?
 

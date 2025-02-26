@@ -1,6 +1,6 @@
 # [528. Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
 
-You are given a **0-indexed** array of positive integers `w` where `w[i]` describes the **weight** of the `i^th` index.
+You are given a **0-indexed** array of positive integers `w` where `w[i]` describes the **weight** of the <code>i<sup>th</sup></code> index.
 
 You need to implement the function `pickIndex()`, which randomly picks an index in the range `[0, w.length - 1]` (**inclusive**) and returns it. The **probability** of picking an index `i` is `w[i] / sum(w)`.
 
