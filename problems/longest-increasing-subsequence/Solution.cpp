@@ -17,13 +17,13 @@ public:
             if (itr == order.end()) order[nums[i]] = 1;
             else {
                 int distance = 0;
-                // find the longest increasing sequence among elements > nums[i]
+                // find the longest increasing subsequence among elements sesen so far > nums[i]
                 // the worst case: runtime complexity: O(n)
                 for (; itr != order.end(); itr++) {
                     distance = max(distance, itr->second + 1);
                 }
                 order[nums[i]] = distance;
-                // find the longest increasing sequence among elements seen so far
+                // find the longest increasing subsequence among elements seen so far
                 longest = max(longest, distance);
             }
         }
