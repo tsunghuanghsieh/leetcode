@@ -22,11 +22,11 @@ Output: 2
 * `-10^7 <= k <= 10^7`
 
 ## Interview
-My facebook phone interview Q1:
+My facebook phone interview CQ 1:
 [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value)
 Subscription needed.
 
-My facebook phone interview Q2:
+My facebook phone interview CQ 2:
 Similar to [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/).
 
 It returns true when there is a continous subarray whose sum equals to k, false otherwise.

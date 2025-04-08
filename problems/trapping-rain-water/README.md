@@ -22,6 +22,6 @@ Output: 9
 * <code>0 <= height[i] <= 10<sup>5</sup></code>
 
 ## Interview
-Google onsite interview.
+Google onsite interview CQ.
 As of 08/30/2024, leetcode premium subscription says Amazon 19 times, Google and Goldman Sachs 18 times, Microsoft, Facebook 7 times in the last 3 months.
 As of 07/16/2019, leetcode premium subscription says Amazon 38 times, Google 23 times, Goldman Sachs 20 times, Facebook 17 times in the last 6 months.

@@ -35,4 +35,4 @@ From the top-left corner, there are a total of 3 ways to reach the bottom-right 
 As of 04/09/2024, leetcode premium subscription says Amazon 6 times, Facebook 5 times and Microsoft 3 times in the last 6 months.
 As of 04/09/2024, leetcode premium subscription says Google 12 times, Adobe 6 times and Apple 4 times in the last 6 - 12 months.
 
-Someone claims [this](https://leetcode.com/discuss/interview-question/303107) is similar to his recent Facebook onsite interview question.
+Someone claims [this](https://leetcode.com/discuss/interview-question/303107) is similar to his recent Facebook onsite interview CQ.
