@@ -179,4 +179,5 @@
 |   175 | [Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| Medium | C++ ||
 |   176 | [Best Time to Buy and Sell Stock II](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/best-time-to-buy-and-sell-stock-ii/)| Medium | C++ ||
 |   177 | [Longest Increasing Subsequence](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/longest-increasing-subsequence/)| Medium | C++ ||
+|   178 | [Number of Provinces](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/number-of-provinces/)| Medium | C++ ||
 
