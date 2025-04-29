@@ -33,4 +33,4 @@ Output: 3
 ## Interview
 04/07/2025, Amazon online assessment example CQ #2.
 
-As of 04//2025, leetcode premium subscription says Amazon  times, Google  times, Microsoft 18 times in the last 6 months.
+As of 04//2025, leetcode premium subscription says Amazon 6 times, Google 5 times, Uber 2 times in the last 3 months.
