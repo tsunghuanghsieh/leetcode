@@ -7,16 +7,17 @@ using namespace std;
 class Solution {
 public:
     int countCharacters(vector<string>& words, string chars) {
-        unordered_map<char, int> freq;
+        vector<int> freq(26, 0);
         int sum = 0;
 
-        for (char c : chars) freq[c]++;
+        for (char c : chars) freq[c - 'a']++;
         for (string word : words) {
-            unordered_map<char, int> curr;
+            vector<int> curr(26, 0);
             bool good = true;
             for (char c : word) {
-                curr[c]++;
-                if (!freq.count(c) || curr[c] > freq[c]) {
+                int pos = c - 'a';
+                curr[pos]++;
+                if (!freq[pos] || curr[pos] > freq[pos]) {
                     good = false;
                     break;
                 }
