@@ -10,11 +10,11 @@ public:
         vector<int> freq(26, 0);
         int sum = 0;
 
-        for (char c : chars) freq[c - 'a']++;
-        for (string word : words) {
+        for (char &c : chars) freq[c - 'a']++;
+        for (string &word : words) {
             vector<int> curr(26, 0);
             bool good = true;
-            for (char c : word) {
+            for (char &c : word) {
                 int pos = c - 'a';
                 curr[pos]++;
                 if (!freq[pos] || curr[pos] > freq[pos]) {
