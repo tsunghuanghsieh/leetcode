@@ -48,6 +48,10 @@ var longestPalindrome = function(s) {
                     updateLongest();
                 }
             } else if (pal_start - 1 < 0) {
+                // at the start of the string, can't expand left
+                // shift start and end of the current palindrome and see if it is still a palindrome
+                // if it is, shift it by 1 character to the right
+                // if not, reset the palindrome
                 var start = pal_start + 1, end = pal_end + 1;
                 var isPalindrome = true;
                 for (loopIdx = 0; loopIdx < Math.ceil((start + end) / 2); loopIdx++) {
@@ -57,7 +61,6 @@ var longestPalindrome = function(s) {
                     }
                 }
                 if (isPalindrome) {
-                    // shift palindrome by 1 character
                     pal_start++;
                     pal_end++;
                 } else {
