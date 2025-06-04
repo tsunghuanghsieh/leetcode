@@ -31,13 +31,13 @@ Explanation: The answer must be returned modulo 109 + 7.
 
 **Bounded Integer Composition (Inclusion-Exclusion):**
 
-$P(n, target) = \displaystyle\sum_{\substack{i = 0}}^{\bigg\lfloor \cfrac{\scriptscriptstyle target - n}{\scriptscriptstyle k} \bigg\rfloor} (-1)^i \lparen \begin{matrix}
-n \\ i \end{matrix}\rparen \lparen \begin{matrix} target - k * i - 1 \\ n - 1\end{matrix} \rparen$
+$`P(n, target) = \displaystyle\sum_{\substack{i = 0}}^{\bigg\lfloor \cfrac{\scriptscriptstyle target - n}{\scriptscriptstyle k} \bigg\rfloor} (-1)^i \left( \begin{matrix} n \\ i \end{matrix} \right) \left(\begin{matrix} target - k * i - 1 \\ n - 1\end{matrix} \right)`$
 
 where
-$\lparen \begin{matrix} n \\ i \end{matrix}\rparen = \cfrac {n!}{i! *(n - i)!} = \cfrac {n * (n - 1) * (n - 2) * ... * (n - i + 1)}{i * (i - 1) * (i - 2) * ... * 2 * 1 * }$
+$`\left( \begin{matrix} n \\ i \end{matrix} \right) = \cfrac {n!}{i! *(n - i)!} = \cfrac {n * (n - 1) * (n - 2) * ... * (n - i + 1)}{i * (i - 1) * (i - 2) * ... * 2 * 1 * }`$
 
-and $\lparen \begin{matrix} n \\ i \end{matrix}\rparen == \lparen \begin{matrix} n \\ n - i \end{matrix}\rparen$
+and $`\left( \begin{matrix} n \\ i \end{matrix} \right) == \left( \begin{matrix} n \\ n - i \end{matrix} \right)`$
+
 
 ## Interview
 As of 04/29/2025, leetcode premium subscription says Google 2 times in the last 6 months.
