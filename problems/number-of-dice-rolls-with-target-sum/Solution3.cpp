@@ -38,6 +38,7 @@ private:
         }
         return ans;
     }
+    // Precompute factorial and inverse factorial for constant lookup
     void precompute() {
         fact[0] = 1;
         for (int i = 1; i < MAX_TARGET; i++) {
