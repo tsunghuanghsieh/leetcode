@@ -182,4 +182,5 @@
 |   178 | [Number of Provinces](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/number-of-provinces/)| Medium | C++ ||
 |   179 | [Roman to Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/roman-to-integer/)| Easy | C++ ||
 |   180 | [Find Words That Can Be Formed by Characters](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-words-that-can-be-formed-by-characters/)| Easy | C++ ||
+|   181 | [Number of Dice Rolls With Target Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/number-of-dice-rolls-with-target-sum/)| Medium | C++ ||
 
