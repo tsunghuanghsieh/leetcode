@@ -20,7 +20,9 @@ private:
     static const int MAX_TARGET = 1001;   // constraint: 1 <= target <= 1000
     vector<long long> fact = vector<long long>(MAX_TARGET), inv_fact = vector<long long>(MAX_TARGET);
     long long boundedIntegerComposition(int i, int n, int k, int target) {
-        return ((i % 2 == 1) ? -1 : 1) * (combination(n, i) * combination(target - k * i - 1, n - 1) % MOD);
+        long long ways = combination(n, i) * combination(target - k * i - 1, n - 1) % MOD;
+        // Ensure modulo arithmetic is not negative
+        return (i % 2 == 1) ? MOD - ways : ways;
     }
     long long combination(int n, int v) {
         return fact[n] * inv_fact[v] % MOD * inv_fact[n - v] % MOD;
