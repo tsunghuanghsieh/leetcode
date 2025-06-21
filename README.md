@@ -183,5 +183,5 @@
 |   179 | [Roman to Integer](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/roman-to-integer/)| Easy | C++ ||
 |   180 | [Find Words That Can Be Formed by Characters](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/find-words-that-can-be-formed-by-characters/)| Easy | C++, python ||
 |   181 | [Number of Dice Rolls With Target Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/number-of-dice-rolls-with-target-sum/)| Medium | C++ ||
-|   182 | [Minimum Difference Between Highest and Lowest of K Scores](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)| Easy | C++ ||
+|   182 | [Minimum Difference Between Highest and Lowest of K Scores](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)| Easy | C++, python ||
 
