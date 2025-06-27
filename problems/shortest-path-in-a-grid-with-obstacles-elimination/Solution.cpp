@@ -10,7 +10,7 @@ public:
     int shortestPath(vector<vector<int>>& grid, int k) {
         m = grid.size() - 1;   // 0-based index
         n = grid[0].size() - 1;   // 0-based index
-        if (k > m + n) return m + n;   // special case: shortest (manhattahn) distance
+        if (k >= m + n) return m + n;   // special case: shortest (manhattahn) distance
         visited.reserve((m + 1) * (n + 1));   // Let STL pick the right bucket count
         priority_queue<vector<int>> q;   // max heap
         visited.insert({0, 0, k});   // row, col, available k at [row, col]
