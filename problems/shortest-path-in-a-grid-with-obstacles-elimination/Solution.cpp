@@ -7,6 +7,13 @@ using namespace std;
 
 class Solution {
 public:
+    // LC soln #1: bfs
+    // LC soln #2: A* algorithm
+    //
+    // This approach uses bfs with recursive calls to indicate steps from [0, 0] and
+    // unordered_set<vector<int>>({row, col, avail_k}) to manage visited cells.
+    //
+    // Solution2 is much cleaner and simple to understand.
     int shortestPath(vector<vector<int>>& grid, int k) {
         m = grid.size() - 1;   // 0-based index
         n = grid[0].size() - 1;   // 0-based index
