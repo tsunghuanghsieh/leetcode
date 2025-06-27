@@ -25,7 +25,8 @@ private:
         size_t operator()(const std::vector<int>& v) const {
             // generating unique hash
             // same hash for same row and col, regardless of k
-            // otherwise unordered_set.count() will return false
+            // otherwise unordered_set.count() will return false for the same cell with diff k
+            // nuance of count(): hashFn(a) == hashFn(b) and equalFn(a) == equalFn(b)
             // row, col, available k at [row, col]
             return (v[0] + 1) * (v[1] + 1);
         }
@@ -33,7 +34,9 @@ private:
     struct equalFn {
         bool operator()(const std::vector<int>& a, const std::vector<int>& b) const {
             // To fulfill commutative property: equalFn(a, b) == equalFn(b, a)
-            // only consider row and col
+            // only consider row and col and NOT available k so that it can handle >, < and == individually
+            // otherwise, only a[2] == b[2] will be excluded.
+            // Processing incoming vector with smaller available k is not necessary.
             // row, col, available k at [row, col]
             return a[0] == b[0] && a[1] == b[1];
         }
@@ -41,13 +44,13 @@ private:
     unordered_set<vector<int>, hashFn, equalFn> visited;
 
     // Evaluate to false to add v to the priority_queue
-    // If v[0] and v[1] exist in the set and v[2] is larger, we want to remove it
-    // since it cannot be replace while it's in the set
+    // If v[0] and v[1] exist in the set and v's k, v[2], is larger, we want to remove it
+    // since it cannot be updated in place while it's in the set
     bool checkDominance(unordered_set<vector<int>, hashFn, equalFn>& visited, const std::vector<int>& v) {
         auto itr = visited.find(v);
         if (itr == visited.end()) return false;
         // row, col, available k at [row, col]
-        if ((*itr)[2] >= v[2]) return true;
+        if ((*itr)[2] >= v[2]) return true;   // v is worse, exclude from being added to the priority_queue
         visited.erase(itr);
         return false;
     }
@@ -65,6 +68,9 @@ private:
                 bool hasObs = grid[nextRow][nextCol];
                 std::vector<int> v({nextRow, nextCol, avail_k - hasObs});
                 if (avail_k - hasObs < 0) continue;   // brickwalled, k exhausted
+                // Instead of visited.count(v) which, if considering available k, will evaluate
+                // to false when v's k, v[2], is different and allow v into the priority_queue,
+                // I used a separate to fine tune the behavior and only allow it when it's larger.
                 else if(checkDominance(visited, v)) continue;
                 next.push({nextRow, nextCol, avail_k - hasObs});
                 visited.insert(v);
