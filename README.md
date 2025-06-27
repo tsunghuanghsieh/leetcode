@@ -185,4 +185,5 @@
 |   181 | [Number of Dice Rolls With Target Sum](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/number-of-dice-rolls-with-target-sum/)| Medium | C++ ||
 |   182 | [Minimum Difference Between Highest and Lowest of K Scores](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)| Easy | C++, python ||
 |   183 | [Buddy Strings](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/buddy-strings/)| Easy | python ||
+|   184 | [Shortest Path in a Grid with Obstacles Elimination](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/shortest-path-in-a-grid-with-obstacles-elimination/)| Hard | C++ ||
 
