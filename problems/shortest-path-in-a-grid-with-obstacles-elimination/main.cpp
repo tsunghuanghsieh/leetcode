@@ -6,9 +6,11 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution2 soln2;
     ifstream fin(argv[1]);
     if (!fin) {
         cout << "Error opening " << argv[1] << endl;
@@ -37,5 +39,6 @@ int main(int argc, char **argv) {
     cout << k << ": k" << endl;
     cout << expected << ": expected" << endl;
     cout << soln.shortestPath(grid, k) << ": actual" << endl;
+    cout << soln2.shortestPath(grid, k) << ": actual soln 2" << endl;
     return 0;
 }
