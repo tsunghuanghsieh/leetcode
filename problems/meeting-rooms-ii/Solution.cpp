@@ -16,6 +16,14 @@ private:
         }
     }
 public:
+    // This is similar to LC soln #2, chronological ordering.
+    // In LC soln #2, it uses 2 vector<int> for start and end times. It goes through
+    // start time vector to increment room count. It reduces room count when start
+    // time is >= end time and increment end time vector index. At the end of start
+    // time vector, it returns the room count.
+    //
+    // I used map<int, int>, start and end times as key, and frequency as value. I
+    // then loop through map<int, int> to tally up the count.
     int minMeetingRooms(vector<vector<int>>& intervals) {
         int size = intervals.size();
         int count = 0;
