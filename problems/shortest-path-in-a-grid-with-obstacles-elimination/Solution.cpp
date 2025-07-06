@@ -26,7 +26,7 @@ public:
         return steps;
     }
 private:
-    const vector<vector<int>> dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};   // e, s, w, n
+    const int dirs[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};   // e, s, w, n
     int m, n;
     struct hashFn {
         size_t operator()(const std::vector<int>& v) const {
