@@ -6,9 +6,11 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 int main(int argc, char** argv) {
     Solution s;
+    Solution2 s2;
     ifstream fin(argv[1]);
     if (!fin) {
         cout << "Error opening " << argv[1] << endl;
@@ -28,5 +30,6 @@ int main(int argc, char** argv) {
     cout << line << ": intervals" << endl;
     cout << expected << ": expected" << endl;
     cout << s.minMeetingRooms(intervals) << ": actual" << endl;
+    cout << s2.minMeetingRooms(intervals) << ": actual s2" << endl;
     return 0;
 }
