@@ -6,18 +6,20 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
-void printResult(vector<double>& result) {
+void printResult(vector<double>& result, string s) {
     cout << "[";
     for (int i = 0; i < result.size(); i++) {
         cout << fixed << setprecision(5) << result[i];
         if (i < result.size() - 1) cout << ",";
     }
-    cout << "]: actual" << endl;
+    cout << "]: actual " << s << endl;
 }
 
 int main(int argc, char **argv) {
     Solution soln;
+    Solution2 soln2;
     ifstream fin(argv[1]);
     if (!fin) {
         cout << "Error opening " << argv[1] << endl;
@@ -64,6 +66,8 @@ int main(int argc, char **argv) {
     cout << line_queries << ": queries" << endl;
     cout << expected << ": expected" << endl;
     vector<double> result = soln.calcEquation(equacations, values, queries);
-    printResult(result);
+    printResult(result, "soln");
+    vector<double> result2 = soln2.calcEquation(equacations, values, queries);
+    printResult(result2, "soln 2");
     return 0;
 }
