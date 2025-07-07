@@ -11,12 +11,22 @@ public:
     //
     // The improved bfs implementation uses queue<pair<int, int>> for steps and bool[][].
     // This is similar to LC Editorial soln #1.
+    //
+    // LC Editorial brings up symmetry property of solutions. It takes the same number of
+    // steps to reach [2, 1], [-2, 1], [2, -1], [-2, -1]. Hence, we can simply find the
+    // steps of [|x|, |y|] in the first quadrant.
+    //
+    // LC Editorial soln #3; It's more efficient using dfs going from [x, y] to [0, 0],
+    // dirs can then be reduced to [-1, -2] and [-2, -1] with terminating conditions that
+    // returns 0 at [0, 0] and 2 at [1, 2] and [2, 1].
     int minKnightMoves(int x, int y) {
-        const int offset = 300, bound = 300;
-        bool visited[2 * bound + 1][2 * bound + 1] = {};   // init to 0
+        const int bound = 300;
+        bool visited[bound + 1][bound + 1] = {};   // init to 0
+        x = abs(x);
+        y = abs(y);
         queue<pair<int, int>> q;
         q.push({0, 0});
-        visited[offset][offset] = true;
+        visited[0][0] = true;
         int size = q.size(), steps = 0;
         while (size > 0) {
             pair<int, int> curr = q.front();
@@ -24,11 +34,11 @@ public:
             q.pop();
             size--;
             for (int i = 0; i < 8; i++) {
-                int new_x = curr.first + dirs[i][0], new_y = curr.second + dirs[i][1];
-                if (new_x > bound || new_x < -bound || new_y > bound || new_y < -bound) continue;
+                int new_x = abs(curr.first + dirs[i][0]), new_y = abs(curr.second + dirs[i][1]);
+                if (new_x > bound || new_y > bound) continue;
                 if (abs(new_x) + abs(new_y) > bound) continue;
-                if (visited[new_x + offset][new_y + offset]) continue;
-                visited[new_x + offset][new_y + offset] = true;
+                if (visited[new_x][new_y]) continue;
+                visited[new_x][new_y] = true;
                 q.push({new_x, new_y});
             }
             if (size == 0) {
