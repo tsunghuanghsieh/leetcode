@@ -188,4 +188,5 @@
 |   184 | [Shortest Path in a Grid with Obstacles Elimination](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/shortest-path-in-a-grid-with-obstacles-elimination/)| Hard | C++ ||
 |   185 | [Maximum Number of Visible Points](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/maximum-number-of-visible-points/)| Hard | C++ ||
 |   186 | [Evaluate Division](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/evaluate-division/)| Medium | C++ ||
+|   187 | [Minimum Knight Moves](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minimum-knight-moves/)| Medium | C++ | Y |
 
