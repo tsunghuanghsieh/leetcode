@@ -6,6 +6,17 @@ using namespace std;
 
 class Solution {
 public:
+    // LC Editorial soln #1: map
+    // LC Editorial soln #2: map + queue
+    // LC Editorial soln #3: map
+    //
+    // My implementation matches LC Editorial soln #1. It uses map<int, int> to store the value of the
+    // number as key and the count of occurrence as the corresponding value. It iterates through the
+    // map to decrement the count to determine if the array can be divided into sets of k consecutive
+    // numbers.
+    //
+    // Runtime complexity: O(nlogn + nk) or O(nlogn) for large n, small k or O(nk) for large k, small n
+    // Space complexity O(n)
     bool isPossibleDivide(vector<int>& nums, int k) {
         map<int, int> freq;
         for (int i = 0; i < nums.size(); i++) {
