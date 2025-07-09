@@ -41,4 +41,13 @@ public:
         if (height != cntAdded.front()) return false;
         return true;
     }
+    // LC Editorial soln #3 goes through nums to creat unordered_map<int, int>. In the unordered_map,
+    // each cluster of numbers can be separately divided into sets of k consecutive numbers, if all
+    // numbers in nums can be divided into sets of k consecutive numbers. It iterates through each
+    // number in the unordered_map. At each number, it first decrements until finding the smallest
+    // number in the cluster. From the smallest number, if its count is not 0, it decrements the
+    // count by one (1) over the range of k consecutive numbers until the count is 0 before moving
+    // to the next number, and repeat the process until the count of all numbers in the cluster is 0.
+    // Otherwise, it returns false. Once the cluster is completed, it moves to the next number in the
+    // unordered_map and repeat the process until the all numbers are done.
 };
