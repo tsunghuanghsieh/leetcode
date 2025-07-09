@@ -6,9 +6,11 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution2.cpp"
 
 int main(int argc, char** argv) {
     Solution soln;
+    Solution2 soln2;
     ifstream fin(argv[1]);
     if (!fin) {
         cout << "Error opening " << argv[1] << endl;
@@ -30,5 +32,6 @@ int main(int argc, char** argv) {
     cout << k << ": k" << endl;
     cout << expected << ": expected" << endl;
     cout << soln.isPossibleDivide(nums, k) << ": actual" << endl;
+    cout << soln2.isPossibleDivide(nums, k) << ": actual soln2" << endl;
     return 0;
 }
