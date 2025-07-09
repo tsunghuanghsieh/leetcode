@@ -6,9 +6,9 @@ using namespace std;
 
 class Solution {
 public:
-    // LC Editorial soln #1: map
-    // LC Editorial soln #2: map + queue
-    // LC Editorial soln #3: map
+    // LC Editorial soln #1: map Runtime O(nlogn + nk) Space O(n)
+    // LC Editorial soln #2: map + queue Runtime O(nlogn + n) Space O(n)
+    // LC Editorial soln #3: unordered_map Runtime O(n) Space O(n)
     //
     // My implementation matches LC Editorial soln #1. It uses map<int, int> to store the value of the
     // number as key and the count of occurrence as the corresponding value. It iterates through the
