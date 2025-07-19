@@ -12,12 +12,20 @@ public:
     //
     // Use union find for number graphs.
     // vector<int> parent to represent number-parent (dislike) relationship.
-    // unordered_map<int, int> distance
+    // unordered_map<int, int> distance represents number and distance to its parent relationship.
     //
     // The logic is to assign distance (rank) among numbers. The first one has distance 0.
     // Its dislike (2nd) number has distance 1. The 2nd's dislike number has distance 2 from
     // the first one. So on and so forth. Even distance in 1 group and old in the other.
     // If any number pair in dislikes are in the same group, it is then impossible to partition.
+    //
+    // In LC Editorial soln #3, it first preprocesses pairs in dislikes once to store them in
+    // vecotr<vector<int>> adj (mutual dislike). Then, it simply iterates through adj, and for
+    // each number, populate the disjoint set (union find) of all its neighbors. And at each
+    // neighbor, it checks and returns false when it finds the number and its neighbor having
+    // the same parent, since their parents have to be in different sets. By preprocessing
+    // (mutual dislikes), it duplicates the edges and reduces union find logic to a simple
+    // parent check between the number and all its neighbors.
     bool possibleBipartition(int n, vector<vector<int>>& dislikes) {
         bool res = true;
         parent.resize(n + 1);   // use numbers in dislikes as is
