@@ -7,9 +7,16 @@ using namespace std;
 
 class Solution2 {
 public:
+    // LC Editorial soln #1: bsf
+    //
+    // This approach will first iterate through dislikes once to store their relationships
+    // in vector<vector<int>> adj. After that, it can perform bfs. One key takeaway is that
+    // adjacent neighbors will be in different partitions, or in LC soln, different colors.
+    // My initial implementation was literally 2 partitions, using vector<unordered_set<int>>.
+    // However, it can use vector<int>, with value 0 and 1 for partitions, which is cleaner.
     bool possibleBipartition(int n, vector<vector<int>>& dislikes) {
         vector<vector<int>> adj(n + 1, vector<int>());
-        vector<unordered_set<int>> partitions(2);
+        vector<int> partitions(n + 1, -1);
         queue<int> q;
         for (int i = 0; i < dislikes.size(); i++) {
             adj[dislikes[i][0]].emplace_back(dislikes[i][1]);
@@ -17,24 +24,18 @@ public:
         }
 
         for (int i = 1, cnt = 0; i < adj.size(); i++) {
-            if (partitions[0].count(i) || partitions[1].count(i)) continue;
-            partitions[cnt].insert(i);
+            if (partitions[i] != -1) continue;
+            partitions[i] = 0;   // partition 0
             q.push(i);
-            int q_size = q.size();
 
-            while (q_size) {
+            while (!q.empty()) {
                 int num = q.front();
                 q.pop();
-                q_size--;
                 for (int j = 0; j < adj[num].size(); j++) {
-                    if (partitions[cnt].count(adj[num][j])) return false;
-                    if (partitions[(cnt + 1) % 2].count(adj[num][j])) continue;
+                    if (partitions[num] == partitions[adj[num][j]]) return false;
+                    if (partitions[adj[num][j]] != -1) continue;
                     q.push(adj[num][j]);
-                    partitions[(cnt + 1) % 2].insert(adj[num][j]);
-                }
-                if (q_size == 0) {
-                    q_size = q.size();
-                    cnt = (cnt + 1) % 2;
+                    partitions[adj[num][j]] = 1 - partitions[num];   // alternate partition
                 }
             }
         }
