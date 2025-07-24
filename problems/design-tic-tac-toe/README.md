@@ -1,4 +1,4 @@
-# [348. Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) **Premium**
+# [348. Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) (**Premium**)
 
 Assume the following rules are for the tic-tac-toe game on an `n x n` board between two players:
 
