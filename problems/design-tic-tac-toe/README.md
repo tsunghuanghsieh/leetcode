@@ -70,4 +70,4 @@ ticTacToe.move(2, 1, 1); // return 1 (player 1 wins)
 **Follow-up:** Could you do better than <code>O(n<sup>2</sup>)</code> per `move()` operation?
 
 ## Interview
-As of 07/09/2025, leetcode premium subscription says Facebook and Amazon 6 times, Databrick 4 times in the last 3 months.
+As of 07/23/2025, leetcode premium subscription says Facebook and Amazon 6 times, Databrick 4 times in the last 3 months.
