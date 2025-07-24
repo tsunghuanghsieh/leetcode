@@ -5,10 +5,10 @@ using namespace std;
 
 class TicTacToe {
 public:
-    // My initial approach uses rows and cols to keep track of players choices, using bitmask
-    // 1, 2 and 3 for both players; rows_count and cols_count for count of player's move on
-    // each row and col. Similar df, db, df_count, df_count for forward diagonal nad backward
-    // diagonal.
+    // My initial approach uses rows and cols to keep track of players moves, using bitmask
+    // 1 for player 1, 2 for player 2 and 3 for both players; rows_count and cols_count for
+    // count of player's move on each row and col. Similar df, db, df_count, df_count for
+    // forward diagonal nad backward diagonal.
     //
     // Runtime complexity: O(1)
     // Space complexity: O(n)
