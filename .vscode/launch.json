@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -36,6 +33,36 @@
             "env": {},
             "args": [],
             "showLog": true
+        },
+        {
+            "name": "Debug C++ (Makefile)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/a.out",
+            "args": [
+                "${input:path_testcase}"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: build with Makefile",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for LLDB",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "path_testcase",
+            "type": "promptString",
+            "description": "Relative path to a test case:",
+            "default": ""
         }
     ]
 }
