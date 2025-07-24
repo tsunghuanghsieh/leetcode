@@ -5,6 +5,13 @@ using namespace std;
 
 class TicTacToe {
 public:
+    // My initial approach uses rows and cols to keep track of players choices, using bitmask
+    // 1, 2 and 3 for both players; rows_count and cols_count for count of player's move on
+    // each row and col. Similar df, db, df_count, df_count for forward diagonal nad backward
+    // diagonal.
+    //
+    // Runtime complexity: O(1)
+    // Space complexity: O(n)
     TicTacToe(int n) : _n(n), df_count(3), db_count(3) {
         rows.resize(n);
         cols.resize(n);
