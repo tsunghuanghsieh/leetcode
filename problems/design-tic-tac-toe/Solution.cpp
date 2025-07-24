@@ -31,7 +31,7 @@ public:
     }
 private:
     int _n, df = 0, db = 0;
-    vector<int> board, rows, cols, df_count, db_count;
+    vector<int> rows, cols, df_count, db_count;
     vector<vector<int>> rows_count, cols_count;
 };
 
