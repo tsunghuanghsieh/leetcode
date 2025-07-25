@@ -1,0 +1,2 @@
+[1,2,3,4,5,null,null,8,null,null,11,16,null,null,23]
+6
