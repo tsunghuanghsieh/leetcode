@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     fin >> line >> k >> expected;
 
     vector<int> nums;
-    regex patternNumber(R"(-?\\d+)");
+    regex patternNumber(R"(-?\d+)");
     sregex_token_iterator itr(line.begin(), line.end(), patternNumber);
     for (; itr != sregex_token_iterator(); itr++) {
         nums.emplace_back(stoi(*itr));
