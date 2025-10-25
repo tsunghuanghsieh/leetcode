@@ -1,19 +1,22 @@
 #include <fstream>
 #include <iostream>
 #include <regex>
+#include <sstream>
 #include <vector>
 
 using namespace std;
 
 #include "Solution.cpp"
 
-void printResult(const vector<double>& result) {
-    cout << "[";
+string formatResult(const vector<double>& result) {
+    stringstream ss;
+    ss << "[";
     for (int i = 0; i < result.size(); i++) {
-        cout << std::fixed << setprecision(5) << result[i];
-        if (i < result.size() - 1) cout << ",";
+        ss << std::fixed << setprecision(5) << result[i];
+        if (i < result.size() - 1) ss << ",";
     }
-    cout << "]: actual" << endl;
+    ss << "]";
+    return ss.str();
 }
 
 int main(int argc, char** argv) {
@@ -36,10 +39,35 @@ int main(int argc, char** argv) {
         nums.emplace_back(stoi(*itr));
     }
 
-    cout << line << ": nums" << endl;
+    vector<double> exp;
+    regex patternResult(R"(-?\d+.\d+)");
+    sregex_token_iterator itr_exp(expected.begin(), expected.end(), patternResult);
+    for (; itr_exp != sregex_token_iterator(); itr_exp++) {
+        exp.emplace_back(stod(*itr_exp));
+    }
+
+    cout << ((nums.size() > 10) ? (line.substr(0, 40) + "...(" +  to_string(nums.size()) + ")") :
+             line) << ": nums" << endl;
     cout << k << ": k" << endl;
-    cout << expected << ": expected" << endl;
-    printResult(soln.medianSlidingWindow(nums, k));
+    cout << ((exp.size() > 10) ? (expected.substr(0, 40) + "...(" +  to_string(exp.size()) + ")") :
+             expected) << ": expected" << endl;
+    vector<double> act = soln.medianSlidingWindow(nums, k);
+    string actual = formatResult(act);
+    cout << ((act.size() > 20) ? (actual.substr(0, 40) + "...(" +  to_string(act.size()) + ")") :
+             actual) << ": actual" << endl;
+    if (actual == expected) cout << "actual result and expected result are identical." << endl;
+    else {
+        if (act.size() != exp.size()) {
+            cout << "count expected: " << exp.size() << endl;
+            cout << "count actual  : " << act.size() << endl;
+        }
+        else {
+            for (int i = 0; i < act.size(); i++) {
+                if (act != exp)
+                    cout << "count " << i << ": expected " << exp[i] << " actual " << act[i] << endl;
+            }
+        }
+    }
 
     return 0;
 }
