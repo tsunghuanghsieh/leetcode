@@ -7,6 +7,7 @@
 using namespace std;
 
 #include "Solution.cpp"
+#include "Solution1.cpp"
 
 string formatResult(const vector<double>& result) {
     stringstream ss;
@@ -19,8 +20,30 @@ string formatResult(const vector<double>& result) {
     return ss.str();
 }
 
+void printResult(const vector<double>& exp, const string expected,
+    const vector<double>& act, const string actual, int num=0) {
+    cout << ((exp.size() > 10) ? (expected.substr(0, 40) + "...(" +  to_string(exp.size()) + ")") :
+             expected) << ": expected" << endl;
+    cout << ((act.size() > 20) ? (actual.substr(0, 40) + "...(" +  to_string(act.size()) + ")") :
+             actual) << ": actual " << num << endl;
+    if (actual == expected) cout << "actual result and expected result are identical." << endl;
+    else {
+        if (act.size() != exp.size()) {
+            cout << "count expected: " << exp.size() << endl;
+            cout << "count actual  : " << act.size() << endl;
+        }
+        else {
+            for (int i = 0; i < act.size(); i++) {
+                if (act != exp)
+                    cout << "count " << i << ": expected " << exp[i] << " actual " << act[i] << endl;
+            }
+        }
+    }
+}
+
 int main(int argc, char** argv) {
     Solution soln;
+    Solution1 soln1;
     ifstream fin;
     fin.open(argv[1]);
     if (!fin)
@@ -49,25 +72,11 @@ int main(int argc, char** argv) {
     cout << ((nums.size() > 10) ? (line.substr(0, 40) + "...(" +  to_string(nums.size()) + ")") :
              line) << ": nums" << endl;
     cout << k << ": k" << endl;
-    cout << ((exp.size() > 10) ? (expected.substr(0, 40) + "...(" +  to_string(exp.size()) + ")") :
-             expected) << ": expected" << endl;
     vector<double> act = soln.medianSlidingWindow(nums, k);
     string actual = formatResult(act);
-    cout << ((act.size() > 20) ? (actual.substr(0, 40) + "...(" +  to_string(act.size()) + ")") :
-             actual) << ": actual" << endl;
-    if (actual == expected) cout << "actual result and expected result are identical." << endl;
-    else {
-        if (act.size() != exp.size()) {
-            cout << "count expected: " << exp.size() << endl;
-            cout << "count actual  : " << act.size() << endl;
-        }
-        else {
-            for (int i = 0; i < act.size(); i++) {
-                if (act != exp)
-                    cout << "count " << i << ": expected " << exp[i] << " actual " << act[i] << endl;
-            }
-        }
-    }
-
+    printResult(exp, expected, act, actual);
+    vector<double> act1 = soln.medianSlidingWindow(nums, k);
+    string actual1 = formatResult(act);
+    printResult(exp, expected, act1, actual1, 1);
     return 0;
 }
