@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
     string actual = formatResult(act);
     printResult(exp, expected, act, actual);
     vector<double> act1 = soln.medianSlidingWindow(nums, k);
-    string actual1 = formatResult(act);
+    string actual1 = formatResult(act1);
     printResult(exp, expected, act1, actual1, 1);
     return 0;
 }
