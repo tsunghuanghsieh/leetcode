@@ -49,13 +49,15 @@ public:
 
         for (int i = 0; i < nums.size(); i++) {
             if (i >= k) {
+                // remove the oldest element in k sliding window
                 if (lte.find(nums[i - k]) != lte.end()) lte.erase(lte.find(nums[i - k]));
                 else gte.erase(gte.find(nums[i - k]));
             }
             lte.insert(nums[i]);
-            // rebalance
+            // move the largest in lte to the smallest of gte
             gte.insert(*lte.rbegin());
             lte.erase(prev(lte.end()));
+            // either lte == gte or lte == gte + 1, otherwise rebalance
             if (lte.size() < gte.size()) {
                 lte.insert(*gte.begin());
                 gte.erase(gte.begin());
