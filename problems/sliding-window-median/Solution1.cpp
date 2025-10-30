@@ -15,6 +15,9 @@ public:
     //
     // multiset runs slower and has higher memory usage than priority_queue.
     //
+    // Runtime complexity: O(nlogk)
+    // Space complexity: O(k)
+    //
     // Below shows the states at each step. Given this, the logic is obvious.
     //
     //  k is odd                            k is even
