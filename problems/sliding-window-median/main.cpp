@@ -8,6 +8,7 @@ using namespace std;
 
 #include "Solution.cpp"
 #include "Solution1.cpp"
+#include "Solution2.cpp"
 
 string formatResult(const vector<double>& result) {
     stringstream ss;
@@ -44,6 +45,7 @@ void printResult(const vector<double>& exp, const string expected,
 int main(int argc, char** argv) {
     Solution soln;
     Solution1 soln1;
+    Solution2 soln2;
     ifstream fin;
     fin.open(argv[1]);
     if (!fin)
@@ -78,5 +80,8 @@ int main(int argc, char** argv) {
     vector<double> act1 = soln.medianSlidingWindow(nums, k);
     string actual1 = formatResult(act1);
     printResult(exp, expected, act1, actual1, 1);
+    vector<double> act2 = soln.medianSlidingWindow(nums, k);
+    string actual2 = formatResult(act2);
+    printResult(exp, expected, act2, actual2, 2);
     return 0;
 }
