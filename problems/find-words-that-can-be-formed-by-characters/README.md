@@ -26,4 +26,6 @@ Explanation: The strings that can be formed are "hello" and "world" so the answe
 * `words[i]` and `chars` consist of lowercase English letters.
 
 ## Interview
+05/25/2026, TabaPay HackerRank assessment #2 with a slightly different question.
+
 As of 04/29/2025, leetcode premium subscription says Paypal 10 times in the last 6 months.
