@@ -11,7 +11,7 @@ public:
     // The approach is to use bfs to determine all distances from any cell to all other cell in the grid.
     // It can start from a building, 1, to calculate distance to all empty space, 0, in the grid.
     // Alternatively, it can start from an empty space, 0, to calculate distances to all buildings, 1.
-    // The approach here is the latter. The speculation was there may tend to have more 0s than 1s.
+    // The approach here is the former. The speculation was there may tend to have more 0s than 1s.
     //
     // Updated the implementation to unordered_set<pair<int, int>> by providing custom hash and equal
     // function and eliminated conversions between 1D and 2D. The execution time dropped to ~950ms.
