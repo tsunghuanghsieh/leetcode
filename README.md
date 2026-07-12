@@ -196,4 +196,5 @@
 |   192 | [Design Tic-Tac-Toe](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/design-tic-tac-toe/)| Medium | C++ | Y |
 |   193 | [Diameter of Binary Tree](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/diameter-of-binary-tree/)| Easy | C++ ||
 |   194 | [Sliding Window Median](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/sliding-window-median/)| Hard | C++ ||
+|   195 | [Best Meeting Point](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/best-meeting-point/)| Hard | C++ | Y |
 
