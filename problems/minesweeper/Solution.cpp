@@ -1,15 +1,19 @@
 #include <iostream>
 #include <queue>
-#include <unordered_set>
 #include <vector>
 
 using namespace std;
 
 class Solution {
 public:
+    // The approach is to use bfs to reveal squares around the clicked square.
+    // Time complexity: O(mn)
+    // Space complexity: O(mn)
     vector<vector<char>> updateBoard(vector<vector<char>>& board, vector<int>& click) {
         if (board[click[0]][click[1]] == 'M') board[click[0]][click[1]] = 'X';
         else if (board[click[0]][click[1]] == 'E') {
+            // unordered_set<pair<int, int>>, before C++23, requires a custom hash function for insert.
+            // For a bounded coordinates (say, 0 <= m, n <= 1000), we can use vector<vector<bool>> instead.
             vector<vector<bool>> seen(board.size(), vector<bool>(board[0].size(), false));
             queue<pair<int, int>> neighbors;
             neighbors.push({click[0], click[1]});
