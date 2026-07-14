@@ -8,7 +8,7 @@ a.out: main.o
 compile: main.o
 
 main.o: main.cpp Solution.cpp
-	g++ -std=c++17 -c main.cpp
+	g++ -std=c++20 -c main.cpp
 
 clean:
 	rm a.out *.o 2> /dev/null

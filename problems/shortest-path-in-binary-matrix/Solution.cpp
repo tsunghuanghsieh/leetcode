@@ -6,38 +6,40 @@ using namespace std;
 
 class Solution {
 public:
+    // The approach is to use bfs to find the shortest path to the destination.
+    //
+    // This second attempt has a few differences from the first.
+    // 1. use a separate grid to indicate visited instead of modify the input where setting 1 as visited.
+    // 2. use pair<int, int> for coordinates instead of encoding/decoding row and col into an int.
+    // 3. use a 2D array for the 8 directional paths, instead of 2 separate vector<int>.
     int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
-        int n = grid.size();
-        if (grid[0][0] || grid[n - 1][n - 1]) return -1;
+        if (grid[0][0] == 1 || grid[grid.size() - 1][grid.size() - 1] == 1) return -1;
 
-        int row = 0, col = 0;
-        queue<int> q;   // encoding [r, c] by r * n + c
-        q.push(0);
-        grid[0][0] = 1;
-        int size = q.size(), count = 1;
-        while (q.size()) {
-            int idx = q.front(), row = idx / n, col = idx % n;
-            q.pop();
-            size--;
-            if (row == n - 1 && col == n - 1) return count;
-            // breadth first traversal
-            for (int i = 0; i < dr.size(); i++) {
-                int r = row + dr[i], c = col + dc[i];
-                if (r < 0 || c < 0 || r == n || c == n || grid[r][c] == 1) continue;
-                q.push(r * n + c);
-                // modify grid in place, instead of using set, to keep track of those that have been in the queue
-                grid[r][c] = 1;
+        int grid_size = grid.size(), steps = 1;
+        // prioritize diaganoal moves over along axis moves
+        // se, sw, nw, ne, e, s, w, n
+        int dirs[8][2] = {{1, 1}, {1, -1}, {-1, -1}, {-1, 1}, {0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        vector<vector<bool>> visited(grid_size, vector<bool>(grid_size, false));
+        queue<pair<int, int>> paths;
+        visited[0][0] = true;
+        paths.push({0, 0});
+        int curr_size = paths.size();
+        while (curr_size > 0) {
+            pair<int, int> curr = paths.front();
+            paths.pop();
+            if (curr.first == grid_size - 1 && curr.second == grid_size - 1) return steps;
+            for (int d = 0; d < 8; d++) {
+                int dr = curr.first + dirs[d][0], dc = curr.second + dirs[d][1];
+                if (dr < 0 || dr >= grid_size || dc < 0 || dc >= grid_size || grid[dr][dc] == 1 ||
+                    visited[dr][dc]) continue;
+                paths.push({dr, dc});
+                visited[dr][dc] = true;
             }
-            if (size == 0) {
-                size = q.size();
-                count++;
+            if (--curr_size == 0) {
+                curr_size = paths.size();
+                steps++;
             }
         }
         return -1;
     }
-private:
-    // combining direction row and direction column
-    // the movements are dr [1, 1], r [0, 1], d [1, 0], dl [1, -1], ul [-1, -1], ur [-1, 1], l [0, -1] and u [-1, 0].
-    const vector<int> dr = {1, 0, 1, 1, -1, -1, 0, -1};
-    const vector<int> dc = {1, 1, 0, -1, -1, 1, -1, 0};
 };
