@@ -38,4 +38,6 @@ Output: -1
 * `grid[i][j] is 0 or 1`
 
 ## Interview
+As of 07/13/2026, leetcode premium subscription says Amazon 4 times, Anduril 3 times and Facebook, Google and Microsoft 2 times in the last 6 months.
+
 As of 06/06/2024, leetcode premium subscription says Facebook 48 times and Amazon 5 times in the last 6 months.
