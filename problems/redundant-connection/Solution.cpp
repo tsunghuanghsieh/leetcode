@@ -41,7 +41,7 @@ public:
             int pa = dsu.findParent(edges[e][0]), pb = dsu.findParent(edges[e][1]);
             if (pa == pb) {
                 // redundant edge, vertices already connected
-                res = {edges[e][0], edges[e][1]};
+                res = edges[e];
                 break;
             }
             dsu.findUnion(edges[e][0], edges[e][1]);
