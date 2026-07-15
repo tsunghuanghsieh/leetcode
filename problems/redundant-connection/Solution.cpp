@@ -34,6 +34,7 @@ private:
 
 class Solution {
 public:
+    // LC Editorial soln 3: Disjoint Set Union
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
         vector<int> res;
         Dsu dsu(edges.size());
