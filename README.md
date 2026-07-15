@@ -200,4 +200,5 @@
 |   196 | [Minesweeper](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/minesweeper/)| Medium | C++ ||
 |   197 | [Design Circular Queue](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/design-circular-queue/)| Medium | C++ ||
 |   198 | [Game of Life](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/game-of-life/)| Medium | C++ ||
+|   199 | [Redundant Connection](https://github.com/tsunghuanghsieh/leetcode/tree/master/problems/redundant-connection/)| Medium | C++ ||
 
